@@ -1,13 +1,19 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import AboutUs from "../components/AboutUs";
-import ClientReviews from "../components/ClientReviews";
-import Services from "../components/Services";
-import ContactUs from "../components/ContactUs";
-import Footer from "../components/Footer";
+import Navbar from "../components/main/Navbar";
+import { Roboto, Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto_init = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-roboto",
+});
+
+const poppins_init = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "800"],
+  variable: "--font-poppins",
+});
 
 export const metadata = {
   title: "Capzient",
@@ -17,14 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <AboutUs />
-        <Services />
-        <ClientReviews />
-        <ContactUs />
-        <Footer />
+      <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
+        <div className="">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
