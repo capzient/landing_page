@@ -9,7 +9,7 @@ const Hero = () => {
         loop
         className="absolute top-0  h-full w-full left-0 z-[1] object-cover "
       >
-        <source src="/assets/videos/final_vid.mp4" type="video/mp4" />
+        <source src="/assets/videos/video.mp4" type="video/mp4" />
       </video>
       <HeroContent />
     </div>

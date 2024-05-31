@@ -1,6 +1,6 @@
 .link {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
   white-space: nowrap;
   color: var(--color-text);
@@ -40,19 +40,19 @@
 /* Contact Us Button Animation */
 
 .button {
+  
   border: none;
   outline: none;
   height: 40px;
   width: 140px;
-  background: #54c4be;
   font-size: 15px;
   border-radius: 20px;
   transition: 0.3s ease;
 }
-
+/* 
 .button:hover {
   cursor: pointer;
   background: #54c4be;
   box-shadow: 0 0 5px #54c4be, 0 0 20px #54c4be, 0 0 60px #54c4be,
     0 0 150px #54c4be;
-}
+} */

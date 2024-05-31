@@ -10,26 +10,28 @@ const HeroContent = () => {
       animate="visible"
       className="flex flex-col items-center justify-center px-20 mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center text-start">
-        <motion.div className="flex gap-6 mt-6 text-9xl font-semibold text-white w-full roboto">
+      <motion.div className="h-full w-full flex flex-col  justify-evenly text-start">
+        <motion.div className="flex tracking-wider mt-6 text-9xl font-medium text-white w-full roboto items-center">
           <span>
-            Designing tomorrow's
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-orange-500">
-              {" "}
-              web today{" "}
+            WE HELP <br /> LEADERS BUILD
+            <span className="font-extrabold text-[140px] "> TOMMOROW </span>
+            <span className="relative inline-block">
+              <div className="absolute top-0 left-0 w-6 h-5 bg-red-500 rounded-none mt-[-20px] ml-[-20px]"></div>
             </span>
           </span>
         </motion.div>
-
-        <motion.p className="text-lg text-gray-400 my-5 max-w-[600px] poppins">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
-          dicta voluptas inventore delectus blanditiis omnis! Voluptas
-          voluptatem iste animi id amet vitae, nisi sit! Odio accusantium
-          corporis dolorum perferendis, alias mollitia molestiae dicta cum
-          voluptatem numquam maiores incidunt vel sapiente optio officia fugit
-          nobis saepe! Exercitationem ut sit excepturi minima.
-        </motion.p>
-      </div>
+        <motion.div className="pt-32 flex flex-row justify-between">
+          <motion.p className="text-white text-4xl roboto text-start  flex items-center">
+            Capabilities that fuel the future{" "}
+            <span className="relative inline-block">
+              <div className="absolute top-0 left-0 w-3 h-2 bg-red-500 rounded-none ml-1"></div>
+            </span>
+          </motion.p>
+          <button className="text-white border text-lg border-white px-16 py-6 rounded-md hover:bg-white hover:text-black">
+            Power your project now
+          </button>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 };
