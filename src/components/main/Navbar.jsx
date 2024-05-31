@@ -76,7 +76,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-[#111111] w-full h-[65px] fixed top-0 backdrop-0 z-50">
+    <div className="bg-[#111111] w-full h-[65px] fixed top-0 backdrop-0 z-50 overflow-hidden">
       <div className="w-full h-full flex flex-row items-center justify-between mx-auto">
         <a href="#hero" className="h-auto w-auto flex flex-row items-center">
           <Image
@@ -88,7 +88,7 @@ const Navbar = () => {
           />
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20 hidden md:flex">
+        <div className="w-[500px] h-full flex-row items-center justify-between md:mr-20 hidden md:flex">
           <div className="flex items-center justify-between w-full h-auto mr-[15px] px-[20px] py-[10px] gap-x-3 text-white tracking-wider">
             <a href="#market" className="link link--metis">
               Markets
@@ -111,12 +111,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 hidden md:block">
+        <div className=" flex-row gap-5 hidden md:block">
           <button className="button text-white">Contact Us</button>
         </div>
 
         <div
-          className="cursor-pointer md:hidden text-md text-white"
+          className="cursor-pointer md:hidden text-md text-white px-4 "
           onClick={toggleMenu}
         >
           Menu
