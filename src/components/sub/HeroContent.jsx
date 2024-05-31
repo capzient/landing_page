@@ -24,12 +24,12 @@ const HeroContent = () => {
           </span>
         </motion.div>
         <motion.div className="pt-[470px] md:pt-32 flex flex-row justify-between">
-          <motion.p className="text-white w-8 md:w-auto text-xl md:text-4xl roboto text-start  flex items-center">
+          <motion.div className="text-white w-8 md:w-auto text-xl md:text-4xl roboto text-start  flex items-center">
             Capabilities that fuel the future{" "}
             <span className="relative inline-block">
               <div className="absolute top-0 left-0 w-3 h-2 bg-red-500 rounded-none ml-1"></div>
             </span>
-          </motion.p>
+          </motion.div>
           <button className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black">
             Power your project now
           </button>

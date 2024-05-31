@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/main/Navbar";
+import Navbar from "../components/layout/nav";
 import { Roboto, Poppins } from "next/font/google";
 
 const roboto_init = Roboto({
