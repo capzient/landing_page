@@ -5,8 +5,7 @@ const ExtendItem = ({ title }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+
             className="flex items-center gap-[5px] link--metis p-2 cursor-pointer">
             <div className="extend-item-before mb-[3px] duration-300"
                 style={
@@ -18,7 +17,10 @@ const ExtendItem = ({ title }) => {
                         }
                 }
             ></div>
-            <div>
+            <div
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
                 {title}
             </div>
         </div>

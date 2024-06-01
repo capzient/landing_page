@@ -75,7 +75,7 @@ const mobileLinkVars = {
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const [extenedElement, setExtendElement] = useState(null)
+    const [extendElement, setExtendElement] = useState(null)
     const [activeMenu, setActiveMenu] = useState(null)
     const toggleMenu = () => {
         setOpen((prevOpen) => !prevOpen);
@@ -114,14 +114,14 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='text-white'>
-                {extenedElement !== null && <AnimatePresence>
+                {extendElement !== null && <AnimatePresence>
                     <motion.div
                     // variants={menuVars}
                     // initial="initial"
                     // animate="animate"
                     // exit="exit"
                     >
-                        {extenedElement}
+                        {extendElement}
                     </motion.div>
                 </AnimatePresence>}
             </div>
