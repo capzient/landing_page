@@ -61,7 +61,43 @@ const menus = [
 
     },
     {
-        title: 'Industries'
+        title: 'Industries',
+        extend: (
+
+            <div className="flex  p-10 px-[100px]">
+                <div className="w-[40%]">
+                    {[
+                        'Aerospace and Defense',
+                        'Automotive',
+                        'Banking',
+                        'Capital Markets',
+                        'Chemicals',
+                        'Communications and Media',
+                        'Consumer Goods and Services',
+                        'Energy',
+                        'Health',
+
+                    ].map((aItem, idx) => (
+                        <ExtendItem key={idx} title={aItem} />
+                    ))}
+                </div>
+                <div>
+                    {[
+                        'High Tech',
+                        'Industrial',
+                        'Insurance',
+                        'Life Sciences',
+                        'Natural Resources',
+                        'Public Service',
+                        'Retail',
+                        'Software and Platforms',
+                        'Travel',
+                        'Utilities',
+                    ].map((aItem, idx) => (
+                        <ExtendItem key={idx} title={aItem} />
+                    ))}</div>
+            </div>
+        )
     },
     {
         title: 'Solutions'
