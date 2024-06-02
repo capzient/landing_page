@@ -17,15 +17,19 @@ const containerVars = {
 
 import ExtendItem from "./extendItem"
 
+const ExtendParent = ({ children }) => (
+    <div className="w-full flex text-[20px] justify-between border-[#ffffff81] border-t-[1px] mt-[50px]  p-10 px-[100px]">
+        {children}
+    </div>
+)
 
 
 const menus = [
     {
         title: 'Capabilities',
         extend: (
-
-            <div className="flex  p-10 px-[100px]">
-                <div className="w-[40%]">
+            <ExtendParent>
+                <div className="w-full">
                     {[
                         'Cloud',
                         'Cybersecurity',
@@ -33,19 +37,26 @@ const menus = [
                         'Digital Engineering and Manufacturing',
                         'Emerging Technology',
                         'Enterprise Platforms',
+                    ].map((aItem, idx) => (
+                        <ExtendItem key={idx} title={aItem} />
+                    ))}
+                </div>
+                <div className="w-full">
+                    {[
                         'Finance and Risk Management',
                         'Learning',
                         'Marketing and Experience',
+                        'Metaverse',
+                        'Private Equity',
+                        'Data and Artificial Intelligence',
 
                     ].map((aItem, idx) => (
                         <ExtendItem key={idx} title={aItem} />
                     ))}
                 </div>
-                <div>
+                <div className="w-full">
                     {[
-                        'Metaverse',
-                        'Private Equity',
-                        'Data and Artificial Intelligence',
+
                         'Digital Engineering and Manufacturing',
                         'Emerging Technology',
                         'Enterprise Platforms',
@@ -56,7 +67,7 @@ const menus = [
                     ].map((aItem, idx) => (
                         <ExtendItem key={idx} title={aItem} />
                     ))}</div>
-            </div>
+            </ExtendParent>
         )
 
     },
@@ -64,8 +75,8 @@ const menus = [
         title: 'Industries',
         extend: (
 
-            <div className="flex  p-10 px-[100px]">
-                <div className="w-[40%]">
+            <ExtendParent>
+                <div className="w-full">
                     {[
                         'Aerospace and Defense',
                         'Automotive',
@@ -73,19 +84,28 @@ const menus = [
                         'Capital Markets',
                         'Chemicals',
                         'Communications and Media',
-                        'Consumer Goods and Services',
-                        'Energy',
-                        'Health',
+
 
                     ].map((aItem, idx) => (
                         <ExtendItem key={idx} title={aItem} />
                     ))}
                 </div>
-                <div>
+                <div className="w-full">
                     {[
+                        'Consumer Goods and Services',
+                        'Energy',
+                        'Health',
                         'High Tech',
                         'Industrial',
                         'Insurance',
+
+                    ].map((aItem, idx) => (
+                        <ExtendItem key={idx} title={aItem} />
+                    ))}
+                </div>
+                <div className="w-full">
+                    {[
+
                         'Life Sciences',
                         'Natural Resources',
                         'Public Service',
@@ -93,10 +113,12 @@ const menus = [
                         'Software and Platforms',
                         'Travel',
                         'Utilities',
+
                     ].map((aItem, idx) => (
                         <ExtendItem key={idx} title={aItem} />
-                    ))}</div>
-            </div>
+                    ))}
+                </div>
+            </ExtendParent>
         )
     },
     {
@@ -105,7 +127,7 @@ const menus = [
     {
         title: 'Company',
         extend: (
-            <div className="flex gap-x-[200px] p-10 px-[100px]">
+            <ExtendParent>
                 <div>
                     {[
                         'Projects',
@@ -115,7 +137,7 @@ const menus = [
                         <ExtendItem key={idx} title={aItem} />
                     ))}
                 </div>
-            </div>
+            </ExtendParent >
         )
     },
     {

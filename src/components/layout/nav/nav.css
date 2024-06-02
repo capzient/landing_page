@@ -1,9 +1,9 @@
 .link {
   cursor: pointer;
-  font-size: 15px;
   position: relative;
   white-space: nowrap;
   color: var(--color-text);
+  font-family: sans-serif;
 }
 
 .link::before,
@@ -15,17 +15,14 @@
   top: 100%;
   left: 0;
   pointer-events: none;
+  background-color: #ffffff81;
 }
 
 .link::before {
   content: "";
   /* show by default */
 }
-.extend-item-before{
-  background-color: white;
-  width: 30px;
-  height: 1px;
-}
+
 .link--metis {
   font-family: bely-display, sans-serif;
 }
@@ -42,13 +39,16 @@
 }
 
 /* Contact Us Button Animation */
-
+.extend-item-before{
+  background-color: white;
+  width: 30px;
+  height: 1px;
+}
 .button {
   border: none;
   outline: none;
   height: 40px;
   width: 140px;
-  font-size: 15px;
   border-radius: 20px;
   transition: 0.3s ease;
 }

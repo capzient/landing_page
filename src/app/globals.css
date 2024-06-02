@@ -39,3 +39,6 @@ body {
 .poppins {
   font-family: var(--font-poppins);
 }
+.dot{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
