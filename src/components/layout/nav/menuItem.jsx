@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import { GoTriangleDown } from "react-icons/go";
 
 
@@ -31,11 +30,6 @@ const MenuItem = ({ id, title, extend, setDropDownOpen, setActiveMenu, activeMen
                     setDropDownOpen(true);
                     setExtendElement(extend)
                 }}
-            // onMouseLeave={() => {
-            //     setActiveMenu(null);
-            //     setExtendElement(null);
-            //     setDropDownOpen(false);
-            // }}
             >
                 {title}
             </span>

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import Link from "next/link";
 import { AnimatePresence, delay, motion } from "framer-motion";
 import { IoMdReturnRight } from "react-icons/io";
 
@@ -12,16 +11,7 @@ import menus from "./menus";
 
 import "./nav.css";
 
-const navLinks = [
-    { title: "Markets", href: "/" },
-    { title: "Solutions", href: "/" },
-    { title: "Products", href: "/" },
-    { title: "Technology", href: "/" },
-    { title: "Company", href: "/" },
-    { title: "Resources", href: "/" },
-];
-
-const menuVars = {
+const dropdownContainerVars = {
     initial: {
         scaleY: 0,
     },
@@ -42,7 +32,7 @@ const menuVars = {
     },
 };
 
-const containerVars = {
+const dropdownContentVars = {
     initial: {
         opacity: 0,
         transition: {
@@ -138,14 +128,14 @@ const Navbar = () => {
             <AnimatePresence>
                 {dropDownOpen && extendElement &&
                     <motion.div
-                        variants={menuVars}
+                        variants={dropdownContainerVars}
                         initial="initial"
                         animate="animate"
                         exit="exit"
                         className="absolute w-full left-0 top-0 w-full origin-top z-[1] bg-blue-700 text-white p-10"
                     >
                         {dropDownOpen && extendElement && <motion.div
-                            variants={containerVars}
+                            variants={dropdownContentVars}
                             initial="initial"
                             animate="open"
                             exit="initial"
@@ -158,7 +148,7 @@ const Navbar = () => {
             {/* <AnimatePresence>
                 {open && (
                     <motion.div
-                        variants={menuVars}
+                        variants={dropdownContentVars}
                         initial="initial"
                         animate="animate"
                         exit="exit"
@@ -175,7 +165,7 @@ const Navbar = () => {
                                 </p>
                             </div>
                             <motion.div
-                                variants={containerVars}
+                                variants={dropdownContentVars}
                                 initial="initial"
                                 animate="open"
                                 exit="initial"
