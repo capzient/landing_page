@@ -1,4 +1,4 @@
-const withRedRect = ({ children }) => {
+const WithRedRect = ({ children }) => {
     return <div className="flex items-end">
         <div>
             {children}
@@ -8,4 +8,4 @@ const withRedRect = ({ children }) => {
         </div>
     </div >
 };
-export default withRedRect;
+export default WithRedRect;
