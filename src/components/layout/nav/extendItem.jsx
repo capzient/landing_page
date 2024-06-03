@@ -5,8 +5,8 @@ const ExtendItem = ({ title }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <div
-            className="flex items-center gap-[5px] link--metis p-2 cursor-pointer">
-            <div className="extend-item-before mb-[3px] duration-300"
+            className="flex gap-[5px] link--metis p-2 cursor-pointer">
+            <div className="extend-item-before mt-[13px] duration-300"
                 style={
                     isHovered ?
                         {
