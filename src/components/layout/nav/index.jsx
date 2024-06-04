@@ -72,8 +72,8 @@ const mobileLinkVars = {
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [dropDownOpen, setDropDownOpen] = useState(false);
-    const [extendElement, setExtendElement] = useState(null)
-    const [activeMenu, setActiveMenu] = useState(null)
+    const [extendElement, setExtendElement] = useState(null);
+    const [activeMenu, setActiveMenu] = useState(null);
     const toggleMenu = () => {
         setOpen((prevOpen) => !prevOpen);
     };
