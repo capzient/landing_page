@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 const MobileLinkVars = {
   initial: {
     y: "30vh",
@@ -61,3 +64,5 @@ export { MobileLinkVars, ContainerVars };
 //     },
 //   },
 // };
+
+
