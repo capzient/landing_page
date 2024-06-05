@@ -14,7 +14,7 @@ const HeroContent = () => {
       variants={ContainerVars}
       initial="initial"
       animate="animate"
-      className="flex flex-col items-center justify-center px-3 md:px-20 mt-40 w-full z-[20]"
+      className="flex flex-col items-center justify-center px-3 md:px-20 mt-40 w-full h-[100vh] z-[20]"
     >
       <motion.div className="h-full w-full flex flex-col justify-evenly text-start">
         <div className="overflow-hidden">
@@ -56,7 +56,7 @@ const HeroContent = () => {
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
-          <button className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black">
+          <button className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black duration-500">
             Power your project now
           </button>
         </motion.div>

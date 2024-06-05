@@ -1,9 +1,8 @@
 import HeroContent from "../../sub/heroContent";
-import { motion } from 'framer-motion'
 
 const Hero = () => {
     return (
-        <div className="flex flex-col h-full w-full">
+        <div className="flex flex-col h-[100vh] w-full">
             <video
                 autoPlay
                 muted
