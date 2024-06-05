@@ -70,7 +70,6 @@ const mobileLinkVars = {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [dropDownOpen, setDropDownOpen] = useState(false);
   const [extendElement, setExtendElement] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
   const toggleMenu = () => {
@@ -96,7 +95,7 @@ const Navbar = () => {
                 key={idx}
                 id={idx}
                 title={aMenu.title}
-                setDropDownOpen={setDropDownOpen}
+                // setDropDownOpen={setDropDownOpen}
                 activeMenu={activeMenu}
                 setActiveMenu={setActiveMenu}
                 extend={
@@ -105,7 +104,6 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setActiveMenu(null);
                         setExtendElement(null);
-                        setDropDownOpen(false);
                       }}
                     >
                       {aMenu.extend ?? ""}
@@ -135,7 +133,7 @@ const Navbar = () => {
         </div>
       </div>
       <AnimatePresence>
-        {dropDownOpen && extendElement && (
+        {extendElement && (
           <motion.div
             variants={dropdownContainerVars}
             initial="initial"
@@ -143,7 +141,7 @@ const Navbar = () => {
             exit="exit"
             className="absolute w-full left-0 top-0 origin-top z-[1] bg-blue-700 text-white p-10"
           >
-            {dropDownOpen && extendElement && (
+            {extendElement && (
               <motion.div
                 variants={dropdownContentVars}
                 initial="initial"
@@ -153,6 +151,7 @@ const Navbar = () => {
                 {extendElement}
               </motion.div>
             )}
+
           </motion.div>
         )}
       </AnimatePresence>
