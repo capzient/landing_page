@@ -5,6 +5,7 @@ import { bullets } from "./data";
 const Welcome = () => {
   return (
     <div>
+      <div className="h-[100vh]"></div>
       <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-[url('/assets/images/welcome/bg_1.svg')] flex-col w-full">
         <div className="text-white text-title">
           <WithRedLeftBar width={10}>
