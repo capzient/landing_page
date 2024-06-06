@@ -1,3 +1,4 @@
+
 import Hero from "../components/main/hero";
 import Welcome from "../components/main/welcome";
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <main className="h-full w-full">
       <Hero />
       <Welcome />
+      <Footer />
     </main>
   );
 }
