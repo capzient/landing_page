@@ -18,17 +18,11 @@ const MobileLinkVars = {
       staggerChildren: 0.3, // Delay between each letter
     },
   },
-  letter: {
-    initial: {
-      opacity: 0,
-      y: 20,
-    },
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
     },
   },
 };
@@ -40,6 +34,11 @@ const ContainerVars = {
     },
   },
   open: {
+    transition: {
+      staggerChildren: 0.09,
+    },
+  },
+  whileInView: {
     transition: {
       staggerChildren: 0.09,
     },
@@ -64,5 +63,3 @@ export { MobileLinkVars, ContainerVars };
 //     },
 //   },
 // };
-
-
