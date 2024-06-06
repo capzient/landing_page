@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Link from "next/link"
 
 
 const ExtendItem = ({ title }) => {
@@ -21,7 +22,12 @@ const ExtendItem = ({ title }) => {
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <div className="text-[#ffffff81] hover:text-[#ffffff] duration-500">
-                    {title}
+                    {/* <Link href={`/${title.replace(/ /g, '_').toLowerCase()}`} >
+                        {title}
+                    </Link> */}
+                    <Link href={`/industry`} >
+                        {title}
+                    </Link>
                 </div>
             </div>
         </div>
