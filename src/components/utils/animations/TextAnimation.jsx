@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 const MobileLinkVars = {
   initial: {
     y: "30vh",
@@ -43,3 +46,20 @@ const ContainerVars = {
 };
 
 export { MobileLinkVars, ContainerVars };
+
+// const MobileLinkVars = {
+//   initial: {
+//     y: "30vh",
+//     transition: {
+//       duration: 0.7,
+//       ease: [0.37, 0, 0.63, 1],
+//     },
+//   },
+//   open: {
+//     y: 0,
+//     transition: {
+//       ease: [0, 0.55, 0.45, 1],
+//       duration: 0.7,
+//     },
+//   },
+// };

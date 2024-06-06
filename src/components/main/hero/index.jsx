@@ -15,5 +15,6 @@ const Hero = () => {
       <HeroContent />
     </div>
   );
+
 };
 export default Hero;

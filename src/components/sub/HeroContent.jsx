@@ -15,6 +15,7 @@ const HeroContent = () => {
       initial="initial"
       animate="animate"
       className="flex flex-col items-center justify-center px-3 md:px-20 mt-20 w-full z-[20]"
+
     >
       <motion.div className="h-full w-full flex flex-col justify-evenly text-start">
         <div className="overflow-hidden">
@@ -55,6 +56,7 @@ const HeroContent = () => {
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
           <div className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black">
+
             Power your project now
           </div>
         </motion.div>
