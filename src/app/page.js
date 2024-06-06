@@ -1,4 +1,8 @@
+
 import Careers from "../components/main/careers";
+
+import Footer from "../components/layout/footer/Footer";
+
 import Hero from "../components/main/hero";
 import Welcome from "../components/main/welcome";
 export default function Home() {
@@ -7,6 +11,7 @@ export default function Home() {
       <Hero />
       <Welcome />
       <Careers />
+      <Footer />
     </main>
   );
 }
