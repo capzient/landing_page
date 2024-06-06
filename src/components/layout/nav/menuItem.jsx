@@ -2,7 +2,7 @@ import { GoTriangleDown } from "react-icons/go";
 
 
 
-const MenuItem = ({ id, title, extend, setDropDownOpen, setActiveMenu, activeMenu, setExtendElement }) => {
+const MenuItem = ({ id, title, extend, setActiveMenu, activeMenu, setExtendElement }) => {
     return (
         <div className="cursor-pointer flex items-center gap-x-1">
             <div className="text-[13px]">
@@ -27,7 +27,7 @@ const MenuItem = ({ id, title, extend, setDropDownOpen, setActiveMenu, activeMen
                 className="link--metis link"
                 onMouseEnter={() => {
                     setActiveMenu(id);
-                    setDropDownOpen(true);
+                    // setDropDownOpen(true);
                     setExtendElement(extend)
                 }}
             >

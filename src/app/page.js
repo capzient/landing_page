@@ -1,13 +1,12 @@
-import Footer from "../components/layout/footer/Footer";
-import Hero from "../components/main/Hero";
 
+import Hero from "../components/main/hero";
+import Welcome from "../components/main/welcome";
 export default function Home() {
   return (
     <main className="h-full w-full">
-      <div>
-        <Hero />
-        <Footer />
-      </div>
+      <Hero />
+      <Welcome />
+      <Footer />
     </main>
   );
 }
