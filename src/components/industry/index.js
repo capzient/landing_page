@@ -28,7 +28,7 @@ const Industry = () => {
                                 <div className="text-[50px] font-bold text-white">
                                     TAKE THE WORLD WITH CLOUD
                                 </div>
-                                <div className="cursor-pointer pt-[20px] flex w-[250px] gap-[20px] items-center gap-[10px]">
+                                <div className="cursor-pointer pt-[20px] flex w-[350px] gap-[20px] items-center gap-[10px]">
                                     <div className="w-[40px] h-[40px]">
                                         <Image src={'/assets/images/industry/shape.svg'} width={40} height={40} alt="" />
                                     </div>
