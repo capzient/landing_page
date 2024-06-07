@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/layout/nav";
 import { Roboto, Poppins } from "next/font/google";
 import SmoothScroll from "../components/utils/smoothScroll/SmoothScroll";
+import { Providers } from "./provides";
 
 const roboto_init = Roboto({
   subsets: ["latin"],
@@ -24,12 +25,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
-        <div className="">
-          <Navbar />
-          <SmoothScroll>{children}</SmoothScroll>
-        </div>
-      </body>
+      <Providers>
+        <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
+          <div className="">
+            <Navbar />
+            <SmoothScroll>{children}</SmoothScroll>
+          </div>
+        </body>
+      </Providers>
     </html>
   );
 }
