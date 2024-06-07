@@ -1,6 +1,6 @@
 import Image from "next/image";
 import WithRedRect from "../../utils/withRedRect";
-import Button from "./Button";
+import Button from "../../utils/button";
 
 const Careers = () => {
   return (

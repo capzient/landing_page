@@ -83,7 +83,7 @@ export default function Footer() {
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
         <script
-          nomodule
+          noModule
           async
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
