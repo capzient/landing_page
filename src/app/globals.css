@@ -83,3 +83,7 @@ body {
 .dot{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.white-blur-btn{
+  background-color: #ffffff31;
+  backdrop-filter: blur(5px);
+}

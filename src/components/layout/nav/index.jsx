@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <div className="nav w-full  fixed top-0 backdrop-0 z-50  text-[20px]">
       <div className="w-full h-full flex flex-row items-center relative z-[52] justify-between mx-auto">
-        <a href="#hero" className="h-auto w-auto flex flex-row items-center">
+        <a href="/" className="h-auto w-auto flex flex-row items-center">
           <Image
             src="/assets/images/capzient_logo_white.png"
             alt="logo"
