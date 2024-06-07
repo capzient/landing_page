@@ -1,4 +1,3 @@
-import Script from "next/script";
 export default function Footer() {
   return (
     <div className=" bg-black text-zinc-50">
@@ -81,7 +80,7 @@ export default function Footer() {
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
         <script
-          nomodule
+          noModule
           async
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>

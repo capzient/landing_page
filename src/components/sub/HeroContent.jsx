@@ -15,7 +15,6 @@ const HeroContent = () => {
       initial="initial"
       animate="animate"
       className="absolute t-0 h-[100vh] items-center justify-center px-3  w-full z-[20]"
-
     >
       <motion.div className="w-full flex flex-col gap-[0px] text-start px-[50px]">
         <div className="h-[70vh] flex items-end">
@@ -55,7 +54,7 @@ const HeroContent = () => {
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
-          <p className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black">
+          <p className="text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black cursor-pointer">
             Power your project now
           </p>
         </motion.div>

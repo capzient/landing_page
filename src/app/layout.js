@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/layout/nav";
 import { Roboto, Poppins } from "next/font/google";
+import SmoothScroll from "../components/utils/smoothScroll/SmoothScroll";
 
 const roboto_init = Roboto({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
         <div className="">
           <Navbar />
-          {children}
+          <SmoothScroll>{children}</SmoothScroll>
         </div>
       </body>
     </html>
