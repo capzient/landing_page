@@ -192,6 +192,9 @@ const Navbar = () => {
                       setActiveMenu(null);
                       setExtendElement(null);
                     }}
+                    onClick={() => {
+                      setExtendElement(null);
+                    }}
                   >
                     {aMenu.extend ?? ""}
                   </div>
