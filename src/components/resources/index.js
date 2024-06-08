@@ -12,7 +12,7 @@ const Resources = () => {
             textArray = [...textArray, ...footerText];
         }
         return (
-            <div className="flex overflow-hidden gap-[15px] ">
+            <div className="flex m-auto justify-center overflow-hidden gap-[15px] ">
                 {textArray.map((a, idx) => (
                     <div className="flex gap-[15px] items-center" key={idx}>
                         {idx !== 0 && (
@@ -55,7 +55,6 @@ const Resources = () => {
                     </div>
                     <div className=" w-full	bg-[#0F0F0F]  p-[10px] mb-[20px] text-[#676665]">
                         {
-                            // 'fd'
                             renderFooterText()
                         }
                     </div>
