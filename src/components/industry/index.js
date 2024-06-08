@@ -30,11 +30,11 @@ const Industry = () => {
         <div className="grow w-[60%] bg-[#1A1A1A] rounded-lg">
           <div className="flex gap-[15px] p-[80px]">
             <div>
-              <div className="flex items-start gap-[10px]">
-                <div className="text-[50px] font-bold text-white">
+              <div className="flex items-start flex-wrap ">
+                <div className="text-[50px] max-w-[70%] font-bold text-white">
                   TAKE THE WORLD WITH CLOUD
                 </div>
-                <div className="cursor-pointer pt-[20px] flex w-[350px] gap-[20px] items-center ">
+                <div className="cursor-pointer pt-[20px] flex w-[30%] gap-[20px] items-center ">
                   <div className="w-[40px] h-[40px]">
                     <Image
                       src={"/assets/images/industry/shape.svg"}
