@@ -151,7 +151,6 @@ const Navbar = () => {
                 {extendElement}
               </motion.div>
             )}
-
           </motion.div>
         )}
       </AnimatePresence>

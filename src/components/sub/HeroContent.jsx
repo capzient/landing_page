@@ -3,41 +3,56 @@
 import React from "react";
 import { motion } from "framer-motion";
 import WithRedRect from "../utils/withRedRect";
+import { useInView } from "react-intersection-observer";
+
 import {
   MobileLinkVars,
   ContainerVars,
 } from "./../utils/animations/TextAnimation";
 
 const HeroContent = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   return (
     <motion.div
+      ref={ref}
       variants={ContainerVars}
       initial="initial"
-      animate="animate"
-      className="absolute t-0 h-[100vh] items-center justify-center px-3  w-full z-[20]"
+      className="absolute top-0 h-[100vh] flex items-center justify-center px-3 w-full z-[20]"
     >
-      <motion.div className="w-full flex flex-col gap-[0px] text-start px-[50px]">
+      <motion.div className="w-full flex flex-col gap-0 text-start px-[50px]">
         <div className="h-[70vh] flex items-end">
-          {/* <motion.div
-            variants={MobileLinkVars}
-            initial="initial"
-            animate="open"
-            className="overflow-hidden tracking-wider md:mt-6 text-4xl md:text-9xl font-medium text-white w-full roboto items-center"
-          ></motion.div> */}
           <motion.div
             variants={MobileLinkVars}
             initial="initial"
-            animate="open"
+            animate={inView ? "open" : "initial"}
             className="overflow-hidden tracking-wider md:mt-6 text-4xl md:text-9xl font-medium text-white w-full roboto items-center"
           >
             <div className="overflow-hidden">
-              <motion.div variants={MobileLinkVars}>WE HELP</motion.div>
+              <motion.div
+                variants={MobileLinkVars}
+                initial="initial"
+                animate={inView ? "open" : "initial"}
+              >
+                WE HELP
+              </motion.div>
             </div>
             <div className="overflow-hidden">
-              <motion.div variants={MobileLinkVars}>LEADERS BUILD</motion.div>
+              <motion.div
+                variants={MobileLinkVars}
+                initial="initial"
+                animate={inView ? "open" : "initial"}
+              >
+                LEADERS BUILD
+              </motion.div>
             </div>
             <motion.div
               variants={MobileLinkVars}
+              initial="initial"
+              animate={inView ? "open" : "initial"}
               className="text-6xl md:text-[140px] font-extrabold"
             >
               <WithRedRect>TOMORROW</WithRedRect>
@@ -48,8 +63,7 @@ const HeroContent = () => {
           <motion.div
             variants={MobileLinkVars}
             initial="initial"
-            animate="open"
-            whileInView="open"
+            animate={inView ? "open" : "initial"}
             className="text-white w-8 md:w-auto text-xl md:text-4xl roboto text-start flex items-center"
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
@@ -64,5 +78,3 @@ const HeroContent = () => {
 };
 
 export default HeroContent;
-
-///doing
