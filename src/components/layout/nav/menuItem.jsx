@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GoTriangleDown } from "react-icons/go";
 
 
@@ -31,7 +32,9 @@ const MenuItem = ({ id, title, extend, setActiveMenu, activeMenu, setExtendEleme
                     setExtendElement(extend)
                 }}
             >
-                {title}
+                {!extend ? <Link href={`/${title.replace(/ /g, '_').toLowerCase()}`}>
+                    {title}
+                </Link> : title}
             </span>
         </div>
     )
