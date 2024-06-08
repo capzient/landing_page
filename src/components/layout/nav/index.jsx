@@ -196,7 +196,7 @@ const Navbar = () => {
                       setExtendElement(null);
                     }}
                   >
-                    {aMenu.extend ?? ""}
+                    {aMenu.extend ?? null}
                   </div>
                 </motion.div>
               ) : null
