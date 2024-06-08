@@ -2,7 +2,7 @@ import Script from "next/script";
 export default function Footer() {
   return (
     <div className=" bg-black text-zinc-50">
-      <div className=" divide-fuchsia-600 divide-y-2 divide-dashed">
+      <div>
         <div className="grid grid-cols-6  pt-16">
           <div>
             <ul className="mx-0">
