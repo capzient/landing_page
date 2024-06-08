@@ -8,7 +8,7 @@ const Careers = () => {
       <div className="pl-11 pt-32 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-9xl">
         <WithRedRect>Careers</WithRedRect>
       </div>
-      <div className="flex mb-4 flex-wrap">
+      <div className="flex mb-0 flex-wrap">
         {" "}
         <div className="w-full md:w-1/2 lg:w-1/2">
           {" "}
