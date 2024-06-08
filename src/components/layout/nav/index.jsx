@@ -70,7 +70,6 @@ const mobileLinkVars = {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [dropDownOpen, setDropDownOpen] = useState(false);
   const [extendElement, setExtendElement] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
   const toggleMenu = () => {
@@ -80,7 +79,7 @@ const Navbar = () => {
   return (
     <div className="nav w-full  fixed top-0 backdrop-0 z-50  text-[20px]">
       <div className="w-full h-full flex flex-row items-center relative z-[52] justify-between mx-auto">
-        <a href="#hero" className="h-auto w-auto flex flex-row items-center">
+        <a href="/" className="h-auto w-auto flex flex-row items-center">
           <Image
             src="/assets/images/capzient_logo_white.png"
             alt="logo"
@@ -96,7 +95,7 @@ const Navbar = () => {
                 key={idx}
                 id={idx}
                 title={aMenu.title}
-                setDropDownOpen={setDropDownOpen}
+                // setDropDownOpen={setDropDownOpen}
                 activeMenu={activeMenu}
                 setActiveMenu={setActiveMenu}
                 extend={
@@ -105,7 +104,6 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setActiveMenu(null);
                         setExtendElement(null);
-                        setDropDownOpen(false);
                       }}
                     >
                       {aMenu.extend ?? ""}
@@ -135,7 +133,7 @@ const Navbar = () => {
         </div>
       </div>
       <AnimatePresence>
-        {dropDownOpen && extendElement && (
+        {extendElement && (
           <motion.div
             variants={dropdownContainerVars}
             initial="initial"
@@ -143,7 +141,7 @@ const Navbar = () => {
             exit="exit"
             className="absolute w-full left-0 top-0 origin-top z-[1] bg-blue-700 text-white p-10"
           >
-            {dropDownOpen && extendElement && (
+            {extendElement && (
               <motion.div
                 variants={dropdownContentVars}
                 initial="initial"

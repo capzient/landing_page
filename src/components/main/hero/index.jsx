@@ -1,5 +1,5 @@
 import HeroContent from "../../sub/heroContent";
-// import { motion } from 'framer-motion'
+import React from "react";
 
 const Hero = () => {
   return (
