@@ -192,8 +192,11 @@ const Navbar = () => {
                       setActiveMenu(null);
                       setExtendElement(null);
                     }}
+                    onClick={() => {
+                      setExtendElement(null);
+                    }}
                   >
-                    {aMenu.extend ?? ""}
+                    {aMenu.extend ?? null}
                   </div>
                 </motion.div>
               ) : null
