@@ -1,8 +1,12 @@
 import Industry from "@/src/components/industry";
+import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
 
 const IndustryPage = () => {
     return (
-        <Industry />
+        <>
+            <ViewportTrigger />
+            <Industry />
+        </>
     )
 }
 

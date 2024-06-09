@@ -9,7 +9,7 @@ const ArrowButton = ({ titleClassName, hoverColor, arrowColor, arrowClassName, t
 
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="cursor-pointer flex items-center duration-300 hover:gap-[20px] gap-[15px]">
+            className="animation-element appear cursor-pointer flex items-center duration-300 hover:gap-[20px] gap-[15px]">
             <div
                 style={{
                     backgroundColor: hovered ? hoverColor : ''
