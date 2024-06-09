@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.0.18",
     "@next/font": "^14.2.3",
     "@studio-freight/react-lenis": "^0.0.47",
     "@svgr/webpack": "^8.1.0",
