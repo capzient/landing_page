@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/inter";
+
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -25,6 +27,14 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: sans-serif;
+}
+
+#custom-checkbox:checked + label {
+  background-color: #F51101; /* Change this to your desired checked color */
+}
+
+#custom-checkbox:checked + label svg {
+  display: block;
 }
 .link {
   cursor: pointer;
