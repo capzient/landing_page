@@ -4,7 +4,6 @@ import Navbar from "../components/layout/nav";
 import { Roboto, Poppins } from "next/font/google";
 import SmoothScroll from "../components/utils/smoothScroll/SmoothScroll";
 import { Providers } from "./provides";
-import ViewportTrigger from "../components/utils/viewPortTrigger";
 
 const roboto_init = Roboto({
   subsets: ["latin"],
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
         <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
           <div className="">
             <Navbar />
-            <ViewportTrigger />
             <SmoothScroll>{children}</SmoothScroll>
           </div>
         </body>

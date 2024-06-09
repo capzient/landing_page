@@ -1,4 +1,9 @@
 import Image from "next/image";
+import Card from "../atoms/card";
+import Container from "../atoms/container";
+import ArrowButton from "../atoms/arrowButton";
+import Link from "next/link";
+
 const Resources = () => {
     const footerText = [
         "CLOUD STORAGE",
@@ -27,7 +32,7 @@ const Resources = () => {
     return (
         <div className="flex flex-col gap-[50px] bg-black px-[130px] py-[100px] pt-[200px]">
             <div className="flex gap-[40px]">
-                <div className="grow w-[60%] bg-[#1A1A1A] rounded-lg">
+                <Card bodyClassName="grow w-[60%]">
                     <div className="flex gap-[15px] p-[80px]">
                         <div>
                             <div className="flex items-center flex-wrap gap-[20px]">
@@ -58,37 +63,36 @@ const Resources = () => {
                             renderFooterText()
                         }
                     </div>
-                </div>
-                <div className="rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
+                </Card>
+                <div className="animation-element appear rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
                     <div className="flex h-full p-[30px] items-end">
                         <div className="flex justify-between w-full items-center">
-                            <div className="flex items-center gap-[15px]">
-                                <Image
-                                    src={"/assets/images/industry/button.svg"}
-                                    width={40}
-                                    height={40}
-                                    alt=""
-                                />
-                                <div className="text-white">LOREM IPSUM</div>
-                            </div>
+                            <ArrowButton
+                                arrowColor="black"
+                                titleClassName="text-white"
+                                hoverColor="#ffffff81"
+                                arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
+                                title="LOREM IPSUM"
+                            />
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-[#1A1A1A] flex items-center justify-between p-[50px] flex text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="flex items-center justify-between p-[50px] flex text-white text-[50px] gap-[20px] w-full">
                 RESOURCES
                 <div className="cursor-pointer flex gap-[15px] items-center">
-                    <Image
-                        src={"/assets/images/industry/button_rounded.svg"}
-                        width={60}
-                        height={60}
-                        alt=""
+                    <ArrowButton
+                        arrowColor="normal"
+                        titleClassName="text-[#B3B3B2]  text-[20px]"
+                        hoverColor="#ffffff81"
+                        arrowClassName="duration-500 color-white  border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
+                        title="VIEW WORKS"
                     />
-                    <div className="text-[#B3B3B2] text-[20px]">VIEW WORKS</div>
+
                 </div>
-            </div>
-            <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col gap-[20px]">
+            </Card>
+            <Container className="p-[20px] flex flex-col gap-[20px]">
 
                 <div className="flex">
 
@@ -123,13 +127,13 @@ const Resources = () => {
                                             </div>
                                         </div>
                                         <div className="cursor-pointer flex gap-[15px] items-center">
-                                            <Image
-                                                src={"/assets/images/industry/button_rounded.svg"}
-                                                width={60}
-                                                height={60}
-                                                alt=""
+                                            <ArrowButton
+                                                arrowColor="normal"
+                                                titleClassName="text-[#B3B3B2]  text-[20px]"
+                                                hoverColor="#ffffff81"
+                                                arrowClassName="duration-500 color-white  border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
+                                                title="READ THE STORY"
                                             />
-                                            <div className="text-[#B3B3B2] text-[20px]">READ THE STORY</div>
                                         </div>
                                     </div>
                                     <div className="flex gap-[20px]">
@@ -154,9 +158,11 @@ const Resources = () => {
                     </div>
                 </div>
 
-            </div>
+            </Container>
             <div className="w-full">
-                <button className="bg-[#F51101] text-[14px] block text-black rounded-md px-[150px] m-auto py-[10px]">LOAD MORE</button>
+                <button className="animation-element appear bg-[#F51101] text-[14px] block text-black rounded-md px-[150px] m-auto py-[15px]">
+                    <Link href={'/resources/more'}>LOAD MORE</Link>
+                </button>
             </div>
         </div>
     );

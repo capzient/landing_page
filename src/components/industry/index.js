@@ -72,7 +72,7 @@ const Industry = () => {
                 arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
                 title="LOREM IPSUM"
               />
-              <button className="text-white rounded-lg white-blur-btn p-[10px] px-[15px]">
+              <button className="animation-element appear text-white rounded-lg white-blur-btn p-[10px] px-[15px]">
                 CLOUD COMPUTING
               </button>
             </div>
@@ -152,8 +152,8 @@ const Industry = () => {
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                   title="VIEW ALL"
-                  titleClassName="text-[#B3B3B2] text-[20px]"
-                ></ArrowButton>
+                  titleClassName='text-[#B3B3B2] text-[20px]'
+                />
               </div>
               <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
                 <ArrowButton
@@ -278,28 +278,28 @@ const Industry = () => {
         </Card>
         <div className="animation-element appear flex">
           <div className="w-[45%]">
-            <div className="flex items-center gap-[15px]">
+            <div className="animation-element appear flex items-center gap-[15px]">
               <div className="w-[10px] h-[10px] bg-red-500"></div>
               <div className="text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
             </div>
-            <button className="my-[30px] bg-[#F51101] rounded-lg p-[10px] px-[15px]">
+            <button className="animation-element appear my-[30px] bg-[#F51101] rounded-lg p-[10px] px-[15px]">
               <div className="text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
             </button>
             <div className="flex flex-col gap-[20px]">
-              <div className="text-[#B3B3B2] text-[25px]">
+              <div className="animation-element appear text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
-              <div className="text-[#B3B3B2] text-[25px]">
+              <div className="animation-element appear text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
-              <div className="text-[#B3B3B2] text-[25px]">
+              <div className="animation-element appear text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
-              <div className="text-[#B3B3B2] text-[25px]">
+              <div className="animation-element appear text-[#B3B3B2] text-[25px]">
                 LOREM IPSUM DOLOR SIT
               </div>
             </div>
