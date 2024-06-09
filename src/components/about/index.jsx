@@ -95,7 +95,7 @@ export default function About() {
         {/* card */}
 
         <div className="flex gap-[20px]">
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg px-[20px] pb-[30px]">
+          <div className="w-[55%] bg-gradient-50-50 rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
@@ -149,7 +149,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg px-[20px] pb-[30px]">
+          <div className="w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
@@ -203,7 +203,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg px-[20px] pb-[30px]">
+          <div className="w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
