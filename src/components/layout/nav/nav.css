@@ -1,6 +1,5 @@
-
-/* Contact Us Button Animation */
-.extend-item-before{
+/*  Us Button Animation */
+.extend-item-before {
   background-color: white;
   width: 30px;
   height: 1px;
@@ -13,7 +12,7 @@
   border-radius: 20px;
   transition: 0.3s ease;
 }
-.nav{
+.nav {
   background-color: #11111181;
   backdrop-filter: blur(15px);
 }

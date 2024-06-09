@@ -30,11 +30,11 @@ const Resources = () => {
                 <div className="grow w-[60%] bg-[#1A1A1A] rounded-lg">
                     <div className="flex gap-[15px] p-[80px]">
                         <div>
-                            <div className="flex items-center gap-[20px]">
+                            <div className="flex items-center flex-wrap gap-[20px]">
                                 <div className="text-[50px] font-bold text-white">
                                     CAPZIENT RESOURCES
                                 </div>
-                                <div className="cursor-pointer flex w-[200px] gap-[20px] items-center ">
+                                <div className="cursor-pointer flex  gap-[20px] items-center ">
                                     <div className="w-[40px] h-[40px]">
                                         <Image
                                             src={"/assets/images/industry/shape.svg"}
