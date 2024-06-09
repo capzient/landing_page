@@ -1,8 +1,12 @@
 import Resources from "@/src/components/resources";
+import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
 
 const ResourcePage = () => {
     return (
-        <Resources />
+        <>
+            <ViewportTrigger />
+            <Resources />
+        </>
     )
 }
 

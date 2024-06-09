@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { AnimatePresence, delay, motion } from "framer-motion";
 import { IoMdReturnRight } from "react-icons/io";
+import Link from "next/link";
 
 import MenuItem from "./menuItem";
 import menus from "./menus";
@@ -154,7 +155,9 @@ const Navbar = () => {
           <button className="button text-white">
             <div className="flex gap-[5px] items-center text-white">
               <IoMdReturnRight />
-              Contact Us
+              <Link href='/contact'>
+                Contact Us
+              </Link>
             </div>
           </button>
         </div>
