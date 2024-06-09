@@ -1,4 +1,10 @@
 import Image from "next/image";
+
+
+import ArrowButton from "../atoms/arrowButton";
+import Card from "../atoms/card";
+import Container from "../atoms/container";
+
 const Industry = () => {
   const footerText = [
     "CLOUD STORAGE",
@@ -27,7 +33,7 @@ const Industry = () => {
   return (
     <div className="flex flex-col gap-[50px] bg-black px-[130px] py-[100px] pt-[200px]">
       <div className="flex gap-[40px]">
-        <div className="grow w-[60%] bg-[#1A1A1A] rounded-lg">
+        <Card bodyClassName={'grow w-[60%]'}>
           <div className="flex gap-[15px] p-[80px]">
             <div>
               <div className="flex items-start flex-wrap ">
@@ -58,19 +64,17 @@ const Industry = () => {
               renderFooterText()
             }
           </div>
-        </div>
-        <div className="rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
+        </Card>
+        <div className="animation-element appear rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
           <div className="flex h-full p-[30px] items-end">
-            <div className="flex justify-between w-full items-center">
-              <div className="flex items-center gap-[15px]">
-                <Image
-                  src={"/assets/images/industry/button.svg"}
-                  width={40}
-                  height={40}
-                  alt=""
-                />
-                <div className="text-white">LOREM IPSUM</div>
-              </div>
+            <div className="flex  justify-between w-full items-center">
+              <ArrowButton
+                arrowColor="black"
+                titleClassName="text-white"
+                hoverColor="#ffffff81"
+                arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
+                title="LOREM IPSUM"
+              />
               <button className="text-white rounded-lg white-blur-btn p-[10px] px-[15px]">
                 CLOUD COMPUTING
               </button>
@@ -78,27 +82,27 @@ const Industry = () => {
           </div>
         </div>
       </div>
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex gap-[20px]">
-        <div className="bg-[#1A1A1A] p-[30px] flex flex-col gap-[20px] w-full text-center rounded-lg">
+      <Container containerClassName={'flex gap-[20px]'}>
+        <Card bodyClassName={'p-[30px] flex flex-col gap-[20px] w-full text-center'}>
           <div className="text-[#B3B3B2] text-[20px]">CLIENTS</div>
           <div className="text-red-500 text-[60px]">200+</div>
-        </div>
-        <div className="bg-[#1A1A1A] p-[30px] flex flex-col gap-[20px] w-full text-center rounded-lg">
+        </Card>
+        <Card bodyClassName={'p-[30px] flex flex-col gap-[20px] w-full text-center'}>
           <div className="text-[#B3B3B2] text-[20px]">PROJECTS</div>
           <div className="text-red-500 text-[60px]">280</div>
-        </div>
-        <div className="bg-[#1A1A1A] p-[30px] flex flex-col gap-[20px] w-full text-center rounded-lg">
+        </Card>
+        <Card bodyClassName={'p-[30px] flex flex-col gap-[20px] w-full text-center'}>
           <div className="text-[#B3B3B2] text-[20px]">HAPPY CLIENTS</div>
           <div className="text-red-500 text-[60px]">100%</div>
-        </div>
-      </div>
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col gap-[20px]">
-        <div className="bg-[#1A1A1A] p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full rounded-lg">
+        </Card>
+      </Container>
+      <Container containerClassName={'flex flex-col gap-[20px]'}>
+        <Card bodyClassName={'p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full'}>
           OUR SERVICES
-        </div>
+        </Card>
         <div className="flex">
           <div className="pr-[10px] w-[50%]">
-            <div className="bg-[#1A1A1A] p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName={'p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full'}>
               <div className="flex flex-col gap-[20px]">
                 <div className="flex items-center gap-[15px]">
                   <Image
@@ -122,62 +126,63 @@ const Industry = () => {
                   DATA IS THE DRIVER AND AI IS THE DIFFERENTIATOR
                 </div>
               </div>
-            </div>
+            </Card>
+
           </div>
-          <div className="pl-[10px] w-[50%]">
-            <div className=" bg-[#1A1A1A] p-[40px] text-white text-[50px] gap-[20px] w-full rounded-lg">
+          <div className="h-full  h-grow pl-[10px] w-[50%]">
+            <Card bodyClassName={'grow p-[40px] text-white text-[50px] gap-[20px] w-full'}>
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
-                <div className="cursor-pointer flex gap-[15px] items-center">
-                  <Image
-                    src={"/assets/images/industry/button_rounded.svg"}
-                    width={60}
-                    height={60}
-                    alt=""
-                  />
-                  <div className="text-[#B3B3B2] text-[20px]">VIEW ALL</div>
-                </div>
+                <ArrowButton
+                  arrowColor="normal"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
+                  title="VIEW ALL"
+                  titleClassName='text-[#B3B3B2] text-[20px]'
+                >
+                </ArrowButton>
+
               </div>
-              <div className="w-full pt-[20px]">
-                <Image
-                  src={"/assets/images/industry/image_1.svg"}
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                  alt=""
+              <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
+                <ArrowButton
+                  arrowColor="black"
+                  titleClassName="text-white text-[20px]"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
+                  title="KNOW MORE"
                 />
               </div>
-            </div>
+            </Card>
           </div>
         </div>
         <div className="flex">
           <div className="pr-[10px] w-[50%]">
-            <div className=" bg-[#1A1A1A] p-[40px] text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="grow p-[40px] text-white text-[50px] gap-[20px] w-full">
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
-                <div className="cursor-pointer flex gap-[15px] items-center">
-                  <Image
-                    src={"/assets/images/industry/button_rounded.svg"}
-                    width={60}
-                    height={60}
-                    alt=""
-                  />
-                  <div className="text-[#B3B3B2] text-[20px]">VIEW ALL</div>
-                </div>
+                <ArrowButton
+                  arrowColor="normal"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
+                  title="VIEW ALL"
+                  titleClassName='text-[#B3B3B2] text-[20px]'
+                >
+                </ArrowButton>
+
               </div>
-              <div className="w-full pt-[20px]">
-                <Image
-                  src={"/assets/images/industry/image_1.svg"}
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                  alt=""
+              <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
+                <ArrowButton
+                  arrowColor="black"
+                  titleClassName="text-white text-[20px]"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
+                  title="KNOW MORE"
                 />
               </div>
-            </div>
+            </Card>
           </div>
           <div className="pl-[10px] w-[50%]">
-            <div className="bg-[#1A1A1A] p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full">
               <div className="flex flex-col gap-[20px]">
                 <div className="flex items-center gap-[15px]">
                   <Image
@@ -201,12 +206,12 @@ const Industry = () => {
                   DATA IS THE DRIVER AND AI IS THE DIFFERENTIATOR
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
         <div className="flex">
           <div className="pr-[10px] w-[50%]">
-            <div className="bg-[#1A1A1A] p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full">
               <div className="flex flex-col gap-[20px]">
                 <div className="flex items-center gap-[15px]">
                   <Image
@@ -230,40 +235,40 @@ const Industry = () => {
                   Stabilizing, Optimizing and Elevating IT Performance
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
           <div className="pl-[10px] w-[50%]">
-            <div className=" bg-[#1A1A1A] p-[40px] text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="p-[80px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full">
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
-                <div className="cursor-pointer flex gap-[15px] items-center">
-                  <Image
-                    src={"/assets/images/industry/button_rounded.svg"}
-                    width={60}
-                    height={60}
-                    alt=""
-                  />
-                  <div className="text-[#B3B3B2] text-[20px]">VIEW ALL</div>
-                </div>
+                <ArrowButton
+                  arrowColor="normal"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
+                  title="VIEW ALL"
+                  titleClassName='text-[#B3B3B2] text-[20px]'
+                >
+                </ArrowButton>
+
               </div>
-              <div className="w-full pt-[20px]">
-                <Image
-                  src={"/assets/images/industry/image_1.svg"}
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                  alt=""
+              <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
+                <ArrowButton
+                  arrowColor="black"
+                  titleClassName="text-white text-[20px]"
+                  hoverColor="#ffffff81"
+                  arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
+                  title="KNOW MORE"
                 />
               </div>
-            </div>
+            </Card>
           </div>
         </div>
-      </div>
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col gap-[20px]">
-        <div className="bg-[#1A1A1A] p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full rounded-lg">
+      </Container >
+      <Container containerClassName={'flex flex-col gap-[20px]'}>
+        <Card bodyClassName="p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full">
           SEGMENT WE SUPPORT
-        </div>
-        <div className="flex">
+        </Card>
+        <div className="animation-element appear flex">
           <div className="w-[45%]">
             <div className="flex items-center gap-[15px]">
               <div className="w-[10px] h-[10px] bg-red-500"></div>
@@ -291,7 +296,7 @@ const Industry = () => {
               </div>
             </div>
           </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[60px]">
+          <Card bodyClassName="w-[55%] p-[60px]">
             <div className="flex justify-between border-[#262626] border-b-[1px] pb-[20px]">
               <div className="text-[#F9EFEC] text-[20px]">
                 How long does it take to complete a web development project?
@@ -312,15 +317,16 @@ const Industry = () => {
                 alt=""
               />
             </div>
-          </div>
+          </Card>
         </div>
-      </div>
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col gap-[20px]">
-        <div className="bg-[#1A1A1A] p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full rounded-lg">
+      </Container>
+
+      <Container containerClassName={'flex flex-col gap-[20px]'}>
+        <Card bodyClassName="p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full">
           WHAT`S TRENDING WITH DATA AND AI?
-        </div>
+        </Card>
         <div className="flex gap-[20px]">
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
+          <Card bodyClassName="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
             <Image
               src={"/assets/images/industry/icon_2.svg"}
               width={60}
@@ -333,8 +339,8 @@ const Industry = () => {
             <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
               A case study of Boeing 787 Dreamliner
             </div>
-          </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
+          </Card>
+          <Card bodyClassName="w-[55%] p-[40px]">
             <Image
               src={"/assets/images/industry/icon_3.svg"}
               width={60}
@@ -347,8 +353,8 @@ const Industry = () => {
             <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
               A case study of Coca-Cola&apos;s personalized ad campaigns
             </div>
-          </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
+          </Card>
+          <Card bodyClassName="w-[55%] p-[40px]">
             <Image
               src={"/assets/images/industry/icon_4.svg"}
               width={60}
@@ -361,10 +367,10 @@ const Industry = () => {
             <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
               Improving patient outcomes with transparent predictive models
             </div>
-          </div>
+          </Card>
         </div>
-      </div>
-    </div>
+      </Container>
+    </div >
   );
 };
 
