@@ -30,15 +30,15 @@ export default function ReadMore() {
         <div className="rounded-lg w-[40%] h-grow bg-[#1A1A1A]">
           <div className="flex flex-col p-8 gap-[40px] text-white">
             <div className="bg-[#1F1F1F] flex justify-between rounded-lg px-4 py-6 ">
-              <p>AUTHOR</p>
+              <p className="text-gray-400">AUTHOR</p>
               <p>LOREM IPSUM</p>
             </div>
             <div className="bg-[#1F1F1F] flex justify-between rounded-lg px-4 py-6 ">
-              <p>Published Date</p>
+              <p className="text-gray-400">Published Date</p>
               <p>25TH OCTOBER 2023</p>
             </div>
             <div className="bg-[#1F1F1F] flex justify-between rounded-lg px-4 py-6 ">
-              <p>Category</p>
+              <p className="text-gray-400">Category</p>
               <p>LOREM</p>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function ReadMore() {
                 Crafting visual narratives that captivate and inspire, weaving
                 creativity into every chapter of the design journey.
               </div>
-              <div className="bg-[#1F1F1F] flex flex-row items-center rounded-xl p-[15px] mt-[10px]">
+              <div className="bg-[#1F1F1F] flex flex-row items-center rounded-xl p-[15px] mt-[20px]">
                 <Image
                   src={"/assets/images/readMore/twitter.svg"}
                   width={32}
@@ -206,21 +206,25 @@ export default function ReadMore() {
           RELATED RESOURCES
         </div>
         <div className="flex gap-[20px]">
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
-            <Image
-              src={"/assets/images/readMore/first.svg"}
-              width={300}
-              height={100}
-              alt=""
-            />
-            <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
-              lOREM EPSUM DOLOR SIT AMET
+          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[25px]">
+            <div className="w-full ">
+              <Image
+                src={"/assets/images/readMore/first.svg"}
+                width={450}
+                height={150}
+                alt=""
+              />
             </div>
-            <div className="text-[#B3B3B2] text-[20px] pt-[10px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              porro hic laboriosam itaque mollitia. Sunt ea ducimus repellendus,
-              itaque aut soluta voluptate porro id voluptatibus temporibus
-              tempora quisquam numquam. Reiciendis!
+            <div className="px-[10px]">
+              <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
+                lOREM EPSUM DOLOR SIT AMET
+              </div>
+              <div className="text-[#B3B3B2] text-[20px] pt-[10px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                porro hic laboriosam itaque mollitia. Sunt ea ducimus
+                repellendus, itaque aut soluta voluptate porro id voluptatibus
+                temporibus tempora quisquam numquam. Reiciendis!
+              </div>
             </div>
             <div className="flex pt-4 items-center ">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
@@ -235,21 +239,26 @@ export default function ReadMore() {
               <div className="pl-3 text-white">READ FULL</div>
             </div>
           </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[40px]">
-            <Image
-              src={"/assets/images/readMore/second.svg"}
-              width={300}
-              height={100}
-              alt=""
-            />
-            <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
-              lOREM EPSUM DOLOR SIT AMET
+          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[25px]">
+            <div className="w-full">
+              <Image
+                src={"/assets/images/readMore/second.svg"}
+                width={450}
+                height={150}
+                alt=""
+              />
             </div>
-            <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              porro hic laboriosam itaque mollitia. Sunt ea ducimus repellendus,
-              itaque aut soluta voluptate porro id voluptatibus temporibus
-              tempora quisquam numquam. Reiciendis!
+            <div className="px-[10px]">
+              {" "}
+              <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
+                lOREM EPSUM DOLOR SIT AMET
+              </div>
+              <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                porro hic laboriosam itaque mollitia. Sunt ea ducimus
+                repellendus, itaque aut soluta voluptate porro id voluptatibus
+                temporibus tempora quisquam numquam. Reiciendis!
+              </div>
             </div>
             <div className="flex pt-4 items-center ">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
@@ -264,21 +273,26 @@ export default function ReadMore() {
               <div className="pl-3 text-white">READ FULL</div>
             </div>
           </div>
-          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[30px]">
-            <Image
-              src={"/assets/images/readMore/third.svg"}
-              width={300}
-              height={400}
-              alt=""
-            />
-            <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
-              lOREM EPSUM DOLOR SIT AMET
+          <div className="w-[55%] bg-[#1A1A1A] rounded-lg p-[25px]">
+            <div className="w-full">
+              <Image
+                src={"/assets/images/readMore/third.svg"}
+                width={450}
+                height={150}
+                alt=""
+              />
             </div>
-            <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              porro hic laboriosam itaque mollitia. Sunt ea ducimus repellendus,
-              itaque aut soluta voluptate porro id voluptatibus temporibus
-              tempora quisquam numquam. Reiciendis!
+            <div className="px-[10px]">
+              {" "}
+              <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">
+                lOREM EPSUM DOLOR SIT AMET
+              </div>
+              <div className="text-[#B3B3B2] text-[20px] pt-[20px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                porro hic laboriosam itaque mollitia. Sunt ea ducimus
+                repellendus, itaque aut soluta voluptate porro id voluptatibus
+                temporibus tempora quisquam numquam. Reiciendis!
+              </div>
             </div>
             <div className="flex pt-4 items-center ">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
