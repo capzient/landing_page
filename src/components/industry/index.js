@@ -79,7 +79,7 @@ const Industry = () => {
           </div>
         </div>
       </div>
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex gap-[20px]">
+      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col w-[650px] gap-[20px]">
         <div className="bg-[#1A1A1A] p-[30px] flex flex-col gap-[20px] w-full text-center rounded-lg">
           <div className="text-[#B3B3B2] text-[20px]">CLIENTS</div>
           <div className="text-red-500 text-[60px]">200+</div>
