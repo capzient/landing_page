@@ -162,7 +162,7 @@ const Resources = () => {
             <div className="w-full">
                 <Link href={'/resources/more'}>
                     <button className="animation-element appear bg-[#F51101] text-[14px] block text-black rounded-md px-[150px] m-auto py-[15px]">
-                        LOAD more
+                        LOAD MORE
                     </button>
                 </Link>
             </div>

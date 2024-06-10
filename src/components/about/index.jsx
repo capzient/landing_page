@@ -1,20 +1,23 @@
 import Image from "next/image";
+import Card from "../atoms/card";
+import Container from "../atoms/container";
 export default function About() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] flex flex-col">
-      <div className="flex items-end  relative justify-">
+      <div className="animation-element appear flex items-end  relative justify-">
         <Image
           src={"/assets/images/about/subContainer.svg"}
           width={1500}
           height={1000}
           alt=""
           className=""
+          layout="responsive"
         />
         <div className="text-white text-[80px] absolute p-[30px] w-[750px]">
           Lorem ipsum dolor sit amet{" "}
         </div>
       </div>
-      <div className="  p-[40px] flex flex-col justify-end bg-[#1A1A1A] rounded-lg">
+      <Card bodyClassName="p-[40px] flex flex-col justify-end">
         <div className="text-[30px] text-[#F9EFEC]">
           THE ESSENCE OF MINIMALISM IN DESIGN.
         </div>
@@ -42,19 +45,18 @@ export default function About() {
           maiores dolorem quasi quos, et
           repudianda//eslint-disable-next-lineimport/no-extraneous-dependencies\n//import
         </div>
-      </div>
+      </Card>
       <div className="flex flex-row justify-end ">
-        {" "}
-        <div className="flex justify-end rounded-lg flex-col bg-[#1A1A1A] w-[40%] items-center">
+        <Card className="flex justify-end  flex-col w-[40%] items-center">
           <div className="flex flex-row w-full rounded-xl justify-end bg-[#1A1A1A] items-center">
             <div className="flex flex-col px-[15px] rounded-xl w-1/2">
-              <div className="bg-[#1F1F1F] m-4 px-[10px] py-[8px] flex flex-col gap-[5px] w-full text-center rounded-xl">
+              <div className="animation-element appear bg-[#1F1F1F] m-4 px-[10px] py-[8px] flex flex-col gap-[5px] w-full text-center rounded-xl">
                 <div className="text-[#B3B3B2] text-[13px]">CLIENTS</div>
                 <div className="text-[#F51101] text-[45px] font-semibold">
                   200+
                 </div>
               </div>
-              <div className="bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
+              <div className="animation-element appear bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
                 <div className="text-[#B3B3B2] text-[13px]">PROJECTS</div>
                 <div className="text-[#F51102] text-[45px] font-semibold">
                   280+
@@ -62,13 +64,13 @@ export default function About() {
               </div>
             </div>
             <div className="bg-[#1A1A1A] flex flex-col px-[20px] mx-[18px] rounded-xl w-1/2">
-              <div className="bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
+              <div className="animation-element appear bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
                 <div className="text-[#B3B3B2] text-[13px]">HAPPY CLIENTS</div>
                 <div className="text-[#F51101] text-[45px] font-semibold">
                   100%
                 </div>
               </div>
-              <div className="bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
+              <div className="animation-element appear bg-[#1F1F1F] m-4 p-[10px] flex flex-col gap-[5px] w-full text-center rounded-xl">
                 <div className="text-[#B3B3B2] text-[13px]">FOLLOWER</div>
                 <div className="text-[#F51101] text-[45px] font-semibold">
                   420K
@@ -76,7 +78,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex py-3 items-center justify-center">
+          <div className="animation-element appear flex py-3 items-center justify-center">
             <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-6">
               <Image
                 src={"/assets/images/about/icon.svg"}
@@ -88,14 +90,13 @@ export default function About() {
             </div>
             <div className="pl-3 text-[#B3B3B2]">KNOW MORE</div>
           </div>
-        </div>
+        </Card>
       </div>
 
-      <div className="p-[20px] rounded-lg border-[#1F1F1F] border-[2px] flex flex-col gap-[20px]">
-        {/* card */}
+      <Container containerClassName="p-[20px] flex flex-col gap-[20px]">
 
         <div className="flex gap-[20px]">
-          <div className="w-[55%] bg-gradient-50-50 rounded-lg px-[20px] pb-[30px]">
+          <div className="animation-element appear w-[55%] bg-gradient-50-50 rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
@@ -110,11 +111,12 @@ export default function About() {
                 src={"/assets/images/about/person1.svg"}
                 width={450}
                 height={150}
+                layout="responsive"
                 alt=""
               />
             </div>
 
-            <div className="flex flex-row pt-4 space-x-3 items-center justify-center ">
+            <div className="animation-element appear flex flex-row pt-4 space-x-3 items-center justify-center ">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
                 <Image
                   src={"/assets/images/about/facebook.svg"}
@@ -149,7 +151,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
+          <div className="animation-element appear w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
@@ -164,11 +166,12 @@ export default function About() {
                 src={"/assets/images/about/person2.svg"}
                 width={450}
                 height={150}
+                layout="responsive"
                 alt=""
               />
             </div>
 
-            <div className="flex pt-4 items-center justify-center space-x-3">
+            <div className="animation-element appear flex pt-4 items-center justify-center space-x-3">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
                 <Image
                   src={"/assets/images/about/facebook.svg"}
@@ -203,7 +206,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
+          <div className="animation-element appear w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
             <div className=" flex flex-col items-center justify-center">
               {" "}
               <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">
@@ -218,11 +221,12 @@ export default function About() {
                 src={"/assets/images/about/person3.svg"}
                 width={450}
                 height={150}
+                layout="responsive"
                 alt=""
               />
             </div>
 
-            <div className="flex pt-4 items-center justify-center space-x-3">
+            <div className="animation-element appear flex pt-4 items-center justify-center space-x-3">
               <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
                 <Image
                   src={"/assets/images/about/facebook.svg"}
@@ -259,11 +263,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-[#1A1A1A] flex flex-row justify-between items-center">
+        <Card bodyClassName="flex flex-row justify-between items-center">
           <div className="p-[40px] flex flex-col text-white text-[48px] gap-[20px] w-full rounded-lg">
             MEET THE BRILLIANT MINDS BEHIND CAPZIENT
           </div>
-          <div className="flex items-center px-4">
+          <div className="animation-element appear flex items-center px-4">
             <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-6">
               <Image
                 src={"/assets/images/about/arrowup.svg"}
@@ -277,8 +281,8 @@ export default function About() {
               ALL MEMBERS
             </div>
           </div>
-        </div>
-      </div>
+        </Card>
+      </Container>
     </div>
   );
 }

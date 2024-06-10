@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Card from "../atoms/card";
 export default function contact() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] pb-[600px] flex flex-col font-sans">
-      <div className="flex items-end  relative justify-">
+      <div className="animation-element appear flex items-end  relative justify-">
         <Image
           src={"/assets/images/contact/subContainer.svg"}
           width={1500}
           height={1000}
+          layout="responsive"
           alt=""
           className=""
         />
@@ -14,9 +16,9 @@ export default function contact() {
           LET&apos;S <br /> CONNECT
         </div>
       </div>
-      <div className="p-[40px] flex flex-col justify-end bg-[#1A1A1A] rounded-lg">
+      <Card bodyClassName="animation-element appear p-[40px] flex flex-col justify-end">
         <div className="grid grid-cols-2 gap-x-16 gap-y-16 p-16 ">
-          <div className="flex flex-col gap-4">
+          <div className="animation-element appear flex flex-col gap-4">
             <span className=" text-base text-[#F3DFD8]  ">FIRST NAME</span>
             <input
               className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
@@ -26,7 +28,7 @@ export default function contact() {
               required
             />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="animation-element appear flex flex-col gap-4">
             <span className=" text-base text-[#F3DFD8] ">LAST NAME</span>
             <input
               className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
@@ -36,7 +38,7 @@ export default function contact() {
               required
             />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="animation-element appear flex flex-col gap-4">
             <span className=" text-base text-[#F3DFD8] ">JOB TITLE</span>
             <input
               className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
@@ -46,7 +48,7 @@ export default function contact() {
               required
             />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="animation-element appear flex flex-col gap-4">
             <span className=" text-base text-[#F3DFD8] ">COMPANY NAME</span>
             <input
               className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
@@ -56,7 +58,7 @@ export default function contact() {
               required
             />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="animation-element appear flex flex-col gap-4">
             <span className=" text-base text-[#F3DFD8] ">EMAIL</span>
             <input
               className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
@@ -66,7 +68,7 @@ export default function contact() {
               required
             />
           </div>
-          <div>
+          <div className="animation-element appear">
             <span className=" text-base mb-4 text-[#F3DFD8] ">
               PHONE NUMBER
             </span>
@@ -89,9 +91,9 @@ export default function contact() {
                   className="pt-2"
                 />
               </span>
-              <span>
+              <span className="w-full">
                 <input
-                  className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
+                  className="text-base w-full border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4"
                   type="tel"
                   placeholder="ENTER PHONE NUMBER"
                   name="phonenumber"
@@ -100,7 +102,7 @@ export default function contact() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-4 col-span-2">
+          <div className="animation-element appear flex flex-col gap-4 col-span-2">
             <span className=" text-base text-[#F3DFD8] ">MESSAGE</span>
             <input
               className="border-[1px] border-gray-700 rounded-xl bg-[#1F1F1F] pl-[20px] pt-[20px] pb-[100px]  w-full"
@@ -112,7 +114,7 @@ export default function contact() {
           </div>
         </div>
         <div className=" flex flex-row justify-between items-center px-16 mx-8 mt-2">
-          <div className="flex flex-row items-center">
+          <div className="animation-element appear flex flex-row items-center">
             <input type="checkbox" id="custom-checkbox" className="hidden" />
             <label
               htmlFor="custom-checkbox"
@@ -134,7 +136,7 @@ export default function contact() {
               I agree with use of term and Privacy Policy
             </span>
           </div>
-          <div className=" ">
+          <div className="animation-element appear">
             <button className="bg-[#F51101] rounded-2xl px-6 py-4 flex flex-row items-center space-x-5">
               SEND YOUR MESSAGE
               <Image
@@ -147,7 +149,7 @@ export default function contact() {
             </button>
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   );
 }
