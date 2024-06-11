@@ -1,5 +1,4 @@
-import Contact from "@/src/components/contact";
-import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
+import Contact from '@/src/components/contact';
 export default function contact() {
   return (
     <div>

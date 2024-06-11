@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "wayou.vscode-todo-highlight",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight"
+  ]
+}
+
+// Or run this in your terminal: code --install-extension dbaeumer.vscode-eslint esbenp.prettier-vscode dsznajder.es7-react-js-snippets wayou.vscode-todo-highlight streetsidesoftware.code-spell-checker naumovs.color-highlight

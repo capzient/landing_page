@@ -1,11 +1,10 @@
-import Image from "next/image";
-import Card from "../atoms/card";
+import Image from 'next/image';
 export default function contact() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] pb-[600px] flex flex-col font-sans">
       <div className="animation-element appear flex items-end  relative justify-">
         <Image
-          src={"/assets/images/contact/subContainer.svg"}
+          src={'/assets/images/contact/subContainer.svg'}
           width={1500}
           height={1000}
           layout="responsive"
@@ -69,27 +68,13 @@ export default function contact() {
             />
           </div>
           <div className="animation-element appear">
-            <span className=" text-base mb-4 text-[#F3DFD8] ">
-              PHONE NUMBER
-            </span>
+            <span className=" text-base mb-4 text-[#F3DFD8] ">PHONE NUMBER</span>
             <div className="flex flex-row gap-4 my-4 items-center">
               <div className="w-[40px] h-[40px]">
-                <Image
-                  src={"/assets/images/contact/flag.svg"}
-                  width={40}
-                  height={40}
-                  alt=""
-                  className="pt"
-                />
+                <Image src={'/assets/images/contact/flag.svg'} width={40} height={40} alt="" className="pt" />
               </div>
               <span className=" ">
-                <Image
-                  src={"/assets/images/contact/down.svg"}
-                  width={25}
-                  height={25}
-                  alt=""
-                  className="pt-2"
-                />
+                <Image src={'/assets/images/contact/down.svg'} width={25} height={25} alt="" className="pt-2" />
               </span>
               <span className="w-full">
                 <input
@@ -120,11 +105,7 @@ export default function contact() {
               htmlFor="custom-checkbox"
               className="h-6 w-6 bg-[#333333] rounded-md cursor-pointer flex items-center justify-center"
             >
-              <svg
-                className="hidden w-4 h-4 text-white"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
+              <svg className="hidden w-4 h-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fillRule="evenodd"
                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -132,20 +113,12 @@ export default function contact() {
                 />
               </svg>
             </label>
-            <span className="text-base text-gray-400 pl-4  ">
-              I agree with use of term and Privacy Policy
-            </span>
+            <span className="text-base text-gray-400 pl-4  ">I agree with use of term and Privacy Policy</span>
           </div>
           <div className="animation-element appear">
             <button className="bg-[#F51101] rounded-2xl px-6 py-4 flex flex-row items-center space-x-5">
               SEND YOUR MESSAGE
-              <Image
-                src={"/assets/images/contact/Icon.svg"}
-                width={23}
-                height={23}
-                alt=""
-                className="ml-2"
-              />
+              <Image src={'/assets/images/contact/Icon.svg'} width={23} height={23} alt="" className="ml-2" />
             </button>
           </div>
         </div>

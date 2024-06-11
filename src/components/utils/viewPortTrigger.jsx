@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect } from 'react';
 import $ from 'jquery'; // Import jQuery
+import React, { useEffect } from 'react';
 
 function ViewportTrigger() {
     useEffect(() => {

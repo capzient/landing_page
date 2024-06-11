@@ -1,5 +1,5 @@
-import About from "@/src/components/about";
-import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
+import About from '@/src/components/about';
+
 export default function aboutPage() {
   return (
     <>

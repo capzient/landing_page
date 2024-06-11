@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Card from "../../atoms/card";
-import Container from "../../atoms/container";
-import ArrowButton from "../../atoms/arrowButton";
+
+import ArrowButton from "@/components/atoms/arrowButton";
+import Card from "@/components/atoms/card";
+import Container from "@/components/atoms/container";
 
 export default function More() {
   return (
