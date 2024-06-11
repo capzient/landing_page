@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/inter";
+
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -25,6 +27,14 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: sans-serif;
+}
+
+#custom-checkbox:checked + label {
+  background-color: #F51101; /* Change this to your desired checked color */
+}
+
+#custom-checkbox:checked + label svg {
+  display: block;
 }
 .link {
   cursor: pointer;
@@ -86,4 +96,19 @@ body {
 .white-blur-btn{
   background-color: #ffffff31;
   backdrop-filter: blur(5px);
+}
+.appear.in-view {  
+  animation: fadeAnimation;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+@keyframes fadeAnimation {
+  from { opacity: 0; transform: translate3d(0,100px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.appear{  
+  transform: translate3d(0,100px, 0);
+  opacity: 0;
 }

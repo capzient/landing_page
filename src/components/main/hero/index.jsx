@@ -1,8 +1,8 @@
-import HeroContent from "../../sub/heroContent";
-// import { motion } from 'framer-motion'
+import React from "react";
 
-const Hero = () => {
-  return (
+import HeroContent from "@/components/sub/HeroContent";
+
+const Hero = () => (
     <div className="flex flex-col h-full w-full">
       <video
         autoPlay
@@ -15,6 +15,4 @@ const Hero = () => {
       <HeroContent />
     </div>
   );
-
-};
 export default Hero;

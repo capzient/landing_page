@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
 import { AnimatePresence, delay, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
 import { IoMdReturnRight } from "react-icons/io";
 
 import MenuItem from "./menuItem";
@@ -24,9 +25,9 @@ const dropdownContainerVars = {
   exit: {
     scaleY: 0,
     transition: {
-      delay: 0.5,
-      duration: 0.3,
-      ease: [0.22, 1, 0.36, 1],
+      // delay: 0.5,
+      // duration: 0.3,
+      // ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -67,11 +68,30 @@ const mobileLinkVars = {
     },
   },
 };
+const extendItemBars = {
+  initial: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  open: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [extendElement, setExtendElement] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isOnMainDiv, setIsOnMainDiv] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -88,39 +108,56 @@ const Navbar = () => {
             className="cursor-pointer"
           />
         </a>
-        <div className="h-full flex-row items-center justify-between hidden md:flex">
-          <div className="flex items-center justify-between w-full h-auto  px-[20px] py-[10px] gap-x-7 text-white tracking-wider">
-            {menus.map((aMenu, idx) => (
-              <MenuItem
-                key={idx}
-                id={idx}
-                title={aMenu.title}
-                // setDropDownOpen={setDropDownOpen}
-                activeMenu={activeMenu}
-                setActiveMenu={setActiveMenu}
-                extend={
-                  aMenu.extend && (
-                    <div
-                      onMouseLeave={() => {
-                        setActiveMenu(null);
-                        setExtendElement(null);
-                      }}
-                    >
-                      {aMenu.extend ?? ""}
-                    </div>
-                  )
-                }
-                setExtendElement={setExtendElement}
-              />
-            ))}
+        <div className=" p-[10px] pb-[0px] w-full h-full flex justify-center"
+          onMouseMove={() => {
+            if (!isOnMainDiv) {
+              setExtendElement(null);
+            }
+          }}
+        >
+          <div className="h-full flex-row items-center justify-between hidden md:flex"
+            onMouseEnter={() => {
+              setIsOnMainDiv(true);
+            }}
+            onMouseLeave={() => {
+              setIsOnMainDiv(false);
+            }}>
+            <div className="flex items-center justify-between w-full h-auto  px-[20px] py-[10px] gap-x-7 text-white tracking-wider">
+              {menus.map((aMenu, idx) => (
+                <MenuItem
+                  key={idx}
+                  id={idx}
+                  title={aMenu.title}
+                  // setDropDownOpen={setDropDownOpen}
+                  activeMenu={activeMenu}
+                  setActiveMenu={setActiveMenu}
+                  extend={
+                    aMenu.extend && (
+                      <div
+                        onMouseLeave={() => {
+                          setActiveMenu(null);
+                          setExtendElement(null);
+                        }}
+                      >
+                        {aMenu.extend ?? ""}
+                      </div>
+                    )
+                  }
+                  setExtendElement={setExtendElement}
+                />
+              ))}
+            </div>
           </div>
         </div>
+
 
         <div className="hidden md:block">
           <button className="button text-white">
             <div className="flex gap-[5px] items-center text-white">
               <IoMdReturnRight />
-              Contact Us
+              <Link href='/contact' className="link link--metis">
+                Contact Us
+              </Link>
             </div>
           </button>
         </div>
@@ -141,16 +178,32 @@ const Navbar = () => {
             exit="exit"
             className="absolute w-full left-0 top-0 origin-top z-[1] bg-blue-700 text-white p-10"
           >
-            {extendElement && (
-              <motion.div
-                variants={dropdownContentVars}
-                initial="initial"
-                animate="open"
-                exit="initial"
-              >
-                {extendElement}
-              </motion.div>
-            )}
+
+            {/* {extendElement}
+                 */}
+            {menus.map((aMenu, idx) => (
+              (extendElement && idx === activeMenu) ? (
+                <motion.div
+                  key={idx}
+                  variants={extendItemBars}
+                  initial="initial"
+                  animate="open"
+                  exit="exit"
+                >
+                  <div
+                    onMouseLeave={() => {
+                      setActiveMenu(null);
+                      setExtendElement(null);
+                    }}
+                    onClick={() => {
+                      setExtendElement(null);
+                    }}
+                  >
+                    {aMenu.extend ?? null}
+                  </div>
+                </motion.div>
+              ) : null
+            ))}
 
           </motion.div>
         )}
@@ -195,7 +248,7 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence> */}
-    </div>
+    </div >
   );
 };
 
