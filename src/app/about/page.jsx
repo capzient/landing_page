@@ -1,5 +1,10 @@
-import About from "@/components/about";
+import About from '@/src/components/about';
 
 export default function aboutPage() {
-  return <About />;
+  return (
+    <>
+      <ViewportTrigger />
+      <About />
+    </>
+  );
 }

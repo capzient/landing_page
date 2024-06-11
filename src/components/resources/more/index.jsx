@@ -150,7 +150,7 @@ export default function More() {
                 <div className="flex flex-row justify-between ">
                   <div className="pl-1 text-gray-400">@wadewarren</div>
                   <Image
-                    src={"/assets/images/readMore/icon.svg"}
+                    src={"/assets/images/common/arrow.svg"}
                     width={30}
                     height={30}
                     alt=""

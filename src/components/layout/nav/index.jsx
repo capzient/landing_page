@@ -155,7 +155,7 @@ const Navbar = () => {
           <button className="button text-white">
             <div className="flex gap-[5px] items-center text-white">
               <IoMdReturnRight />
-              <Link href='/contact'>
+              <Link href='/contact' className="link link--metis">
                 Contact Us
               </Link>
             </div>
