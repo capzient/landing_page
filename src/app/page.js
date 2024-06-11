@@ -1,7 +1,7 @@
-import Hero from "../components/main/hero";
-import Welcome from "../components/main/welcome";
-import Careers from "../components/main/careers";
-import Footer from "../components/layout/footer/Footer";
+import Footer from '@/components/layout/footer/Footer';
+import Careers from '@/components/main/careers';
+import Hero from '@/components/main/hero';
+import Welcome from '@/components/main/welcome';
 
 export default function Home() {
   return (

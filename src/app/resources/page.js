@@ -1,13 +1,11 @@
-import Resources from "@/src/components/resources";
-import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
+import Resources from '@/components/resources';
+import ViewportTrigger from '@/components/utils/viewPortTrigger';
 
-const ResourcePage = () => {
-    return (
-        <>
-            <ViewportTrigger />
-            <Resources />
-        </>
-    )
-}
+const ResourcePage = () => (
+  <>
+    <ViewportTrigger />
+    <Resources />
+  </>
+);
 
 export default ResourcePage;

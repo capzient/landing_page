@@ -1,14 +1,16 @@
 'use client'
-import WithRedRect from "../../utils/withRedRect";
-import WithRedLeftBar from "../../utils/withRedLeftBar";
 import Image from "next/image";
-import { bullets, carouselData } from "./data";
-import { InView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import WithRedLeftBar from "@/components/utils/withRedLeftBar";
+import WithRedRect from "@/components/utils/withRedRect";
+
+
+import {  carouselData } from "./data";
+
 import 'swiper/css';
-const Welcome = () => {
-  return (
+
+const Welcome = () => (
     <div>
       <div className="h-[100vh]"></div>
       <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-[url('/assets/images/welcome/bg_1.svg')] flex-col w-full">
@@ -166,5 +168,4 @@ const Welcome = () => {
       </div>
     </div>
   );
-};
 export default Welcome;

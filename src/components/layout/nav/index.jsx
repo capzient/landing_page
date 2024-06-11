@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
 import { AnimatePresence, delay, motion } from "framer-motion";
-import { IoMdReturnRight } from "react-icons/io";
+import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
+import { IoMdReturnRight } from "react-icons/io";
 
 import MenuItem from "./menuItem";
 import menus from "./menus";
