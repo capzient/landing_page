@@ -43,7 +43,9 @@ const Industry = () => {
               </div>
             </div>
           </div>
-          <div className=" w-full	bg-[#0F0F0F]  p-[10px] mb-[20px] text-[#676665]">{renderFooterText()}</div>
+          <div className="animation-element appear w-full	bg-[#0F0F0F]  p-[10px] mb-[20px] text-[#676665]">
+            {renderFooterText()}
+          </div>
         </Card>
         <div className="animation-element appear rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
           <div className="flex h-full p-[30px] items-end">
