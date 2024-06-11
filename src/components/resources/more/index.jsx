@@ -15,7 +15,7 @@ export default function More() {
                 <div className="text-[50px] max-w-[70%] font-bold text-white">LOREM IPSUM SIT CONSECTECTUR</div>
                 <div className="cursor-pointer pt-[20px] flex w-[30%] gap-[20px] items-center">
                   <div className="w-[40px] h-[40px]">
-                    <Image src={'/assets/images/readMore/shape.svg'} width={40} height={40} alt="" className="" />
+                    <Image src={'/assets/images/resources_more/shape.svg'} width={40} height={40} alt="" className="" />
                   </div>
                   <div className="text-red-500">SEE ALL</div>
                 </div>
@@ -42,7 +42,13 @@ export default function More() {
       </div>
 
       <div className="animation-element appear">
-        <Image src={'/assets/images/readMore/readMore.svg'} layout="responsive" width={1500} height={1500} alt="" />
+        <Image
+          src={'/assets/images/resources_more/readMore.svg'}
+          layout="responsive"
+          width={1500}
+          height={1500}
+          alt=""
+        />
       </div>
       {/* middle */}
       <div className="animation-element appear px-[10px] rounded-lg flex flex-col">
@@ -54,7 +60,13 @@ export default function More() {
                 className="relative flex justify-center items-center bg-[#1F1F1F] rounded-xl
                border border-[#333333] p-[30px] "
               >
-                <Image src={'/assets/images/readMore/twitter.svg'} width={30} height={30} alt="" className="absolute" />
+                <Image
+                  src={'/assets/images/resources_more/twitter.svg'}
+                  width={30}
+                  height={30}
+                  alt=""
+                  className="absolute"
+                />
               </div>
             </div>
             <div className="flex pt-4 items-center ">
@@ -63,7 +75,7 @@ export default function More() {
                border border-[#333333] p-[30px] "
               >
                 <Image
-                  src={'/assets/images/readMore/facebook.svg'}
+                  src={'/assets/images/resources_more/facebook.svg'}
                   width={18}
                   height={18}
                   alt=""
@@ -96,7 +108,7 @@ export default function More() {
           <div className="w-[55%] px-[40px] ">
             <Card bodyClassName="p-[35px]">
               <div className="flex flex-row items-center">
-                <Image src={'/assets/images/readMore/person.svg'} width={60} height={60} alt="" />
+                <Image src={'/assets/images/resources_more/person.svg'} width={60} height={60} alt="" />
                 <div className="flex flex-col px-[20px]">
                   <div className="font-semibold">Wade Warren</div>
                   <div className="text-gray-400">Art Director</div>
@@ -107,7 +119,7 @@ export default function More() {
                 design journey.
               </div>
               <div className="animation-element appear bg-[#1F1F1F] flex flex-row items-center rounded-xl p-[15px] mt-[20px]">
-                <Image src={'/assets/images/readMore/twitter.svg'} width={32} height={32} alt="" />
+                <Image src={'/assets/images/resources_more/twitter.svg'} width={32} height={32} alt="" />
                 <div className="flex flex-row justify-between ">
                   <div className="pl-1 text-gray-400">@wadewarren</div>
                   <Image
@@ -125,7 +137,7 @@ export default function More() {
                 <div className="flex flex-row items-center">
                   <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-lg border border-[#333333] p-[26px] ">
                     <Image
-                      src={'/assets/images/readMore/heart.svg'}
+                      src={'/assets/images/resources_more/heart.svg'}
                       width={30}
                       height={30}
                       alt=""
@@ -147,7 +159,7 @@ export default function More() {
                 <div className="flex flex-row items-center">
                   <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-lg border border-[#333333] p-[26px] ">
                     <Image
-                      src={'/assets/images/readMore/share.svg'}
+                      src={'/assets/images/resources_more/share.svg'}
                       width={30}
                       height={30}
                       alt=""
@@ -172,7 +184,13 @@ export default function More() {
         <div className="flex gap-[20px]">
           <Card bodyClassName="w-[55%] p-[25px] ">
             <div className="w-full ">
-              <Image src={'/assets/images/readMore/first.svg'} layout="responsive" width={450} height={150} alt="" />
+              <Image
+                src={'/assets/images/resources_more/first.svg'}
+                layout="responsive"
+                width={450}
+                height={150}
+                alt=""
+              />
             </div>
             <div className="px-[10px]">
               <div className="text-[#F9EFEC] text-[30px] h-[150px] pt-[40px]">lOREM EPSUM DOLOR SIT AMET</div>
@@ -194,7 +212,13 @@ export default function More() {
           </Card>
           <Card bodyClassName="w-[55%] p-[25px]">
             <div className="w-full">
-              <Image src={'/assets/images/readMore/second.svg'} layout="responsive" width={450} height={150} alt="" />
+              <Image
+                src={'/assets/images/resources_more/second.svg'}
+                layout="responsive"
+                width={450}
+                height={150}
+                alt=""
+              />
             </div>
             <div className="px-[10px]">
               {' '}
@@ -217,7 +241,13 @@ export default function More() {
           </Card>
           <Card bodyClassName="w-[55%] p-[25px]">
             <div className="w-full">
-              <Image src={'/assets/images/readMore/third.svg'} width={450} layout="responsive" height={150} alt="" />
+              <Image
+                src={'/assets/images/resources_more/third.svg'}
+                width={450}
+                layout="responsive"
+                height={150}
+                alt=""
+              />
             </div>
             <div className="px-[10px]">
               {' '}

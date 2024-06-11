@@ -90,7 +90,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""
@@ -123,7 +123,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""
@@ -158,7 +158,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""
