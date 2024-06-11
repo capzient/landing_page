@@ -33,7 +33,7 @@ export const carouselData = [
     heading: '67% of organizations are investing more in technology, with data and AI topping their priority list.',
     description:
       "Capzient's data-driven approach and AI expertise unlock the true potential of game-changing technologies.",
-    image: 'ai.svg',
+    image: 'ai.png',
     subhead: 'Emphasizing Investment in Data and AI',
   },
   {

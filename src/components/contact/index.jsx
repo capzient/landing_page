@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function contact() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] pb-[600px] flex flex-col font-sans">

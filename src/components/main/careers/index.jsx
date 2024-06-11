@@ -1,9 +1,10 @@
 import Image from "next/image";
-import WithRedRect from "../../utils/withRedRect";
-import Button from "../../utils/button";
 
-const Careers = () => {
-  return (
+import WithRedRect from "@/components//utils/withRedRect";
+import Button from "@/components/utils/button";
+
+
+const Careers = () => (
     <div className="bg-[#030303] w-full">
       <div className="pl-11 pt-32 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-9xl">
         <WithRedRect>Careers</WithRedRect>
@@ -23,11 +24,11 @@ const Careers = () => {
         <div className="w-full md:w-1/2 lg:w-1/2 text-white text-left mt-12 p-20 mr-50 text-4xl">
           <p>
             At Capzient, we live for change, thrive in disruption, and champion
-            those who dare to dream bigger. If you're the kind of innovator
-            who's hungry for growth and not afraid to challenge the status quo,
-            this is your time. We're looking for the curious, the bold, and the
-            brilliant. So, if you’re ready to push the boundaries of what’s
-            possible, come join us and together, we’ll redefine the future of
+            those who dare to dream bigger. If you&apos;re the kind of innovator
+            who&apos;s hungry for growth and not afraid to challenge the status quo,
+            this is your time. We&apos;re looking for the curious, the bold, and the
+            brilliant. So, if you&apos;re ready to push the boundaries of what&apos;s
+            possible, come join us and together, we&apos;ll redefine the future of
             business, technology, and society.
           </p>
           <div className="flex mt-20 justify-center md:justify-start">
@@ -38,6 +39,5 @@ const Careers = () => {
       </div>
     </div>
   );
-};
 
 export default Careers;
