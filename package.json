@@ -24,7 +24,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "eslint": "^9.4.0",
+    "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.29.1",
