@@ -1,13 +1,11 @@
-import Industry from "@/src/components/industry";
-import ViewportTrigger from "@/src/components/utils/viewPortTrigger";
+import Industry from '@/components/industry';
+import ViewportTrigger from '@/components/utils/viewPortTrigger';
 
-const IndustryPage = () => {
-    return (
-        <>
-            <ViewportTrigger />
-            <Industry />
-        </>
-    )
-}
+const IndustryPage = () => (
+  <>
+    <ViewportTrigger />
+    <Industry />
+  </>
+);
 
 export default IndustryPage;
