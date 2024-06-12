@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Card from '@/components/atoms/card';
 import WithRedLeftBar from '@/components/utils/withRedLeftBar';
 import WithRedRect from '@/components/utils/withRedRect';
 
@@ -53,7 +53,7 @@ const Welcome = () => (
       </div> */}
 
     <div className="bg-black w-full text-white text-8xl font-semibold font-['Inter'] uppercase h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
-      <div className="space-y-10 w-full flex flex-col gap-10 py-10">
+      <div className="animation-element appear space-y-10 w-full flex flex-col gap-10 py-10">
         <p className="uppercase flex md:text-[96px] text-3xl">Unleash tomorrow&apos;s</p>
         <div className="uppercase flex justify-end items-end md:text-[96px] text-3xl">
           <WithRedRect>Tech Today</WithRedRect>
@@ -82,15 +82,15 @@ const Welcome = () => (
       >
         {carouselData.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative  w-full md:w-[400px] h-[582px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
-              <div className=" flex-col w-full h-full justify-start items-start inline-flex gap-10 md:gap-[52px]">
-                <div className="md:w-[127.77px] w-full h-[582px] md:h-[500.38px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
-                <div className="text-2xl md:text-2xl text-[#F9EFEC] ">
-                  <span className="text-[#F51101] ">&quot;</span>
-                  {item.heading}
-                  <span className="text-[#F51101]">&rdquo;</span>
-                </div>
-                <div className=" text-xs md:text-lg text-[#A3A3A3]">{item.description}</div>
+            <div className="w-full  h-[582px] p-[40px] pt-[80px] flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+              <div className="md:w-[127.77px] w-full md:h-[500.38px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
+              <div className="text-[35px]  text-[#F9EFEC] ">
+                <span className="text-[#F51101] ">&quot;</span>
+                {item.heading}
+                <span className="text-[#F51101]">&rdquo;</span>
+              </div>
+              <div className="text-[25px] text-[#A3A3A3]">{item.description}</div>
+              <div className="flex justify-end h-full h-grow flex-col">
                 <div className="gap-16 text-sm flex justify-center items-center">
                   <div className="icon">
                     <Image
@@ -111,7 +111,7 @@ const Welcome = () => (
     </div>
 
     <div className="bg-black p-[30px] text-[#B3B3B2] px-10 h-screen flex flex-col items-center justify-center ">
-      <div className="uppercase text-2xl md:text-6xl inline-flex gap-2 mb-10">
+      <div className="animation-element appear  uppercase text-2xl md:text-6xl inline-flex gap-2 mb-10">
         We keep you <WithRedRect>ahead</WithRedRect>
       </div>
       <div className="w-full flex md:flex-row flex-col justify-between gap-10">
@@ -123,14 +123,14 @@ const Welcome = () => (
             'consulting services',
             'Lorem ipsum dolor sit',
           ].map((aItem, idx) => (
-            <div key={idx} className="p-6 uppercase">
+            <div key={idx} className="animation-element appear  p-6 uppercase">
               {' '}
               {aItem}
             </div>
           ))}
         </div>
         <div className="w-1/2 p-10">
-          <div className="bg-[#191919] rounded-lg p-8 flex flex-col gap-10">
+          <Card bodyClassName="rounded-lg p-8 flex flex-col gap-10">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             <div className="relative w-full h-56 rounded-lg">
               <Image
@@ -140,7 +140,7 @@ const Welcome = () => (
                 className="object-cover rounded-lg"
               />
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </div>
