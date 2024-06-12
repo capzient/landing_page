@@ -120,7 +120,7 @@ export default function Contact() {
           <div className="animation-element appear">
             <button className="bg-[#F51101] rounded-2xl px-6 py-4 flex flex-row items-center space-x-5">
               SEND YOUR MESSAGE
-              <Image src={'/assets/images/contact/Icon.svg'} width={23} height={23} alt="" className="ml-2" />
+              <Image src={'/assets/images/contact/arrow_icon.svg'} width={23} height={23} alt="" className="ml-2" />
             </button>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Card from '../atoms/card';
+import Container from '../atoms/container';
 export default function About() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] flex flex-col">
@@ -88,7 +90,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""
@@ -121,7 +123,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""
@@ -156,7 +158,7 @@ export default function About() {
                border border-gray-700 p-7 "
                 >
                   <Image
-                    src={'/assets/images/readMore/twitter.svg'}
+                    src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
                     height={30}
                     alt=""

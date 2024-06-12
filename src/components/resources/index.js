@@ -44,7 +44,9 @@ const Resources = () => {
               </div>
             </div>
           </div>
-          <div className=" w-full	bg-[#0F0F0F]  p-[10px] mb-[20px] text-[#676665]">{renderFooterText()}</div>
+          <div className="animation-element appear w-full	bg-[#0F0F0F]  p-[10px] mb-[20px] text-[#676665]">
+            {renderFooterText()}
+          </div>
         </Card>
         <div className="animation-element appear rounded-lg w-[40%] h-grow bg-center bg-cover bg-[url('/assets/images/industry/sub_container.svg')]">
           <div className="flex h-full p-[30px] items-end">
@@ -128,9 +130,11 @@ const Resources = () => {
         </div>
       </Container>
       <div className="w-full">
-        <button className="animation-element appear bg-[#F51101] text-[14px] block text-black rounded-md px-[150px] m-auto py-[15px]">
-          <Link href={'/resources/more'}>LOAD MORE</Link>
-        </button>
+        <Link href={'/resources/more'}>
+          <button className="animation-element appear bg-[#F51101] text-[14px] block text-black rounded-md px-[150px] m-auto py-[15px]">
+            LOAD MORE
+          </button>
+        </Link>
       </div>
     </div>
   );
