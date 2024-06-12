@@ -82,14 +82,14 @@ const Welcome = () => (
       >
         {carouselData.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="animation-element appear w-full  h-[582px] p-[40px] flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+            <div className="w-full  h-[582px] p-[40px] pt-[80px] flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
               <div className="md:w-[127.77px] w-full md:h-[500.38px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
-              <div className="text-2xl md:text-2xl text-[#F9EFEC] ">
+              <div className="text-[35px]  text-[#F9EFEC] ">
                 <span className="text-[#F51101] ">&quot;</span>
                 {item.heading}
                 <span className="text-[#F51101]">&rdquo;</span>
               </div>
-              <div className=" text-xs md:text-lg text-[#A3A3A3]">{item.description}</div>
+              <div className="text-[25px] text-[#A3A3A3]">{item.description}</div>
               <div className="flex justify-end h-full h-grow flex-col">
                 <div className="gap-16 text-sm flex justify-center items-center">
                   <div className="icon">
