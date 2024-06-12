@@ -29,7 +29,6 @@ const Careers = () => (
           business, technology, and society.
         </p>
         <div className="flex mt-20 justify-center md:justify-start">
-          {' '}
           <Button />
         </div>
       </div>
