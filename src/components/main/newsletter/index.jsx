@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import { IoMdArrowUp } from 'react-icons/io';
+
+import ArrowButton from '@/components/common/atoms/arrowButton';
 import Card from '@/components/common/atoms/card';
 import Container from '@/components/common/atoms/container';
-import ArrowButton from '@/components/common/atoms/arrowButton';
 
 const NewsLetter = () => (
   <section className="bg-black p-[30px] text-[#B3B3B2] px-10 flex flex-col items-center justify-center ">
@@ -20,7 +20,7 @@ const NewsLetter = () => (
       </Card>
       <div className="grid grid-cols-3 gap-[15px] grid-rows-2 h-full w-full">
         <div className="animation-element appear w-full flex flex-col bg-[#191919] rounded-2xl h-full">
-          <div className="flex items-center justify-center gap-2 relative h-[400px] w-full">
+          <div className="flex items-center h-[400px] justify-center gap-2 relative  w-full">
             <Image
               src="/assets/images/welcome/graphic/newsletter1.svg"
               fill
@@ -29,7 +29,7 @@ const NewsLetter = () => (
             />
           </div>
           <div className="h-[30%] w-full p-5 flex justify-between items-center">
-            <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>{' '}
+            <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>
             <ArrowButton
               arrowType="red_right"
               hoverColor="#ffffff81"
@@ -51,14 +51,26 @@ const NewsLetter = () => (
               titleClassName="text-[#B3B3B2] text-[20px]"
             />
           </div>
-          <div className="flex items-center justify-center gap-2  h-[400px] w-full bg-[#191919] rounded-2xl">
-            Lorem ipsum dior
+          <div className="p-[40px] bg-[#0f0f0f] gap-2  h-full w-full bg-[#161616] rounded-b-2xl">
+            <div className="text-[#F9EFEC] text-[25px] uppercase mb-[40px]">
+              Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div className="text-[#B3B3B2] text-[20px]">
+              Lorem ipsum dolor sit amet consectetur. Ac mi vestibulum mi aliquam. Ultricies amet cursus sit mauris dui
+              ut leo. Luctus consequat aliquet faucibus auctor suspendisse augue.
+            </div>
           </div>
         </div>
         {/*  */}
         <div className="animation-element appear w-full flex flex-col bg-[#191919] rounded-2xl h-full ">
-          <div className="flex items-center justify-center gap-2  h-[400px] w-full bg-[#191919] rounded-2xl">
-            Lorem ipsum dior
+          <div className="p-[40px] bg-[#0f0f0f] gap-2  h-full  w-full bg-[#161616] rounded-t-2xl">
+            <div className="text-[#F9EFEC] text-[25px] uppercase mb-[40px]">
+              Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div className="text-[#B3B3B2] text-[20px]">
+              Lorem ipsum dolor sit amet consectetur. Ac mi vestibulum mi aliquam. Ultricies amet cursus sit mauris dui
+              ut leo. Luctus consequat aliquet faucibus auctor suspendisse augue.
+            </div>
           </div>
           <div className="h-[30%] w-full p-5 flex justify-between items-center">
             <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>{' '}
@@ -73,7 +85,7 @@ const NewsLetter = () => (
         </div>
         {/*  */}
         <div className="animation-element appear w-full flex flex-col bg-[#191919] rounded-2xl h-full col-span-2">
-          <div className="flex items-center justify-center gap-2 relative h-[400px] w-full">
+          <div className="flex items-center h-[400px] justify-center gap-2 relative  w-full">
             <Image
               src="/assets/images/welcome/graphic/newsletter1.svg"
               fill
@@ -94,7 +106,7 @@ const NewsLetter = () => (
         </div>
         {/*  */}
         <div className="animation-element appear w-full flex flex-col bg-[#191919] rounded-2xl h-full">
-          <div className="flex items-center justify-center gap-2 relative h-[400px] w-full">
+          <div className="flex items-center justify-center h-[400px]  gap-2 relative  w-full">
             <Image
               src="/assets/images/welcome/graphic/newsletter2.svg"
               fill
