@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Container from '@/components/common/atoms/container';
 
+import Container from '@/components/common/atoms/container';
 import WithRedRect from '@/components/utils/withRedRect';
 
 const Careers = () => (

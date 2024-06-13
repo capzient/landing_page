@@ -2,11 +2,11 @@
 import Image from 'next/image';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from '@/components/common/atoms/card';
-import WithRedLeftBar from '@/components/utils/withRedLeftBar';
-import WithRedRect from '@/components/utils/withRedRect';
+
 import Accordion from '@/components/common/organizms/accordion';
 import Menu from '@/components/common/organizms/menu';
+import WithRedRect from '@/components/utils/withRedRect';
+
 import { carouselData } from './data';
 
 import 'swiper/css';
@@ -73,7 +73,7 @@ const Welcome = () => (
         </div>
       </div>
       <Swiper
-        // modules={[Autoplay]}
+        modules={[Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
@@ -92,8 +92,8 @@ const Welcome = () => (
         className="w-full h-full grow flex justify-center items-center gap-10"
       >
         {carouselData.map((item, index) => (
-          <div className="h-full grow">
-            <SwiperSlide className="grow h-full relative" key={index}>
+          <div key={index} className="h-full grow">
+            <SwiperSlide className="grow h-full relative">
               <div className="w-full h-full grow  pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
                 <div className="absolute top-0 left-0 md:w-[100px] w-full md:h-[500px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
                 <div className="text-[35px]  text-[#F9EFEC] ">

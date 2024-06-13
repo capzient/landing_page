@@ -1,8 +1,10 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+
 import Card from '../atoms/card';
-import { FaPlus, FaMinus } from 'react-icons/fa';
-import { AnimatePresence, delay, motion } from 'framer-motion';
 
 const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
   const [active, setActive] = useState(false);

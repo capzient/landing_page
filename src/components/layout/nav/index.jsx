@@ -1,9 +1,9 @@
 'use client';
 
-import { AnimatePresence, delay, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IoMdReturnRight } from 'react-icons/io';
 
 import MenuItem from './menuItem';
@@ -32,42 +32,42 @@ const dropdownContainerVars = {
   },
 };
 
-const dropdownContentVars = {
-  initial: {
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.09,
-      staggerDirection: -1,
-    },
-  },
-  open: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      delayChildren: 0.3,
-      staggerChildren: 0.09,
-      staggerDirection: 1,
-    },
-  },
-};
+// const dropdownContentVars = {
+//   initial: {
+//     opacity: 0,
+//     transition: {
+//       duration: 0.5,
+//       staggerChildren: 0.09,
+//       staggerDirection: -1,
+//     },
+//   },
+//   open: {
+//     opacity: 1,
+//     transition: {
+//       delay: 0.5,
+//       delayChildren: 0.3,
+//       staggerChildren: 0.09,
+//       staggerDirection: 1,
+//     },
+//   },
+// };
 
-const mobileLinkVars = {
-  initial: {
-    y: '30vh',
-    transition: {
-      duration: 0.5,
-      ease: [0.37, 0, 0.63, 1],
-    },
-  },
-  open: {
-    y: 0,
-    transition: {
-      ease: [0, 0.55, 0.45, 1],
-      duration: 0.5,
-    },
-  },
-};
+// const mobileLinkVars = {
+//   initial: {
+//     y: '30vh',
+//     transition: {
+//       duration: 0.5,
+//       ease: [0.37, 0, 0.63, 1],
+//     },
+//   },
+//   open: {
+//     y: 0,
+//     transition: {
+//       ease: [0, 0.55, 0.45, 1],
+//       duration: 0.5,
+//     },
+//   },
+// };
 const extendItemBars = {
   initial: {
     opacity: 0,
@@ -88,13 +88,13 @@ const extendItemBars = {
 };
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [extendElement, setExtendElement] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
   const [isOnMainDiv, setIsOnMainDiv] = useState(false);
-  const toggleMenu = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  // const toggleMenu = () => {
+  //   setOpen((prevOpen) => !prevOpen);
+  // };
   const extendRef = useRef(null);
   const extendContentRef = useRef(null);
   useEffect(() => {
@@ -170,9 +170,9 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="cursor-pointer md:hidden text-md text-white px-4 " onClick={toggleMenu}>
+        {/* <div className="cursor-pointer md:hidden text-md text-white px-4 " onClick={toggleMenu}>
           Menu
-        </div>
+        </div> */}
       </div>
       <AnimatePresence>
         {extendElement && (
