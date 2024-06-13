@@ -2,8 +2,8 @@ import { Poppins, Roboto } from 'next/font/google';
 
 import './globals.css';
 import Navbar from '@/components/layout/nav';
-import SmoothScroll from '@/components/utils/smoothScroll/SmoothScroll';
 import CursorFollower from '@/components/utils/cursorFollower';
+import SmoothScroll from '@/components/utils/smoothScroll/SmoothScroll';
 
 import { Providers } from './provides';
 
