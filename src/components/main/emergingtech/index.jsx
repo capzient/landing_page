@@ -1,8 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaPlus } from 'react-icons/fa';
-import { FaMinus } from 'react-icons/fa6';
-import Card from '@/components/common/atoms/card';
 import Accordion from '@/components/common/organizms/accordion';
 
 const EmergingTech = () => (
@@ -29,7 +26,7 @@ const EmergingTech = () => (
           title={<p className="w-full text-3xl">Re-imagine with cloud</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
@@ -41,7 +38,7 @@ const EmergingTech = () => (
           title={<p className="w-full text-3xl">Re-imagine with data and ai</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
@@ -53,7 +50,7 @@ const EmergingTech = () => (
           title={<p className="w-full text-3xl">Re-imagine with blockchain</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
@@ -64,7 +61,7 @@ const EmergingTech = () => (
           title={<p className="w-full text-3xl">Re-imagine spatial computing</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>

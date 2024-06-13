@@ -89,7 +89,7 @@ const Welcome = () => (
         {carouselData.map((item, index) => (
           <div className="h-full grow">
             <SwiperSlide className="grow h-full relative" key={index}>
-              <div className="w-full grow h-full min-h-[500px]  pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+              <div className="w-full h-full grow  pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
                 <div className="absolute top-0 left-0 md:w-[100px] w-full md:h-[500px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
                 <div className="text-[35px]  text-[#F9EFEC] ">
                   <span className="text-[#F51101] ">&quot;</span>
@@ -152,7 +152,7 @@ const Welcome = () => (
               </div>
             }
             activeCpn={
-              <div className="text-[#979796] text-[20px]">
+              <div className="text-[#979796] p-[15px] text-[20px]">
                 Lorem ipsum dolor sit amet consectetur. Non congue cursus quis adipiscing donec velit a. Nunc varius
                 lectus ut laoreet facilisis eu. Arcu ac urna eu et. Feugiat nibh nulla sed faucibus velit parturient
                 proin. In sed lobortis maecenas facilisis sit enim magna velit nisi. Mauris senectus id ut consectetur
