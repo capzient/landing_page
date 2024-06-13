@@ -30,20 +30,20 @@ const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
     open: {
       opacity: 1,
       transition: {
-        duration: 0.5,
         delay: 0.5,
+        duration: 0.5,
       },
     },
     exit: {
-      duration: 0.5,
       opacity: 0,
+      duration: 0.5,
     },
   };
 
   return (
-    <Card bodyClassName={bodyClassName}>
+    <Card bodyClassName={bodyClassName} noHover>
       <div>
-        <div onClick={() => setActive(!active)} className="flex gap-[40px] items-center">
+        <div onClick={() => setActive(!active)} className="px-[40px] flex gap-[40px] items-center">
           <div className={`w-full  text-3xl `}>{title}</div>
           {!active && (
             <div
@@ -66,7 +66,7 @@ const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
             </div>
           )}
         </div>
-        <div ref={contentRef} className="height-animated">
+        <div ref={contentRef} className="bg-[#131313]  height-animated">
           {active && (
             <AnimatePresence>
               <motion.div variants={accordionBodyVars} initial="initial" animate="open" exit="exit">

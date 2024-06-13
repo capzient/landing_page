@@ -1,6 +1,11 @@
-const Card = ({ bodyClassName, children }) => (
+const Card = ({ bodyClassName, children, noHover }) => (
   <div
-    className={`height-animated animation-element appear bg-[#1A1A1A] hover:bg-[#131313] hover:shadow-lg cursor-pointer rounded-lg ${bodyClassName}`}
+    style={{
+      transitionDuration: '500ms',
+    }}
+    className={`height-animated animation-element appear bg-[#1A1A1A] ${
+      !noHover ? 'hover:bg-[#131313]' : ''
+    } hover:shadow-lg cursor-pointer rounded-lg ${bodyClassName}`}
   >
     {children}
   </div>

@@ -7,7 +7,7 @@ const EmergingTech = () => (
     <div className="animation-element appear uppercase text-2xl md:text-6xl inline-flex gap-2 mb-10">
       Emerging <span className="text-[#f51101]">Technologies</span>
     </div>
-    <div className="w-full flex md:flex-row flex-col justify-between gap-10 h-full">
+    <div className="w-full flex md:flex-row flex-col justify-between items-start gap-10 h-full">
       <div className="animation-element appear w-1/3 p-10">
         <div className="relative w-full h-full rounded-lg">
           <Image
@@ -22,11 +22,11 @@ const EmergingTech = () => (
       </div>
       <div className="w-2/3 p-10 gap-3 flex flex-col justify-center">
         <Accordion
-          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
-          title={<p className="w-full text-3xl">Re-imagine with cloud</p>}
+          bodyClassName="rounded-lg flex flex-col gap-10"
+          title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
+            <p className="p-[40px] text-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
@@ -34,11 +34,11 @@ const EmergingTech = () => (
         />
 
         <Accordion
-          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
-          title={<p className="w-full text-3xl">Re-imagine with data and ai</p>}
+          bodyClassName="rounded-lg flex flex-col gap-10"
+          title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
+            <p className="p-[40px] text-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
@@ -46,22 +46,22 @@ const EmergingTech = () => (
         />
 
         <Accordion
-          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
-          title={<p className="w-full text-3xl">Re-imagine with blockchain</p>}
+          bodyClassName="rounded-lg flex flex-col gap-10"
+          title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
+            <p className="p-[40px] text-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
           }
         />
         <Accordion
-          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
-          title={<p className="w-full text-3xl">Re-imagine spatial computing</p>}
+          bodyClassName="rounded-lg flex flex-col gap-10"
+          title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}
           idleCpn={null}
           activeCpn={
-            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px] mt-[20px]">
+            <p className="p-[40px] text-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>

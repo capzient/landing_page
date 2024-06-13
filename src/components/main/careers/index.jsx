@@ -8,9 +8,9 @@ const Careers = () => (
     <div className="animation-element appear pl-11 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-8xl uppercase">
       <WithRedRect>Careers</WithRedRect>
     </div>
-    <Container containerClassName="flex  flex-wrap  justify-center items-center p-[20px]  mt-[20px]">
+    <Container containerClassName="flex flex-wrap  justify-center items-center p-[20px]  mt-[20px]">
       {' '}
-      <div className="animation-element appear w-full md:w-1/2 lg:w-1/2">
+      <div className="animation-element appear w-full md:w-1/2 p-[20px] lg:w-1/2">
         {' '}
         <Image
           src={'/assets/images/common/careers.svg'}
@@ -30,7 +30,7 @@ const Careers = () => (
           gravida elementum. Ac odio cursus egestac suscipit nisl. Faucibus commodo congue sit ultricies massa vehicula.
         </p>
         <div className="animation-element appear flex mt-[30px] justify-center md:justify-start">
-          <button className="bg-[#1F1F1F] text-white py-2 px-4 rounded-xl">
+          <button className="bg-[#1F1F1F] text-white py-2 mt-[50px] px-4 rounded-xl">
             Learn More <span className="ml-2 text-red-600 text-2xl">→</span>
           </button>
         </div>
