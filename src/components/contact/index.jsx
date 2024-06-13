@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Card from '../atoms/card';
+import Card from '../common/atoms/card';
 
 export default function Contact() {
   return (

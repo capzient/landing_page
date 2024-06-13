@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@fontsource/inter";
-
+@import '@fontsource/inter';
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -20,17 +19,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: sans-serif;
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  /* font-family: sans-serif; */
+  background-color: #131313;
 }
 
 #custom-checkbox:checked + label {
-  background-color: #F51101; /* Change this to your desired checked color */
+  background-color: #f51101; /* Change this to your desired checked color */
 }
 
 #custom-checkbox:checked + label svg {
@@ -57,7 +52,7 @@ body {
 }
 
 .link::before {
-  content: "";
+  content: '';
   /* show by default */
 }
 
@@ -76,7 +71,6 @@ body {
   transform: scale3d(1, 1, 1);
 }
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -90,25 +84,72 @@ body {
 .poppins {
   font-family: var(--font-poppins);
 }
-.dot{
+.dot {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.white-blur-btn{
+.white-blur-btn {
   background-color: #ffffff31;
   backdrop-filter: blur(5px);
 }
-.appear.in-view {  
+.appear.in-view {
   animation: fadeAnimation;
   animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
   backface-visibility: hidden;
 }
-@keyframes fadeAnimation {
-  from { opacity: 0; transform: translate3d(0,100px, 0); }
-  to { opacity: 1; transform: none; }
-}
-.appear{  
-  transform: translate3d(0,100px, 0);
+.nav-item {
   opacity: 0;
+  transition-duration: 0.5s;
+}
+.nav-item.in-view {
+  opacity: 1;
+}
+.welcome-text-container {
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  /* text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); */
+}
+.welcome-text {
+  font-weight: bold;
+  background: linear-gradient(to right, #ffffff, #e49898);
+  -webkit-background-clip: text;
+  background-clip: text; /* For non-webkit browsers */
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; /* For non-webkit browsers */
+}
+.welcome-text::before {
+  content: 'We Re-imagine'; /* Duplicate the text for the border effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: white;
+  -webkit-text-stroke: 1px white; /* Thin white border */
+  text-stroke: 1px white; /* For non-webkit browsers */
+  background: none; /* No background gradient for the border text */
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+.welcome-blur {
+  background-color: #ffffff00;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+@keyframes fadeAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.appear {
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+}
+.height-animated {
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
 }

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import ArrowButton from '@/components/atoms/arrowButton';
-import Card from '@/components/atoms/card';
-import Container from '@/components/atoms/container';
+import ArrowButton from '@/components/common/atoms/arrowButton';
+import Card from '@/components/common/atoms/card';
+import Container from '@/components/common/atoms/container';
 
 export default function More() {
   return (
@@ -202,7 +202,7 @@ export default function More() {
             </div>
             <div className="flex pt-4 items-center ">
               <ArrowButton
-                arrowColor="normal"
+                arrowType="normal"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                 title="VIEW ALL"
@@ -231,7 +231,7 @@ export default function More() {
             </div>
             <div className="flex pt-4 items-center ">
               <ArrowButton
-                arrowColor="normal"
+                arrowType="normal"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                 title="READ FULL"
@@ -260,7 +260,7 @@ export default function More() {
             </div>
             <div className="flex pt-4 items-center ">
               <ArrowButton
-                arrowColor="normal"
+                arrowType="normal"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                 title="READ FULL"

@@ -57,7 +57,7 @@ const HeroContent = () => {
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
-          <p className="animation-element appear text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-white hover:text-black cursor-pointer">
+          <p className="animation-element appear text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-[#ffffff9f] hover:text-black cursor-pointer duration-500">
             Power your project now
           </p>
         </motion.div>

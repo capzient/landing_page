@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { AnimatePresence, delay, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-import { IoMdReturnRight } from "react-icons/io";
+import { AnimatePresence, delay, motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { IoMdReturnRight } from 'react-icons/io';
 
-import MenuItem from "./menuItem";
-import menus from "./menus";
+import MenuItem from './menuItem';
+import menus from './menus';
 
-import "./nav.css";
+import './nav.css';
 
 const dropdownContainerVars = {
   initial: {
@@ -54,7 +54,7 @@ const dropdownContentVars = {
 
 const mobileLinkVars = {
   initial: {
-    y: "30vh",
+    y: '30vh',
     transition: {
       duration: 0.5,
       ease: [0.37, 0, 0.63, 1],
@@ -97,31 +97,34 @@ const Navbar = () => {
   };
 
   return (
-    <div className="nav w-full  fixed top-0 backdrop-0 z-50  text-[20px]">
+    <div className="nav animation-element nav-item w-full  fixed top-0 backdrop-0 z-50  text-[20px]">
       <div className="w-full h-full flex flex-row items-center relative z-[52] justify-between mx-auto">
-        <a href="/" className="h-auto w-auto flex flex-row items-center">
+        <Link href="/" className="h-auto w-auto flex flex-row items-center">
           <Image
             src="/assets/images/capzient_logo_white.png"
             alt="logo"
             width={300}
-            height={200}
-            className="cursor-pointer"
+            height={100}
+            className="animation-element nav-item cursor-pointer"
           />
-        </a>
-        <div className=" p-[10px] pb-[0px] w-full h-full flex justify-center"
+        </Link>
+        <div
+          className="animation-element nav-item p-[10px] pb-0 mb-[5px]  w-full h-full flex justify-center"
           onMouseMove={() => {
             if (!isOnMainDiv) {
               setExtendElement(null);
             }
           }}
         >
-          <div className="h-full flex-row items-center justify-between hidden md:flex"
+          <div
+            className="h-full flex-row items-center justify-between hidden md:flex"
             onMouseEnter={() => {
               setIsOnMainDiv(true);
             }}
             onMouseLeave={() => {
               setIsOnMainDiv(false);
-            }}>
+            }}
+          >
             <div className="flex items-center justify-between w-full h-auto  px-[20px] py-[10px] gap-x-7 text-white tracking-wider">
               {menus.map((aMenu, idx) => (
                 <MenuItem
@@ -139,7 +142,7 @@ const Navbar = () => {
                           setExtendElement(null);
                         }}
                       >
-                        {aMenu.extend ?? ""}
+                        {aMenu.extend ?? ''}
                       </div>
                     )
                   }
@@ -150,22 +153,18 @@ const Navbar = () => {
           </div>
         </div>
 
-
-        <div className="hidden md:block">
+        <div className="animation-element nav-item hidden md:block">
           <button className="button text-white">
             <div className="flex gap-[5px] items-center text-white">
               <IoMdReturnRight />
-              <Link href='/contact' className="link link--metis">
+              <Link href="/contact" className="link link--metis">
                 Contact Us
               </Link>
             </div>
           </button>
         </div>
 
-        <div
-          className="cursor-pointer md:hidden text-md text-white px-4 "
-          onClick={toggleMenu}
-        >
+        <div className="cursor-pointer md:hidden text-md text-white px-4 " onClick={toggleMenu}>
           Menu
         </div>
       </div>
@@ -178,18 +177,11 @@ const Navbar = () => {
             exit="exit"
             className="absolute w-full left-0 top-0 origin-top z-[1] bg-blue-700 text-white p-10"
           >
-
             {/* {extendElement}
-                 */}
-            {menus.map((aMenu, idx) => (
-              (extendElement && idx === activeMenu) ? (
-                <motion.div
-                  key={idx}
-                  variants={extendItemBars}
-                  initial="initial"
-                  animate="open"
-                  exit="exit"
-                >
+             */}
+            {menus.map((aMenu, idx) =>
+              extendElement && idx === activeMenu ? (
+                <motion.div key={idx} variants={extendItemBars} initial="initial" animate="open" exit="exit">
                   <div
                     onMouseLeave={() => {
                       setActiveMenu(null);
@@ -202,9 +194,8 @@ const Navbar = () => {
                     {aMenu.extend ?? null}
                   </div>
                 </motion.div>
-              ) : null
-            ))}
-
+              ) : null,
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -248,7 +239,7 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence> */}
-    </div >
+    </div>
   );
 };
 
