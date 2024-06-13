@@ -16,7 +16,13 @@ const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, ti
         }}
         className={arrowClassName}
       >
-        <Image src={`/assets/images/common/arrow_${arrowType}.svg`} width={20} height={20} alt="" />
+        <Image
+          className="min-w-[20px] min-h-[20px]"
+          src={`/assets/images/common/arrow_${arrowType}.svg`}
+          width={20}
+          height={20}
+          alt=""
+        />
       </div>
 
       {title && <div className={titleClassName}>{title}</div>}
