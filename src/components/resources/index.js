@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ArrowButton from '@/components/atoms/arrowButton';
-import Card from '@/components/atoms/card';
-import Container from '@/components/atoms/container';
+import ArrowButton from '@/components/common/atoms/arrowButton';
+import Card from '@/components/common/atoms/card';
+import Container from '@/components/common/atoms/container';
 
 const Resources = () => {
   const footerText = ['CLOUD STORAGE', 'VIRTUALIZATION', 'LOAD BALANCING', 'BACKUP AND RECOVERY'];
@@ -52,7 +52,7 @@ const Resources = () => {
           <div className="flex h-full p-[30px] items-end">
             <div className="flex justify-between w-full items-center">
               <ArrowButton
-                arrowColor="black"
+                arrowType="black"
                 titleClassName="text-white"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
@@ -66,7 +66,7 @@ const Resources = () => {
         RESOURCES
         <div className="cursor-pointer flex gap-[15px] items-center">
           <ArrowButton
-            arrowColor="normal"
+            arrowType="normal"
             titleClassName="text-[#B3B3B2]  text-[20px]"
             hoverColor="#ffffff81"
             arrowClassName="duration-500 color-white  border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
@@ -101,7 +101,7 @@ const Resources = () => {
                     </div>
                     <div className="cursor-pointer flex gap-[15px] items-center">
                       <ArrowButton
-                        arrowColor="normal"
+                        arrowType="normal"
                         titleClassName="text-[#B3B3B2]  text-[20px]"
                         hoverColor="#ffffff81"
                         arrowClassName="duration-500 color-white  border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"

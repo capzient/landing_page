@@ -2,10 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { FaMinus } from 'react-icons/fa6';
-import Card from '@/components/atoms/card';
+import Card from '@/components/common/atoms/card';
+import Accordion from '@/components/common/organizms/accordion';
 
 const EmergingTech = () => (
-  <div className="bg-black p-[30px] text-[#B3B3B2] px-10 min-h-screen flex flex-col items-center justify-center ">
+  <div className="bg-black p-[30px] text-[#B3B3B2] px-10 flex flex-col items-center justify-center ">
     <div className="animation-element appear uppercase text-2xl md:text-6xl inline-flex gap-2 mb-10">
       Emerging <span className="text-[#f51101]">Technologies</span>
     </div>
@@ -14,58 +15,61 @@ const EmergingTech = () => (
         <div className="relative w-full h-full rounded-lg">
           <Image
             src="/assets/images/industry/sub_container.svg"
-            fill
+            width={500}
+            height={500}
+            layout="responsive"
             alt="graphic"
             className="object-cover rounded-lg"
           />
         </div>
       </div>
       <div className="w-2/3 p-10 gap-3 flex flex-col justify-center">
-        <Card bodyClassName="bg-[#191919] rounded-lg p-8 flex flex-row gap-10 ">
-          <div className="w-[80%] h-full flex flex-col gap-2">
-            <p className="text-3xl">Re-imagine with cloud</p>
-            <hr className=" border-[#1f1f1f]" />
-            <p className="text-sm">
+        <Accordion
+          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
+          title={<p className="w-full text-3xl">Re-imagine with cloud</p>}
+          idleCpn={null}
+          activeCpn={
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
               The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
               deliver projects on time while maintaining the highest quality standards.
             </p>
-          </div>
-          <div className="w-[20%] flex items-center justify-center h-full ">
-            <div className="p-2 rounded-full  bg-[#232323]">
-              <FaMinus className="text-[#f51101]" />
-            </div>
-          </div>
-        </Card>
-        <Card bodyClassName="bg-[#191919] rounded-lg p-8 flex flex-row gap-10">
-          <div className="w-[80%] h-full flex flex-col gap-2">
-            <p className="text-3xl">Re-imagine with data and ai</p>
-          </div>
-          <div className="w-[20%] flex items-center justify-center h-full ">
-            <div className="p-2 rounded-full  bg-[#232323]">
-              <FaPlus className="text-[#f51101]" />
-            </div>
-          </div>
-        </Card>
-        <Card bodyClassName="bg-[#191919] rounded-lg p-8 flex flex-row gap-10">
-          <div className="w-[80%] h-full flex flex-col gap-2">
-            <p className="text-3xl">Re-imagine with blockchain</p>
-          </div>
-          <div className="w-[20%] flex items-center justify-center h-full ">
-            <div className="p-2 rounded-full  bg-[#232323]">
-              <FaPlus className="text-[#f51101]" />
-            </div>
-          </div>
-        </Card>
-        <Card bodyClassName="bg-[#191919] rounded-lg p-8 flex flex-row gap-10">
-          <div className="w-[80%] h-full flex flex-col gap-2">
-            <p className="text-3xl">Re-imagine spatial computing</p>
-          </div>
-          <div className="w-[20%] flex items-center justify-center h-full ">
-            <div className="p-2 rounded-full  bg-[#232323]">
-              <FaPlus className="text-[#f51101]" />
-            </div>
-          </div>
-        </Card>
+          }
+        />
+
+        <Accordion
+          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
+          title={<p className="w-full text-3xl">Re-imagine with data and ai</p>}
+          idleCpn={null}
+          activeCpn={
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+              The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
+              deliver projects on time while maintaining the highest quality standards.
+            </p>
+          }
+        />
+
+        <Accordion
+          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
+          title={<p className="w-full text-3xl">Re-imagine with blockchain</p>}
+          idleCpn={null}
+          activeCpn={
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+              The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
+              deliver projects on time while maintaining the highest quality standards.
+            </p>
+          }
+        />
+        <Accordion
+          bodyClassName="rounded-lg p-[40px] px-[60px] flex flex-col gap-10"
+          title={<p className="w-full text-3xl">Re-imagine spatial computing</p>}
+          idleCpn={null}
+          activeCpn={
+            <p className="text-[20px] border-[#262626] border-t-[1px] pt-[20px]">
+              The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
+              deliver projects on time while maintaining the highest quality standards.
+            </p>
+          }
+        />
       </div>
     </div>
   </div>

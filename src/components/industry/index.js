@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import ArrowButton from '@/components/atoms/arrowButton';
-import Card from '@/components/atoms/card';
-import Container from '@/components/atoms/container';
+import ArrowButton from '@/components/common/atoms/arrowButton';
+import Card from '@/components/common/atoms/card';
+import Container from '@/components/common/atoms/container';
 
 const Industry = () => {
   const footerText = ['CLOUD STORAGE', 'VIRTUALIZATION', 'LOAD BALANCING', 'BACKUP AND RECOVERY'];
@@ -51,7 +51,7 @@ const Industry = () => {
           <div className="flex h-full p-[30px] items-end">
             <div className="flex  justify-between w-full items-center">
               <ArrowButton
-                arrowColor="black"
+                arrowType="black"
                 titleClassName="text-white"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
@@ -107,7 +107,7 @@ const Industry = () => {
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
                 <ArrowButton
-                  arrowColor="normal"
+                  arrowType="normal"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                   title="VIEW ALL"
@@ -116,7 +116,7 @@ const Industry = () => {
               </div>
               <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
                 <ArrowButton
-                  arrowColor="black"
+                  arrowType="black"
                   titleClassName="text-white text-[20px]"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
@@ -132,7 +132,7 @@ const Industry = () => {
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
                 <ArrowButton
-                  arrowColor="normal"
+                  arrowType="normal"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                   title="VIEW ALL"
@@ -141,7 +141,7 @@ const Industry = () => {
               </div>
               <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
                 <ArrowButton
-                  arrowColor="black"
+                  arrowType="black"
                   titleClassName="text-white text-[20px]"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"
@@ -196,7 +196,7 @@ const Industry = () => {
               <div className="flex items-center justify-between">
                 <div className="text-white text-[25px]">LOREM IPSUM DOLOR</div>
                 <ArrowButton
-                  arrowColor="normal"
+                  arrowType="normal"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
                   title="VIEW ALL"
@@ -205,7 +205,7 @@ const Industry = () => {
               </div>
               <div className="w-full border-[1px] border-[#333333] mt-[20px] flex flex-col justify-end h-[300px] grow pt-[20px] bg-cover p-[30px] bg-center rounded-[20px] bg-[url(/assets/images/industry/image_1.svg)]">
                 <ArrowButton
-                  arrowColor="black"
+                  arrowType="black"
                   titleClassName="text-white text-[20px]"
                   hoverColor="#ffffff81"
                   arrowClassName="duration-500 color-white border-white border-[1px]  p-[15px] rounded-full bg-white"

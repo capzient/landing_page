@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Card from '../atoms/card';
-import Container from '../atoms/container';
+import Card from '../common/atoms/card';
+import Container from '../common/atoms/container';
 export default function About() {
   return (
     <div className="gap-[50px] bg-black px-[60px] py-[100px] pt-[200px] flex flex-col">

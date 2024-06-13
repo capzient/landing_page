@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 const ExtendItem = ({ title }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="flex gap-[5px] link--metis p-2 cursor-pointer">
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="flex gap-[5px] link--metis p-2 cursor-pointer"
+    >
       <div
         className="extend-item-before mt-[13px] duration-300"
         style={
@@ -22,9 +26,7 @@ const ExtendItem = ({ title }) => {
           {/* <Link href={`/${title.replace(/ /g, '_').toLowerCase()}`} >
                         {title}
                     </Link> */}
-          <Link onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} href={`/industry`}>
-            {title}
-          </Link>
+          <Link href={`/industry`}>{title}</Link>
         </div>
       </div>
     </div>

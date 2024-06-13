@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Card from '../atoms/card';
-import Container from '../atoms/container';
-import ArrowButton from '@/components/atoms/arrowButton';
+import Card from '../common/atoms/card';
+import Container from '../common/atoms/container';
+import ArrowButton from '@/components/common/atoms/arrowButton';
 
 export default function Careers() {
   return (
@@ -55,7 +55,7 @@ export default function Careers() {
               <div className="text-[25px] text-white/90">LOREM IPSUM DOLOR</div>
             </div>
             <ArrowButton
-              arrowColor="normal"
+              arrowType="normal"
               hoverColor="#ffffff81"
               arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
               title="VIEW DETAILS"
@@ -95,7 +95,7 @@ export default function Careers() {
               <div className="text-[25px] text-white/90">LOREM IPSUM DOLOR</div>
             </div>
             <ArrowButton
-              arrowColor="normal"
+              arrowType="normal"
               hoverColor="#ffffff81"
               arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
               title="VIEW DETAILS"
@@ -135,7 +135,7 @@ export default function Careers() {
               <div className="text-[25px] text-white/90">LOREM IPSUM DOLOR</div>
             </div>
             <ArrowButton
-              arrowColor="normal"
+              arrowType="normal"
               hoverColor="#ffffff81"
               arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
               title="VIEW DETAILS"
