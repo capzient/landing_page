@@ -16,7 +16,7 @@ const Industry = () => {
         {textArray.map((a, idx) => (
           <div className="flex gap-[15px] items-center" key={idx}>
             {idx !== 0 && <div className="w-[5px] h-[5px] rounded-full bg-red-500"></div>}
-            {a}
+            <span className="whitespace-nowrap"> {a}</span>
           </div>
         ))}
       </div>
