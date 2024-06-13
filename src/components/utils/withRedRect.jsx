@@ -1,7 +1,7 @@
 const WithRedRect = ({ children }) => (
-  <div className="flex items-end">
-    <div>{children}</div>
-    <div className={`text-red-500 dot`}>.</div>
-  </div>
+  <span className="flex items-end">
+    <span>{children}</span>
+    <span className={`text-red-500 dot`}>.</span>
+  </span>
 );
 export default WithRedRect;

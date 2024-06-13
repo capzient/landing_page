@@ -3,7 +3,7 @@
 import { AnimatePresence, delay, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { IoMdReturnRight } from 'react-icons/io';
 
 import MenuItem from './menuItem';
@@ -95,7 +95,13 @@ const Navbar = () => {
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-
+  const extendRef = useRef(null);
+  const extendContentRef = useRef(null);
+  useEffect(() => {
+    if (extendRef.current) {
+      extendRef.current.style.height = `${extendContentRef.current.scrollHeight + 40}px`;
+    }
+  }, [activeMenu]);
   return (
     <div className="nav animation-element nav-item w-full  fixed top-0 backdrop-0 z-50  text-[20px]">
       <div className="w-full h-full flex flex-row items-center relative z-[52] justify-between mx-auto">
@@ -175,27 +181,30 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute w-full left-0 top-0 origin-top z-[1] bg-blue-700 text-white p-10"
+            className="absolute w-full left-0 top-0 origin-top z-[1] bg-[#131313] text-white p-10"
           >
             {/* {extendElement}
              */}
-            {menus.map((aMenu, idx) =>
-              extendElement && idx === activeMenu ? (
-                <motion.div key={idx} variants={extendItemBars} initial="initial" animate="open" exit="exit">
-                  <div
-                    onMouseLeave={() => {
-                      setActiveMenu(null);
-                      setExtendElement(null);
-                    }}
-                    onClick={() => {
-                      setExtendElement(null);
-                    }}
-                  >
-                    {aMenu.extend ?? null}
-                  </div>
-                </motion.div>
-              ) : null,
-            )}
+            <div ref={extendRef} className="height-animated">
+              {menus.map((aMenu, idx) =>
+                extendElement && idx === activeMenu ? (
+                  <motion.div key={idx} variants={extendItemBars} initial="initial" animate="open" exit="exit">
+                    <div
+                      ref={extendContentRef}
+                      onMouseLeave={() => {
+                        setActiveMenu(null);
+                        setExtendElement(null);
+                      }}
+                      onClick={() => {
+                        setExtendElement(null);
+                      }}
+                    >
+                      {aMenu.extend ?? null}
+                    </div>
+                  </motion.div>
+                ) : null,
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

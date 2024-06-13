@@ -22,13 +22,18 @@ const Welcome = () => (
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
     <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
-      <div className="text-center text-white text-title">Welcome to the stellar standard of technology solutions</div>
+      <div className="uppercase text-center text-white text-center text-title">
+        Welcome to the <span className="text-red-500">stellar</span>
+        <div className="flex justify-center flex-wrap gap-[20px]">
+          <span className="text-red-500">standard</span> of technology <WithRedRect>solutions</WithRedRect>
+        </div>
+      </div>
       <div className="flex pt-[100px] gap-[30px] items-center justify-center">
         <div className="w-[50%] p-[20px] text-[32px] text-[#979796]">
           We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and
           groundbreaking technology.
         </div>
-        <div className="w-50%">
+        <div className="w-[50%]">
           <Image
             className="mx-auto"
             src={'/assets/images/welcome/video.svg'}
@@ -61,10 +66,10 @@ const Welcome = () => (
       </div> */}
 
     <div className="bg-black w-full text-white text-8xl  font-['Inter']  h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
-      <div className="uppercase justify-center  w-full flex flex-wrap  gap-10 py-10">
-        <div className="flex ">Unleash tomorrow&apos;s</div>
+      <div className="uppercase text-center justify-center  w-full flex flex-wrap  gap-10 py-10">
+        <div className="flex ">Unleash tomorrow&apos;s Tech</div>
         <div className="flex justify-end items-end ">
-          <WithRedRect>Tech Today</WithRedRect>
+          <WithRedRect>Today</WithRedRect>
         </div>
       </div>
       <Swiper
@@ -89,7 +94,7 @@ const Welcome = () => (
         {carouselData.map((item, index) => (
           <div className="h-full grow">
             <SwiperSlide className="grow h-full relative" key={index}>
-              <div className="w-full grow h-full min-h-[500px]  pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+              <div className="w-full h-full grow  pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
                 <div className="absolute top-0 left-0 md:w-[100px] w-full md:h-[500px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
                 <div className="text-[35px]  text-[#F9EFEC] ">
                   <span className="text-[#F51101] ">&quot;</span>
@@ -135,24 +140,21 @@ const Welcome = () => (
         </div>
         <div className="w-1/2 p-10">
           <Accordion
-            bodyClassName="rounded-lg p-[40px] flex flex-col gap-10 h-full grow"
+            bodyClassName="rounded-lg flex flex-col gap-10"
             title={
-              <p className="relative pr-[50px] text-white text-[20px] border-b-[1px] border-[#262626] pb-[20px]">
+              <p className="py-[40px] text-white text-[20px] ">
                 Lorem ipsum dolor sit amet consectetur. Vitae potenti etiam amet fermentum.
               </p>
             }
             idleCpn={
-              <div className="relative w-full h-56 rounded-lg">
-                <Image
-                  src="/assets/images/industry/sub_container.svg"
-                  fill
-                  alt="graphic"
-                  className="object-cover rounded-lg"
-                />
+              <div className=" h-[250px] w-full p-[20px] rounded-lg">
+                <div className="p-[25px] relative w-full h-full">
+                  <Image src="/assets/images/industry/sub_container.svg" fill className="object-cover rounded-lg" />
+                </div>
               </div>
             }
             activeCpn={
-              <div className="text-[#979796] text-[20px]">
+              <div className="text-[#979796] p-[35px] text-[20px]">
                 Lorem ipsum dolor sit amet consectetur. Non congue cursus quis adipiscing donec velit a. Nunc varius
                 lectus ut laoreet facilisis eu. Arcu ac urna eu et. Feugiat nibh nulla sed faucibus velit parturient
                 proin. In sed lobortis maecenas facilisis sit enim magna velit nisi. Mauris senectus id ut consectetur

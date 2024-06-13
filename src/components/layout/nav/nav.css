@@ -1,8 +1,8 @@
 /*  Us Button Animation */
 .extend-item-before {
-  background-color: white;
+  background-color: rgba(255, 0, 0, 0.842);
   width: 30px;
-  height: 1px;
+  height: 2px;
 }
 .button {
   border: none;
