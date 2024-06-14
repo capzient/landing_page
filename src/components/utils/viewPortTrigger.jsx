@@ -15,28 +15,15 @@ function ViewportTrigger() {
 
       function checkIfInView() {
         var windowHeight = $window.height();
-        var windowWidth = $window.width();
         var windowTopPosition = $window.scrollTop();
-        var windowLeftPosition = $window.scrollLeft();
         var windowBottomPosition = windowTopPosition + windowHeight;
-        var windowRightPosition = windowLeftPosition + windowWidth;
 
         $.each($animationElements, function () {
           var $element = $(this);
           var elementHeight = $element.outerHeight();
-          var elementWidth = $element.outerWidth();
           var elementTopPosition = $element.offset().top;
-          var elementLeftPosition = $element.offset().left;
           var elementBottomPosition = elementTopPosition + elementHeight;
-          var elementRightPosition = elementLeftPosition + elementWidth;
-
-          // Check if the current container is within the viewport
-          if (
-            elementBottomPosition >= windowTopPosition &&
-            elementTopPosition <= windowBottomPosition &&
-            elementRightPosition >= windowLeftPosition &&
-            elementLeftPosition <= windowRightPosition
-          ) {
+          if (elementBottomPosition >= windowTopPosition && elementTopPosition <= windowBottomPosition) {
             $element.addClass('in-view');
           } else {
             $element.removeClass('in-view');

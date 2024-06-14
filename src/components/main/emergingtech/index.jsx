@@ -68,6 +68,17 @@ const EmergingTech = () => (
             </p>
           }
         />
+        <Accordion
+          bodyClassName="rounded-lg flex flex-col gap-10"
+          title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}
+          idleCpn={null}
+          activeCpn={
+            <p className="p-[40px] text-[20px]">
+              The timeline varies depending on the project&apos;s complexity and requirements. Our team strives to
+              deliver projects on time while maintaining the highest quality standards.
+            </p>
+          }
+        />
       </div>
     </div>
   </div>

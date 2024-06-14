@@ -15,7 +15,7 @@ const extraContainerVars = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: 'circOut',
+      ease: 'circIn',
     },
   },
   exit: {
