@@ -1,5 +1,5 @@
 const Container = ({ containerClassName, children }) => (
-  <div className={`appear animation-element p-[20px] rounded-lg border-[#1F1F1F] border-[2px] ${containerClassName}`}>
+  <div className={`animation-element container--bordered p-[20px] rounded-lg border-[2px] ${containerClassName}`}>
     {children}
   </div>
 );

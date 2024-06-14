@@ -8,7 +8,7 @@ import ViewportTrigger from '@/components/utils/viewPortTrigger';
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
+    <div className="h-full w-full">
       <ViewportTrigger />
       <Hero />
       <Welcome />
@@ -16,6 +16,6 @@ export default function Home() {
       <NewsLetter />
       <Careers />
       <Footer />
-    </main>
+    </div>
   );
 }

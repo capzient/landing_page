@@ -8,7 +8,17 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
@@ -96,11 +106,19 @@ body {
   animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
-  backface-visibility: hidden;
+}
+.container--bordered {
+  border-color: #ffffff00;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+.container--bordered.in-view {
+  border-color: #1f1f1f;
+  transition-duration: 1s;
 }
 .nav-item {
   opacity: 0;
-  transition-duration: 0.5s;
+  transition-duration: 500ms;
 }
 .nav-item.in-view {
   opacity: 1;
@@ -131,7 +149,7 @@ body {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 .welcome-blur {
-  background-color: #ffffff00;
+  background-color: #77060600;
   backdrop-filter: blur(5px);
   z-index: -1;
 }
