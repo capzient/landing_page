@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeroContent from '@/components/sub/HeroContent';
+import HeroContent from '@/components/main/hero/sub/HeroContent';
 import ViewportTrigger from '@/components/utils/viewPortTrigger';
 
 const Hero = () => (

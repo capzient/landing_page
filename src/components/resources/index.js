@@ -76,7 +76,7 @@ const Resources = () => {
       </Card>
       <Container className="p-[20px] flex flex-col gap-[20px]">
         <div className="flex">
-          <div className="pr-[10px] w-[50%]">
+          <div className="animation-element appear pr-[10px] w-[50%]">
             <div className=" bg-[#1A1A1A] text-white text-[50px] w-full rounded-lg">
               <div className="w-full">
                 <Image
@@ -90,7 +90,7 @@ const Resources = () => {
             </div>
           </div>
           <div className="pl-[10px] w-[50%]">
-            <div className="bg-[#1A1A1A] p-[30px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full rounded-lg">
+            <Card bodyClassName="p-[30px] flex h-full flex-col justify-between text-white text-[50px] gap-[20px] w-full ">
               <div className="flex flex-col justify-between h-full">
                 <div className="flex flex-col gap-[20px]">
                   <div className="flex items-center justify-between">
@@ -125,7 +125,7 @@ const Resources = () => {
 
                 <div className="text-[#B3B3B2] pb-[40px] text-[20px]">By - Lorem Ipsum</div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </Container>

@@ -57,10 +57,10 @@ const Welcome = () => (
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           1024: {
             slidesPerView: 3,
@@ -74,14 +74,14 @@ const Welcome = () => (
         {carouselData.map((item, index) => (
           <div key={index} className="h-full grow">
             <SwiperSlide className="grow h-full relative">
-              <div className="w-full h-full grow  slide pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+              <div className="w-full h-[600px] grow pt-[80px] p-10 flex flex-col gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
                 <div className="absolute top-0 left-0 md:w-[100px] w-full md:h-[500px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
                 <div className="text-[35px]  text-[#F9EFEC] ">
                   <span className="text-[#F51101] ">&quot;</span>
                   {item.heading}
                   <span className="text-[#F51101]">&rdquo;</span>
                 </div>
-                <div className="w-full text-[25px] text-[#A3A3A3]">{item.description}</div>
+                <div className="w-full text-[25px] py-10 leading-normal text-[#A3A3A3]">{item.description}</div>
                 <div className="flex flex-col justify-end h-full grow">
                   <div className="gap-10 text-sm flex lex-wrap items-center">
                     <Image
@@ -101,14 +101,14 @@ const Welcome = () => (
       </Swiper>
     </div>
     <div className="lg:px-[10vw] md:px-0 bg-black p-[30px] text-[#B3B3B2] flex flex-col items-center justify-center ">
-      <div className="animation-element appear font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 mb-10">
+      <div className="animation-element my-[70px] appear font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 ">
         We keep you{' '}
         <WithRedRect>
           <span className="text-red-500">ahead</span>
         </WithRedRect>
       </div>
-      <div className="w-full flex md:flex-row flex-col justify-between gap-[10px]">
-        <div className="w-[60%] p-10">
+      <div className="w-full flex md:flex-row flex-col gap-[10px]">
+        <div className="w-[40%] p-10">
           <Menu
             data={[
               'Research and Development',
@@ -120,7 +120,7 @@ const Welcome = () => (
             itemClassName="text-[25px]  p-6 uppercase"
           />
         </div>
-        <div className="w-1/2 p-10">
+        <div className="w-[60%] p-10">
           <Accordion
             bodyClassName="rounded-lg flex flex-col gap-[10px]"
             title={

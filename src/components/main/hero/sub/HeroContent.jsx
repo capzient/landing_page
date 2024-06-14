@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import WithRedRect from '../utils/withRedRect';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import { MobileLinkVars, ContainerVars } from './../utils/animations/TextAnimation';
+import { ContainerVars, MobileLinkVars } from '../../../utils/animations/TextAnimation';
+import WithRedRect from '../../../utils/withRedRect';
 
 const HeroContent = () => {
   const { ref, inView } = useInView({

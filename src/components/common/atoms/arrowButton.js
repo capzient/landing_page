@@ -2,10 +2,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, title }) => {
+const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, title, handleClick }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <div
+      onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="animation-element appear cursor-pointer flex items-center duration-300 hover:gap-[20px] gap-[15px]"
