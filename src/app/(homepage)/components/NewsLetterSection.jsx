@@ -12,7 +12,7 @@ export const NewsLetterSection = () => {
   return (
     <div className="bg-black p-[30px] text-[#B3B3B2] px-10 flex flex-col items-center justify-center ">
       <Container containerClassName="p-3 rounded-2xl border h-full w-full flex flex-col gap-[15px]">
-        <ExtraContentContainer open={openExtra} setOpen={setOpenExtra} extraCpn={<Card>this is extra cpn</Card>}>
+        <ExtraContentContainer open={openExtra} setOpen={setOpenExtra} extraCpn={<div>extra contents here</div>}>
           <Card bodyClassName="w-full p-5 flex justify-between items-center bg-[#191919] rounded-2xl">
             <p className="text-[#F9EFEC] text-[40px] p-[20px]">NEWS LETTER</p>
             <ArrowButton

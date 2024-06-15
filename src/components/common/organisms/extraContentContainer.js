@@ -5,25 +5,44 @@ import { IoMdClose } from 'react-icons/io';
 const extraContainerVars = {
   initial: {
     right: '-100vw',
-    opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1,
     },
   },
   open: {
     right: '0px',
+    transition: {
+      duration: 1,
+      ease: 'circIn',
+    },
+  },
+  exit: {
+    right: '-100vw',
+    transition: {
+      duration: 1,
+      ease: 'circIn',
+    },
+  },
+};
+const extraContainerBgVars = {
+  initial: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  open: {
     opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1,
       ease: 'circIn',
     },
   },
   exit: {
     opacity: 0,
-    right: '-100vw',
     transition: {
-      duration: 0.7,
-      ease: 'circOut',
+      duration: 1,
+      ease: 'circIn',
     },
   },
 };
@@ -55,6 +74,20 @@ export const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => 
           </div>
           {extraCpn}
         </motion.div>
+      )}
+    </AnimatePresence>
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          variants={extraContainerBgVars}
+          initial="initial"
+          animate="open"
+          exit="exit"
+          style={{
+            zIndex: 99,
+          }}
+          className="fixed p-[20px] bg-black w-[100vw] h-[100vh] top-0 left-0"
+        ></motion.div>
       )}
     </AnimatePresence>
   </div>
