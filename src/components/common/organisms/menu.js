@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 
-const Menu = ({ data, itemClassName }) => {
+export const Menu = ({ data, itemClassName }) => {
   const [active, setActive] = useState(0);
   return (
     <>
       {data.map((aItem, idx) => (
         <div
+          key={idx}
           onClick={() => setActive(idx)}
           className="animation-element appear cursor-pointer hover:text-white duration-500 flex items-center"
         >
@@ -26,5 +27,3 @@ const Menu = ({ data, itemClassName }) => {
     </>
   );
 };
-
-export default Menu;

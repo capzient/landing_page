@@ -1,11 +1,10 @@
 import { Poppins, Roboto } from 'next/font/google';
 
 import './globals.css';
-import Navbar from '@/components/layout/nav';
-import CursorFollower from '@/components/utils/cursorFollower';
-import SmoothScroll from '@/components/utils/smoothScroll/SmoothScroll';
+import { Footer } from '@/components/layout/footer/Footer';
+import { Navbar } from '@/components/layout/nav';
 
-import { Providers } from './provides';
+import { Providers } from './providers';
 
 const roboto_init = Roboto({
   subsets: ['latin'],
@@ -27,15 +26,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Providers>
-        <body className={`${roboto_init.variable} ${poppins_init.variable}`}>
+      <body className={`${roboto_init.variable} ${poppins_init.variable} relative`}>
+        <Providers>
           <div className="">
-            <CursorFollower />
             <Navbar />
-            <SmoothScroll>{children}</SmoothScroll>
+            {children}
           </div>
-        </body>
-      </Providers>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }

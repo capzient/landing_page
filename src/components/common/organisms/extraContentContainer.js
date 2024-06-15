@@ -28,7 +28,7 @@ const extraContainerVars = {
   },
 };
 
-const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => (
+export const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => (
   <div>
     {children}
     <AnimatePresence>
@@ -59,4 +59,3 @@ const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => (
     </AnimatePresence>
   </div>
 );
-export default ExtraContentContainer;

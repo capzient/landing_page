@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   return (
     <div className=" bg-black text-zinc-50">
       <div>
@@ -42,17 +42,17 @@ export default function Footer() {
               <li className="flex justify-start">
                 <span className="relative">
                   <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-facebook"></ion-icon>{" "}
+                  <ion-icon name="logo-facebook"></ion-icon>{' '}
                 </span>
 
                 <span className="mx-8 relative">
                   <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-xing"></ion-icon>{" "}
+                  <ion-icon name="logo-xing"></ion-icon>{' '}
                 </span>
 
                 <span className="mx-2 relative">
                   <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-instagram"></ion-icon>{" "}
+                  <ion-icon name="logo-instagram"></ion-icon>{' '}
                 </span>
               </li>
             </ul>
@@ -76,17 +76,9 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        {" "}
-        <script
-          type="module"
-          async
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-          noModule
-          async
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        ></script>
+        {' '}
+        <script type="module" async src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script noModule async src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
       </div>
     </div>
   );

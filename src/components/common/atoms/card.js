@@ -1,4 +1,4 @@
-const Card = ({ bodyClassName, children, noHover }) => (
+export const Card = ({ bodyClassName, children, noHover }) => (
   <div
     style={{
       transitionDuration: '500ms',
@@ -10,5 +10,3 @@ const Card = ({ bodyClassName, children, noHover }) => (
     {children}
   </div>
 );
-
-export default Card;

@@ -4,9 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
-import Card from '../atoms/card';
+import { Card } from '../atoms/card';
 
-const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
+export const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
   const [active, setActive] = useState(false);
   const contentRef = useRef(null);
   const idleRef = useRef(null);
@@ -88,5 +88,3 @@ const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
     </Card>
   );
 };
-
-export default Accordion;

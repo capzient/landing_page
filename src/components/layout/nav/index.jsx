@@ -6,8 +6,8 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { IoMdReturnRight } from 'react-icons/io';
 
-import MenuItem from './menuItem';
-import menus from './menus';
+import { MenuItem } from './menuItem';
+import { menus } from './menus';
 
 import './nav.css';
 
@@ -107,7 +107,7 @@ const navBarVars = {
   },
 };
 
-const Navbar = () => {
+export const Navbar = () => {
   // const [open, setOpen] = useState(false);
   const [extendElement, setExtendElement] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -300,5 +300,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

@@ -4,7 +4,7 @@ import { ArrowButton } from '@/components/common/atoms/arrowButton';
 import { Card } from '@/components/common/atoms/card';
 import { Container } from '@/components/common/atoms/container';
 
-export default function More() {
+export function More() {
   return (
     <div className="flex flex-col gap-[50px] bg-black px-[130px] py-[100px] pt-[200px]">
       <div className="flex gap-[40px]">
