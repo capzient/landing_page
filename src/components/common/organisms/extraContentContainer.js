@@ -5,25 +5,22 @@ import { IoMdClose } from 'react-icons/io';
 const extraContainerVars = {
   initial: {
     right: '-100vw',
-    opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1,
     },
   },
   open: {
     right: '0px',
-    opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1,
       ease: 'circIn',
     },
   },
   exit: {
-    opacity: 0,
     right: '-100vw',
     transition: {
-      duration: 0.7,
-      ease: 'circOut',
+      duration: 1,
+      ease: 'circIn',
     },
   },
 };
