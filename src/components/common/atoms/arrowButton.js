@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, title, handleClick }) => {
+export const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, title, handleClick }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <div
@@ -30,4 +30,3 @@ const ArrowButton = ({ titleClassName, hoverColor, arrowType, arrowClassName, ti
     </div>
   );
 };
-export default ArrowButton;

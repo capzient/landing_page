@@ -1,4 +1,4 @@
-import ExtendItem from './extendItem';
+import { ExtendItem } from './extendItem';
 
 const ExtendParent = ({ children }) => (
   <div className="w-full flex text-[20px] justify-between border-[#ffffff20] border-t-[1px] mt-[50px]  p-10 px-[100px]">
@@ -6,7 +6,7 @@ const ExtendParent = ({ children }) => (
   </div>
 );
 
-const menus = [
+export const menus = [
   {
     title: 'Capabilities',
     extend: (
@@ -108,5 +108,3 @@ const menus = [
     title: 'Resources',
   },
 ];
-
-export default menus;

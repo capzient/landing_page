@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-const ExtendItem = ({ title }) => {
+export const ExtendItem = ({ title }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
@@ -32,5 +32,3 @@ const ExtendItem = ({ title }) => {
     </div>
   );
 };
-
-export default ExtendItem;

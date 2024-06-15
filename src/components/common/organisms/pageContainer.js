@@ -27,11 +27,10 @@ const extraContainerVars = {
   },
 };
 
-const PageContainer = ({ children }) => (
+export const PageContainer = ({ children }) => (
   <AnimatePresence>
     <motion.div variants={extraContainerVars} initial="initial" animate="open" exit="exit" className="relative">
       {children}
     </motion.div>
   </AnimatePresence>
 );
-export default PageContainer;

@@ -5,7 +5,7 @@ import { ArrowButton } from '@/components/common/atoms/arrowButton';
 import { Card } from '@/components/common/atoms/card';
 import { Container } from '@/components/common/atoms/container';
 
-const Resources = () => {
+export const Resources = () => {
   const footerText = ['CLOUD STORAGE', 'VIRTUALIZATION', 'LOAD BALANCING', 'BACKUP AND RECOVERY'];
   const renderFooterText = () => {
     let textArray = [];
@@ -139,5 +139,3 @@ const Resources = () => {
     </div>
   );
 };
-
-export default Resources;
