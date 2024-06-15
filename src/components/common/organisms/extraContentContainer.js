@@ -24,6 +24,28 @@ const extraContainerVars = {
     },
   },
 };
+const extraContainerBgVars = {
+  initial: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  open: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: 'circIn',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'circIn',
+    },
+  },
+};
 
 export const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => (
   <div>
@@ -52,6 +74,20 @@ export const ExtraContentContainer = ({ children, open, setOpen, extraCpn }) => 
           </div>
           {extraCpn}
         </motion.div>
+      )}
+    </AnimatePresence>
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          variants={extraContainerBgVars}
+          initial="initial"
+          animate="open"
+          exit="exit"
+          style={{
+            zIndex: 99,
+          }}
+          className="fixed p-[20px] bg-black w-[100vw] h-[100vh] top-0 left-0"
+        ></motion.div>
       )}
     </AnimatePresence>
   </div>
