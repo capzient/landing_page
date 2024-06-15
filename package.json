@@ -10,12 +10,10 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.18",
-    "@hookform/resolvers": "^3.6.0",
-    "@next/font": "^14.2.3",
+    "@hookform/resolvers": "^14.2.3",
     "@studio-freight/react-lenis": "^0.0.47",
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.1.9",
-    "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "next": "14.2.3",
     "react": "^18",
