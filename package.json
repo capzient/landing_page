@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+
   "dependencies": {
     "@fontsource/inter": "^5.0.18",
-    // "@hookform/resolvers": "^14.2.3",
     "@studio-freight/react-lenis": "^0.0.47",
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.1.9",
