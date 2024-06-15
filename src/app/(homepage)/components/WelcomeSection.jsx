@@ -73,7 +73,7 @@ export const WelcomeSection = () => (
         </div>
       </div>
     </div>
-    <div className="bg-black w-full text-white text-8xl  font-['Inter']  h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
+    <div className="bg-black w-full text-white text-8xl  h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
       <div className="animation-element appear  uppercase text-center justify-center  w-full flex flex-wrap  gap-10 py-10">
         <div className="flex ">Unleash tomorrow&apos;s Tech</div>
         <div className="flex justify-end items-end ">
