@@ -9,7 +9,7 @@ export const EmergingTechSection = () => (
       Emerging <span className="text-[#f51101]">Technologies</span>
     </div>
     <div className="w-full flex md:flex-row flex-col justify-between items-start gap-[10px] h-full">
-      <div className="animation-element appear w-1/3 p-[10px]">
+      <div className="animation-element appear w-full md:w-1/3 p-[10px]">
         <div className="relative w-full h-full rounded-lg">
           <Image
             src="/assets/images/industry/sub_container.svg"
@@ -21,7 +21,7 @@ export const EmergingTechSection = () => (
           />
         </div>
       </div>
-      <div className="w-2/3 p-[10px] gap-3 flex flex-col justify-center">
+      <div className="md:w-2/3 w-full p-[10px] gap-3 flex flex-col justify-center">
         <Accordion
           bodyClassName="rounded-lg flex flex-col gap-10"
           title={<p className="w-full text-3xl py-[40px] ">Re-imagine with cloud</p>}

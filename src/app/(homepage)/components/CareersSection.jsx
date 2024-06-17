@@ -5,7 +5,7 @@ import { WithRedRect } from '@/utils/withRedRect';
 
 export const CareersSection = () => (
   <div className="gap-[50px] bg-black px-[30px] py-[150px] pt-[100px] pb-[100px] flex flex-col">
-    <div className="animation-element appear pl-11 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-8xl uppercase">
+    <div className="animation-element appear pl-11 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-5xl md:text-8xl uppercase">
       <WithRedRect>Careers</WithRedRect>
     </div>
     <Container containerClassName="flex flex-wrap  justify-center items-center p-[20px]  mt-[20px]">

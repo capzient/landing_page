@@ -46,7 +46,7 @@ export const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
     <Card bodyClassName={bodyClassName} noHover>
       <div>
         <div onClick={() => setActive(!active)} className="px-[40px] flex gap-[40px] items-center">
-          <div className={`w-full  text-3xl `}>{title}</div>
+          <div className={`w-full  text-3xl text-balance flex justify-between`}>{title}</div>
           {!active && (
             <div
               className="p-[15px] border-[1px] border-[#333333]  rounded-full  bg-[#1F1F1F]"
