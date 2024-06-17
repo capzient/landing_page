@@ -1,7 +1,7 @@
+import { generateSeo } from '@/utils/generateSeo';
 import { ViewportTrigger } from '@/utils/viewPortTrigger';
 
 import { About } from './components/About';
-import { generateSeo } from '@/utils/generateSeo';
 
 export const generateMetadata = () =>
   generateSeo({

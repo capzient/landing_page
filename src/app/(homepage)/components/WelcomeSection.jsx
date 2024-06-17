@@ -45,7 +45,7 @@ export const WelcomeSection = () => (
     <div className="h-[100vh]"></div>
     <div className="h-[100vh] relative welcome-text-container flex items-center justify-center bg-cover bg-center bg-[url('/assets/images/home/image_1.svg')] w-full text-white text-[128px]">
       <WithRedRect>
-        <div className="relative md:welcome-text text-4xl ">We Re-imagine</div>
+        <div className="relative md:welcome-text ">We Re-imagine</div>
       </WithRedRect>
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
