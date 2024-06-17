@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -10,9 +11,9 @@ const companyLinks = [
 ];
 
 const legalLinks = [
-  { name: 'Privacy Statement', link: '#' },
-  { name: 'Terms and Condition', link: '#' },
-  { name: 'Cookies Policy', link: '#' },
+  { name: 'Privacy Statement', link: '/privacy-policy' },
+  { name: 'Terms of Service', link: '/terms-of-service' },
+  { name: 'Cookies Policy', link: '/cookies-policy' },
 ];
 
 const socialLinks = [
@@ -23,13 +24,12 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <div className=" bg-black text-zinc-50">
+    <div className=" bg-black text-zinc-50 py-6">
       <div>
-        <div className="md:grid md:grid-cols-6 flex flex-col md:justify-start gap-10 items-center pt-16">
-          <div>
-            <ul className="mx-0">
-              <li className=" text-4xl mx-16">Capzient</li>
-            </ul>
+        <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16">
+          <div className="px-10 col-span-2">
+            <Image src="/assets/images/capzient_logo_white.png" height={250} width={250} alt="logo"></Image>
+            <p className="text-start opacity-70">(c) 2024 Capzient, All rights reserved.</p>
           </div>
           <div className="col-start-3">
             <ul className="flex flex-col items-center  gap-1">
@@ -60,8 +60,8 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="flex justify-end">
-            <ul className="flex flex-col items-center  gap-1">
+          <div className="flex justify-center">
+            <ul className="flex flex-col items-center gap-1">
               <li className="font-bold my-2">FOLLOW US</li>
               <li className="flex justify-center items-center md:justify-start">
                 {socialLinks.map((link) => (
@@ -73,24 +73,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-3 my-10 p-4 pt-6 pb-6 mb-0">
-          <div className="mx-16">
-            <ion-icon name="business-outline"></ion-icon> 2024 Company
-          </div>
-          <div className="col-start-3">
-            <span className="mx-2 ">Term of Services</span>
-            <span className="mx-2">Privacy Policy</span>
-            <span className="mx-2">English</span>
-            <span className="mx-2">
-              <ion-icon name="chevron-down-outline"></ion-icon>
-            </span>
-            <span className="mx-8">
-              <ion-icon name="arrow-up-outline"></ion-icon>
-            </span>
-          </div>
-        </div>
       </div>
-      <div></div>
     </div>
   );
 }
