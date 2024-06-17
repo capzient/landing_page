@@ -177,7 +177,12 @@ export const WelcomeSection = () => (
                 proin. In sed lobortis maecenas facilisis sit enim magna velit nisi. Mauris senectus id ut consectetur
                 nulla sagittis aenean mauris. Aliquam nibh pellentesque justo eu elementum. Mattis et amet ni
                 Scelerisque maecenas ac ac viverra ipsum dis justo non. Ultrices ut accumsan etiam mattis. Justo fames
-                sapien lorem laoreet nunc.
+                sapien lorem laoreet nunc. Lorem ipsum dolor sit amet consectetur. Non congue cursus quis adipiscing
+                donec velit a. Nunc varius lectus ut laoreet facilisis eu. Arcu ac urna eu et. Feugiat nibh nulla sed
+                faucibus velit parturient proin. In sed lobortis maecenas facilisis sit enim magna velit nisi. Mauris
+                senectus id ut consectetur nulla sagittis aenean mauris. Aliquam nibh pellentesque justo eu elementum.
+                Mattis et amet ni Scelerisque maecenas ac ac viverra ipsum dis justo non. Ultrices ut accumsan etiam
+                mattis. Justo fames sapien lorem laoreet nunc.
               </div>
             }
           ></Accordion>
