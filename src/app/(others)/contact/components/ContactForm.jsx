@@ -9,7 +9,7 @@ import { Card } from '@/components/common/atoms/card';
 function FormItem({ label, children, error }) {
   return (
     <>
-      <div className="animation-element appear flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <span className={`text-base ${error ? 'text-red-500' : 'text-[#F3DFD8]'}`}>{label}</span>
         {children}
         {error && <span className="text-red-500 text-sm">{error.message}</span>}
@@ -107,7 +107,7 @@ export function ContactForm() {
                 placeholder="ENTER PHONE NUMBER"
               />
             </FormItem>
-            <div className="animation-element appear flex flex-col gap-4 col-span-2">
+            <div className="flex flex-col gap-4 col-span-2">
               <span className=" text-base text-[#F3DFD8] ">MESSAGE</span>
               <input
                 {...register('message')}
@@ -119,7 +119,7 @@ export function ContactForm() {
             </div>
           </div>
           <div className=" flex flex-row justify-between items-center px-16 mx-8 mt-2">
-            <div className="animation-element appear flex flex-col items-center gap-2">
+            <div className=" flex flex-col items-center gap-2">
               <div className="flex">
                 <input {...register('agreeterms')} type="checkbox" id="custom-checkbox" className="hidden" />
                 <label
@@ -140,7 +140,7 @@ export function ContactForm() {
                 <span className="text-red-500 text-sm text-start">{errors.agreeterms.message}</span>
               )}
             </div>
-            <div className="animation-element appear">
+            <div>
               <button
                 role="submit"
                 disabled={isSubmitting || isSubmitSuccessful}
