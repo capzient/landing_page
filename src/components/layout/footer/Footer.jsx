@@ -1,59 +1,74 @@
+import Link from 'next/link';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+
+const companyLinks = [
+  { name: 'About Us', link: '#' },
+  { name: 'Contact Us', link: '#' },
+  { name: 'Location', link: '#' },
+  { name: 'Careers', link: '#' },
+];
+
+const legalLinks = [
+  { name: 'Privacy Statement', link: '#' },
+  { name: 'Terms and Condition', link: '#' },
+  { name: 'Cookies Policy', link: '#' },
+];
+
+const socialLinks = [
+  { name: 'Facebook', icon: <FaFacebook className="text-xl" />, link: '#' },
+  { name: 'Xing', icon: <FaXTwitter className="text-xl" />, link: '#' },
+  { name: 'Instagram', icon: <FaInstagram className="text-xl" />, link: '#' },
+];
+
 export function Footer() {
   return (
     <div className=" bg-black text-zinc-50">
       <div>
-        <div className="grid grid-cols-6  pt-16">
+        <div className="md:grid md:grid-cols-6 flex flex-col md:justify-start gap-10 items-center pt-16">
           <div>
             <ul className="mx-0">
-              <li className=" text-4xl   mx-16">Capzient</li>
+              <li className=" text-4xl mx-16">Capzient</li>
             </ul>
           </div>
           <div className="col-start-3">
-            <ul>
-              <li className="font-bold mb-8">Company</li>
-              <li>About Us</li>
-              <li className="my-2">Contact Us</li>
-              <li className="mb-2">Location</li>
-              <li>Careers</li>
+            <ul className="flex flex-col items-center  gap-1">
+              <li className="font-bold my-2">Company</li>
+              {companyLinks.map((link) => (
+                <Link
+                  href={link.link}
+                  key={link.name}
+                  className=" flex justify-center items-center md:justify-start text-white/70 hover:text-white"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </ul>
           </div>
           <div>
-            <ul>
-              <li className="font-bold mb-8">Legal and Policy</li>
-              <li>Privacy Statement</li>
-              <li className="my-2">Terms and Condition</li>
-              <li>Cookies Policy</li>
+            <ul className="flex flex-col items-center  gap-1">
+              <li className="font-bold my-2 ">Legal and Policy</li>
+              {legalLinks.map((link) => (
+                <Link
+                  href={link.link}
+                  key={link.name}
+                  className=" flex justify-center items-center md:justify-start text-white/70 hover:text-white"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </ul>
           </div>
-          <div>
-            <ul>
-              <li className="font-bold mb-8">Services</li>
-              <li>Blockchain</li>
-              <li className="my-2">Cloud Computing</li>
-              <li>Web 3.0</li>
-              <li className="my-2">Machine Learning</li>
-              <li>Cybersecurity</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li className="font-bold mb-8">FOLLOW US</li>
 
-              <li className="flex justify-start">
-                <span className="relative">
-                  <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-facebook"></ion-icon>{' '}
-                </span>
-
-                <span className="mx-8 relative">
-                  <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-xing"></ion-icon>{' '}
-                </span>
-
-                <span className="mx-2 relative">
-                  <div className="rounded-full h-8 w-8 bg-gray-400 absolute -top-1.5 -left-2 opacity-50"></div>
-                  <ion-icon name="logo-instagram"></ion-icon>{' '}
-                </span>
+          <div className="flex justify-end">
+            <ul className="flex flex-col items-center  gap-1">
+              <li className="font-bold my-2">FOLLOW US</li>
+              <li className="flex justify-center items-center md:justify-start">
+                {socialLinks.map((link) => (
+                  <Link href={link.link} key={link.name} className="mx-2 text-white/70 hover:text-white">
+                    {link.icon}
+                  </Link>
+                ))}
               </li>
             </ul>
           </div>
@@ -75,11 +90,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div>
-        {' '}
-        <script type="module" async src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script noModule async src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      </div>
+      <div></div>
     </div>
   );
 }
