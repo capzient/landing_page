@@ -1,15 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@fontsource/inter";
-
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
@@ -20,17 +28,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: sans-serif;
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  /* font-family: sans-serif; */
+  background-color: #0b0b0b;
 }
 
 #custom-checkbox:checked + label {
-  background-color: #F51101; /* Change this to your desired checked color */
+  background-color: #f51101; /* Change this to your desired checked color */
 }
 
 #custom-checkbox:checked + label svg {
@@ -57,7 +61,7 @@ body {
 }
 
 .link::before {
-  content: "";
+  content: '';
   /* show by default */
 }
 
@@ -76,7 +80,6 @@ body {
   transform: scale3d(1, 1, 1);
 }
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -90,25 +93,91 @@ body {
 .poppins {
   font-family: var(--font-poppins);
 }
-.dot{
+.dot {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.white-blur-btn{
+.white-blur-btn {
   background-color: #ffffff31;
   backdrop-filter: blur(5px);
 }
-.appear.in-view {  
+.appear.in-view {
   animation: fadeAnimation;
   animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
-  backface-visibility: hidden;
+}
+.container--bordered {
+  border-color: #ffffff00;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+.container--bordered.in-view {
+  border-color: #1f1f1f;
+  transition-duration: 1s;
+}
+.nav-item {
+  opacity: 0;
+  transition-duration: 500ms;
+}
+.nav-item.in-view {
+  opacity: 1;
+}
+.welcome-text-container {
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  /* text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); */
+}
+.welcome-text {
+  font-weight: bold;
+  background: linear-gradient(to right, #ffffff, #e49898);
+  -webkit-background-clip: text;
+  background-clip: text; /* For non-webkit browsers */
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; /* For non-webkit browsers */
+}
+.welcome-text::before {
+  content: 'We Re-imagine'; /* Duplicate the text for the border effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: white;
+  -webkit-text-stroke: 1px white; /* Thin white border */
+  text-stroke: 1px white; /* For non-webkit browsers */
+  background: none; /* No background gradient for the border text */
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+.welcome-blur {
+  background-color: #77060600;
+  backdrop-filter: blur(5px);
+  z-index: -1;
 }
 @keyframes fadeAnimation {
-  from { opacity: 0; transform: translate3d(0,100px, 0); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
-.appear{  
-  transform: translate3d(0,100px, 0);
+.appear {
+  transform: translate3d(0, 100px, 0);
   opacity: 0;
+}
+.height-animated {
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.cursor-follower {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 36, 36);
+  border-radius: 50%;
+  pointer-events: none; /* Prevents the div from blocking interactions */
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensures it is above other elements */
 }
