@@ -85,10 +85,10 @@ export const WelcomeSection = () => (
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: true,
+        }}
         breakpoints={{
           1024: {
             slidesPerView: 3,
@@ -102,7 +102,7 @@ export const WelcomeSection = () => (
         {carouselData.map((item, index) => (
           <div key={index} className="h-full grow">
             <SwiperSlide className="grow h-full relative">
-              <div className="w-full  h-[600px] grow  p-10 flex flex-col gap-3 md:gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
+              <div className="w-full  h-[600px] grow cursor-grab p-10 flex flex-col gap-3 md:gap-[30px] bg-gradient-to-b from-black to-black rounded-2xl border border-white/20 px-10">
                 <div className="top-0  md:w-[100px] w-full md:h-[500px] left-[50%] rotate-[-55.41deg] blur-3xl bg-gradient-to-l from-red-700 to-orange-950 rounded-full absolute opacity-50" />
                 <div className="text-2xl md:text-[35px]  text-[#F9EFEC]	">
                   <span className="text-[#F51101] ">&quot;</span>
