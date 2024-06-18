@@ -8,103 +8,117 @@ const ExtendParent = ({ children }) => (
 
 export const menus = [
   {
+    title: 'About Us',
+    href: '/about-us',
+  },
+  {
     title: 'Capabilities',
     extend: (
       <ExtendParent>
         <div className="w-full">
           {[
-            'Cloud',
-            'Cybersecurity',
-            'Data and Artificial Intelligence',
-            'Digital Engineering and Manufacturing',
-            'Emerging Technology',
-            'Enterprise Platforms',
+            { title: 'Cloud', href: '/capabilities/cloud' },
+            { title: 'Cybersecurity', href: '/capabilities/cybersecurity' },
+            { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
+            { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
+            { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
+            { title: 'Enterprise Platforms', href: '/capabilities/enterprise-platforms' },
           ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
+            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
           ))}
         </div>
         <div className="w-full">
           {[
-            'Finance and Risk Management',
-            'Learning',
-            'Marketing and Experience',
-            'Metaverse',
-            'Private Equity',
-            'Data and Artificial Intelligence',
+            { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
+            { title: 'Learning', href: '/learning' },
+            { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
+            { title: 'Metaverse', href: '/capabilities/metaverse' },
+            { title: 'Private Equity', href: '/capabilities/private-equity' },
+            { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
           ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
+            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
           ))}
         </div>
         <div className="w-full">
           {[
-            'Digital Engineering and Manufacturing',
-            'Emerging Technology',
-            'Enterprise Platforms',
-            'Finance and Risk Management',
-            'Learning',
-            'Marketing and Experience',
+            { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
+            { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
+            { title: 'Enterprise Platforms', href: '/enterprise-platforms' },
+            { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
+            { title: 'Learning', href: '/capabilities/learning' },
+            { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
           ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
+            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
           ))}
         </div>
       </ExtendParent>
     ),
   },
   {
-    title: 'Industries',
-    extend: (
-      <ExtendParent>
-        <div className="w-full">
-          {[
-            'Aerospace and Defense',
-            'Automotive',
-            'Banking',
-            'Capital Markets',
-            'Chemicals',
-            'Communications and Media',
-          ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
-          ))}
-        </div>
-        <div className="w-full">
-          {['Consumer Goods and Services', 'Energy', 'Health', 'High Tech', 'Industrial', 'Insurance'].map(
-            (aItem, idx) => (
-              <ExtendItem key={idx} title={aItem} />
-            ),
-          )}
-        </div>
-        <div className="w-full">
-          {[
-            'Life Sciences',
-            'Natural Resources',
-            'Public Service',
-            'Retail',
-            'Software and Platforms',
-            'Travel',
-            'Utilities',
-          ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
-          ))}
-        </div>
-      </ExtendParent>
-    ),
+    title: 'Careers',
+    href: '/#careers',
   },
-  {
-    title: 'Solutions',
-  },
-  {
-    title: 'Company',
-    extend: (
-      <ExtendParent>
-        <div className="w-full flex flex-col pl-[50vw]">
-          {['Projects', 'Investors'].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem} />
-          ))}
-        </div>
-      </ExtendParent>
-    ),
-  },
-  {
-    title: 'Resources',
-  },
+
+  // {
+  //   title: 'Industries',
+  //   extend: (
+  //     <ExtendParent>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Aerospace and Defense', href: '/aerospace-defense' },
+  //           { title: 'Automotive', href: '/automotive' },
+  //           { title: 'Banking', href: '/banking' },
+  //           { title: 'Capital Markets', href: '/capital-markets' },
+  //           { title: 'Chemicals', href: '/chemicals' },
+  //           { title: 'Communications and Media', href: '/communications-media' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Consumer Goods and Services', href: '/consumer-goods' },
+  //           { title: 'Energy', href: '/energy' },
+  //           { title: 'Health', href: '/health' },
+  //           { title: 'High Tech', href: '/high-tech' },
+  //           { title: 'Industrial', href: '/industrial' },
+  //           { title: 'Insurance', href: '/insurance' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Life Sciences', href: '/life-sciences' },
+  //           { title: 'Natural Resources', href: '/natural-resources' },
+  //           { title: 'Public Service', href: '/public-service' },
+  //           { title: 'Retail', href: '/retail' },
+  //           { title: 'Software and Platforms', href: '/software-platforms' },
+  //           { title: 'Travel', href: '/travel' },
+  //           { title: 'Utilities', href: '/utilities' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //     </ExtendParent>
+  //   ),
+  // },
+  // {
+  //   title: 'Solutions',
+  // },
+  // {
+  //   title: 'Company',
+  //   extend: (
+  //     <ExtendParent>
+  //       <div className="w-full flex flex-col pl-[50vw]">
+  //         {['Projects', 'Investors'].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem} />
+  //         ))}
+  //       </div>
+  //     </ExtendParent>
+  //   ),
+  // },
+  // {
+  //   title: 'Resources',
+  // },
 ];

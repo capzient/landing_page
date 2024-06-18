@@ -185,6 +185,7 @@ export const Navbar = () => {
                         key={idx}
                         id={idx}
                         title={aMenu.title}
+                        href={aMenu.href}
                         // setDropDownOpen={setDropDownOpen}
                         activeMenu={activeMenu}
                         setActiveMenu={setActiveMenu}

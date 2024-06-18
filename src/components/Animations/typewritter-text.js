@@ -62,7 +62,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
           opacity: 1,
         }}
         transition={{
-          duration: 0.8,
+          duration: 0.1,
           repeat: Infinity,
           repeatType: 'reverse',
         }}
@@ -105,9 +105,9 @@ export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) =>
           width: 'fit-content',
         }}
         transition={{
-          duration: 2,
+          duration: 1,
           ease: 'linear',
-          delay: 1,
+          delay: 0.1,
         }}
       >
         <div

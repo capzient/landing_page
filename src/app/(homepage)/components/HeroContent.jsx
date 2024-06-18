@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -57,9 +58,12 @@ export const HeroContent = () => {
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
-          <p className="animation-element appear text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-[#ffffff9f] hover:text-black cursor-pointer duration-500">
+          <Link
+            href="/contact"
+            className="animation-element appear text-white border text-sm md:text-lg border-white px-5 py-[2px] md:px-16 md:py-6 rounded-md hover:bg-[#ffffff9f] hover:text-black cursor-pointer duration-500"
+          >
             Power your project now
-          </p>
+          </Link>
         </motion.div>
       </motion.div>
     </motion.div>

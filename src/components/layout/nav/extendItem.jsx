@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export const ExtendItem = ({ title }) => {
+export const ExtendItem = ({ title, href }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
@@ -26,7 +26,7 @@ export const ExtendItem = ({ title }) => {
           {/* <Link href={`/${title.replace(/ /g, '_').toLowerCase()}`} >
                         {title}
                     </Link> */}
-          <Link href={`/industry`}>{title}</Link>
+          <Link href={href}>{title}</Link>
         </div>
       </div>
     </div>

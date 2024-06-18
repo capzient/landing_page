@@ -95,7 +95,7 @@ export const HoverImage = ({ className, url, title, description }) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {hovered && (
           <motion.div
             variants={expandVars}
@@ -113,7 +113,7 @@ export const HoverImage = ({ className, url, title, description }) => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

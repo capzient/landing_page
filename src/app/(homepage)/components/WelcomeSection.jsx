@@ -9,9 +9,10 @@ import { Menu } from '@/components/common/organisms/menu';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { WithRedRect } from '@/utils/withRedRect';
+
 import { BackgroundGradient } from './BackgroundGradient';
 import { FlipWords } from './FlipWords';
-import { WithRedRect } from '@/utils/withRedRect';
 
 const carouselData = [
   {
@@ -69,9 +70,9 @@ export const WelcomeSection = () => (
       </svg> */}
 
       <BackgroundGradient>
-        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-7xl">
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-3xl text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-9xl">
           <WithRedRect>
-            <div className="text-9xl">
+            <div className="">
               We Re-
               <FlipWords words={words} />
             </div>
@@ -82,7 +83,7 @@ export const WelcomeSection = () => (
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
     <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
-      <div className=" uppercase text-center text-white text-3xl  md:text-4xl mx-auto flex justify-center items-center flex-col">
+      <div className=" uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full flex justify-center items-center flex-col">
         <TypewriterEffectSmooth words={welcomeWords} />
         <TypewriterEffectSmooth words={[{ text: 'of' }, { text: 'Technology' }, { text: 'solution' }]} />
       </div>

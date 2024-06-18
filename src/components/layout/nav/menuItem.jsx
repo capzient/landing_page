@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { GoTriangleDown } from 'react-icons/go';
 
-export const MenuItem = ({ id, title, extend, setActiveMenu, activeMenu, setExtendElement }) => (
+export const MenuItem = ({ id, title, href, extend, setActiveMenu, activeMenu, setExtendElement }) => (
   <div className="cursor-pointer flex items-center gap-x-1">
     <div className="text-[13px]">
       {extend && (
@@ -31,7 +31,7 @@ export const MenuItem = ({ id, title, extend, setActiveMenu, activeMenu, setExte
         setExtendElement(extend);
       }}
     >
-      {!extend ? <Link href={`/${title.replace(/ /g, '_').toLowerCase()}`}>{title}</Link> : title}
+      {!extend ? <Link href={href}>{title}</Link> : title}
     </span>
   </div>
 );

@@ -6,7 +6,7 @@ import { TypewriterEffectSmooth } from '@/components/Animations/typewritter-text
 import { Container } from '@/components/common/atoms/container';
 
 export const CareersSection = () => (
-  <div className="gap-[50px] bg-black px-[30px] py-[150px] pt-[100px] pb-[100px] flex flex-col">
+  <div id="careers" className="gap-[50px] bg-black px-[30px] py-[150px] pt-[100px] pb-[100px] flex flex-col">
     <div className="pl-11 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-5xl md:text-8xl uppercase text-center flex justify-center items-center">
       <TypewriterEffectSmooth words={[{ text: 'Careers' }]} />
     </div>
