@@ -3,7 +3,7 @@ export const Card = ({ bodyClassName, children, noHover }) => (
     style={{
       transitionDuration: '500ms',
     }}
-    className={`height-animated animation-element appear bg-[#1A1A1A] ${
+    className={`height-animated animation-element appear  bg-[#1A1A1A] ${
       !noHover ? 'hover:bg-[#131313]' : ''
     } hover:shadow-lg cursor-pointer rounded-lg ${bodyClassName}`}
   >

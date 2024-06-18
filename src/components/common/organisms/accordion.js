@@ -2,12 +2,12 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { FaMinus, FaPlus } from 'react-icons/fa';
 
 import { Card } from '../atoms/card';
 
 export const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
   const [active, setActive] = useState(false);
+  const [hover, setHover] = useState(false);
   const contentRef = useRef(null);
   const idleRef = useRef(null);
 
@@ -45,28 +45,36 @@ export const Accordion = ({ bodyClassName, title, idleCpn, activeCpn }) => {
   return (
     <Card bodyClassName={bodyClassName} noHover>
       <div>
-        <div onClick={() => setActive(!active)} className="px-[40px] flex gap-[40px] items-center">
-          <div className={`w-full  text-3xl text-balance flex justify-between`}>{title}</div>
-          {!active && (
+        <div
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          onClick={() => setActive(!active)}
+          className="px-[40px] flex justify-between items-center"
+        >
+          <div className={`text-3xl text-balance flex justify-between`}>
+            <div className={`${hover ? 'animated-title duration-500' : 'animated-title-idle'}`}>{title}</div>
+          </div>
+          <div
+            className="relative min-w-[50px] min-h-[50px] flex items-center justify-center  border-[1px] border-[#333333]  rounded-full  bg-[#1F1F1F]"
+            initial="initial"
+            animate="open"
+            exit="exit"
+          >
+            <div className="w-[15px] h-[2px] rounded-md bg-red-500" />
             <div
-              className="p-[15px] border-[1px] border-[#333333]  rounded-full  bg-[#1F1F1F]"
+              style={{
+                transform: `rotate(${active ? 360 : 90}deg)`,
+                opacity: active ? 0 : 1,
+                transitionDuration: '0.5s',
+              }}
+              className="absolute w-full h-full left-[0.5px] top-[0.5px] flex items-center justify-center  rounded-full"
               initial="initial"
               animate="open"
               exit="exit"
             >
-              <FaPlus className="text-[#f51101]" />
+              <div className="w-[15px] h-[2px] rounded-md bg-red-500" />
             </div>
-          )}
-          {active && (
-            <div
-              className="p-[15px] border-[1px] border-[#333333]  rounded-full  bg-[#1F1F1F]"
-              initial="initial"
-              animate="open"
-              exit="exit"
-            >
-              <FaMinus className="text-[#f51101]" />
-            </div>
-          )}
+          </div>
         </div>
         <div ref={contentRef} className="bg-[#131313]  height-animated">
           {active && (

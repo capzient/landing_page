@@ -7,13 +7,12 @@ import { HeroSection } from './components/HeroSection';
 import { NewsLetterSection } from './components/NewsLetterSection';
 import { WelcomeSection } from './components/WelcomeSection';
 
-export const generateMetadata = () => {
-  return generateSeo({
+export const generateMetadata = () =>
+  generateSeo({
     title: `Home`,
     description: 'Hello world',
     url: '/',
   });
-};
 
 export default function Home() {
   return (
