@@ -9,6 +9,9 @@ import { AnimatedTitle } from '@/utils/animatedTitle';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { BackgroundGradient } from './BackgroundGradient';
+import { FlipWords } from './FlipWords';
+import { WithRedRect } from '@/utils/withRedRect';
 
 const carouselData = [
   {
@@ -40,19 +43,32 @@ const carouselData = [
   },
 ];
 
+const words = ['imagine', 'invent', 'define'];
+
 export const WelcomeSection = () => (
   <div>
     <div className="h-[100vh]"></div>
-    <div className="h-[100vh] relative welcome-text-container flex items-center justify-center bg-cover bg-center bg-[url('/assets/images/home/image_1.svg')] w-full text-white text-[128px]">
+    <div className="h-[100vh] relative welcome-text-container flex items-center justify-center bg-cover bg-center bg-black w-full text-white text-[128px]">
       {/* <WithRedRect>
         <div className="relative md:welcome-text ">We Re-imagine</div>
       </WithRedRect> */}
-      <svg className="welcome-text" viewBox="0 0 1320 300">
+      {/* <svg className="welcome-text" viewBox="0 0 1320 300">
         <text x="50%" y="50%" dy=".35em" text-anchor="middle">
           We Re-imagine
         </text>
         <text x="50%" y="50%" dy=".35em" text-anchor="middle"></text>
-      </svg>
+      </svg> */}
+
+      <BackgroundGradient>
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-7xl">
+          <WithRedRect>
+            <div className="text-9xl">
+              We Re-
+              <FlipWords words={words} />
+            </div>
+          </WithRedRect>
+        </div>
+      </BackgroundGradient>
 
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
