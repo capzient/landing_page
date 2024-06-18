@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { TypewriterEffectSmooth } from '@/components/Animations/typewritter-text';
 import { Accordion } from '@/components/common/organisms/accordion';
 import { Menu } from '@/components/common/organisms/menu';
-import { AnimatedTitle } from '@/utils/animatedTitle';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -45,6 +45,15 @@ const carouselData = [
 
 const words = ['imagine', 'invent', 'define'];
 
+const welcomeWords = [
+  { text: 'Welcome' },
+  { text: 'to' },
+  { text: 'the' },
+  { text: 'stellar' },
+  { text: 'standard', className: 'text-[#F51101] dark:text-[#F51101]' },
+  { text: 'solutions', className: 'text-[#cb6666] dark:text-[#cb6666]' },
+];
+
 export const WelcomeSection = () => (
   <div>
     <div className="h-[100vh]"></div>
@@ -73,10 +82,9 @@ export const WelcomeSection = () => (
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
     <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
-      <div className=" uppercase text-center text-white text-5xl  md:text-7xl">
-        <div class="animation-element home-title">
-          {AnimatedTitle('Welcome to the stellar standard solutions.', 15, 30)}
-        </div>
+      <div className=" uppercase text-center text-white text-3xl  md:text-4xl mx-auto flex justify-center items-center flex-col">
+        <TypewriterEffectSmooth words={welcomeWords} />
+        <TypewriterEffectSmooth words={[{ text: 'of' }, { text: 'Technology' }, { text: 'solution' }]} />
       </div>
       <div className="flex md:flex-row flex-col-reverse pt-[100px] gap-[30px] items-center justify-center">
         <div className="animation-element appear leading-normal	 md:w-[50%] md:p-[20px] text-xl md:text-[42px] text-[#979796]">
@@ -97,7 +105,9 @@ export const WelcomeSection = () => (
     </div>
     <div className="bg-black w-full text-white   h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
       <div className="uppercase text-center justify-center  w-full flex flex-wrap  md:gap-10 md:py-10 md:text-8xl text-5xl">
-        {AnimatedTitle('Unleash tomorrow`s Tech Today.', -1, -1)}
+        <TypewriterEffectSmooth
+          words={[{ text: 'Our' }, { text: 'capabilities', className: 'text-[#F51101] dark:text-[#F51101]' }]}
+        />
       </div>
       <Swiper
         modules={[Autoplay]}
@@ -151,7 +161,14 @@ export const WelcomeSection = () => (
     </div>
     <div className="lg:px-[10vw] md:px-0 bg-black p-[30px] text-[#B3B3B2] flex flex-col items-center justify-center ">
       <div className=" my-[70px] font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 ">
-        {AnimatedTitle('We keep you ahead.', -1, -1)}
+        <TypewriterEffectSmooth
+          words={[
+            { text: 'We' },
+            { text: 'Keep' },
+            { text: 'you' },
+            { text: 'Ahead', className: 'text-[#F51101] dark:text-[#F51101]' },
+          ]}
+        />
       </div>
       <div className="w-full flex md:flex-row flex-col gap-[10px]">
         <div className="w-[40%] p-10">

@@ -74,6 +74,7 @@ export const NewsLetterSection = () => {
             <div className="h-[30%] w-full p-5 flex justify-between items-center">
               <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>
               <ArrowButton
+                handleClick={() => setOpenExtra(true)}
                 arrowType="red_right"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
@@ -87,6 +88,7 @@ export const NewsLetterSection = () => {
             <div className="md:h-[30%] w-full p-5 flex justify-between items-center">
               <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dior</p>{' '}
               <ArrowButton
+                handleClick={() => setOpenExtra(true)}
                 arrowType="red_right"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
@@ -109,6 +111,7 @@ export const NewsLetterSection = () => {
             <div className="md:h-[30%] w-full p-5 flex justify-between items-center">
               <p className="text-[#F9EFEC] text-[25px]">2Lorem ipsum dior</p>{' '}
               <ArrowButton
+                handleClick={() => setOpenExtra(true)}
                 arrowType="red_right"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
@@ -137,6 +140,7 @@ export const NewsLetterSection = () => {
             <div className="h-[30%] w-full p-5 flex justify-between items-center">
               <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>{' '}
               <ArrowButton
+                handleClick={() => setOpenExtra(true)}
                 arrowType="red_right"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
@@ -155,6 +159,7 @@ export const NewsLetterSection = () => {
             <div className="h-[30%] w-full p-5 flex justify-between items-center">
               <p className="text-[#F9EFEC] text-[25px]">Lorem ipsum dolor sit amet consectetur.</p>{' '}
               <ArrowButton
+                handleClick={() => setOpenExtra(true)}
                 arrowType="red_right"
                 hoverColor="#ffffff81"
                 arrowClassName="duration-500 color-white border-[#262626] border-[1px]  p-[15px] rounded-full bg-transparent"
