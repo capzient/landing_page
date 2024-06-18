@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Accordion } from '@/components/common/organisms/accordion';
 import { Menu } from '@/components/common/organisms/menu';
-import { WithRedRect } from '@/utils/withRedRect';
+import { AnimatedTitle } from '@/utils/animatedTitle';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -44,20 +44,26 @@ export const WelcomeSection = () => (
   <div>
     <div className="h-[100vh]"></div>
     <div className="h-[100vh] relative welcome-text-container flex items-center justify-center bg-cover bg-center bg-[url('/assets/images/home/image_1.svg')] w-full text-white text-[128px]">
-      <WithRedRect>
-        <div className="relative md:welcome-text text-4xl ">We Re-imagine</div>
-      </WithRedRect>
+      {/* <WithRedRect>
+        <div className="relative md:welcome-text ">We Re-imagine</div>
+      </WithRedRect> */}
+      <svg className="welcome-text" viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          We Re-imagine
+        </text>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle"></text>
+      </svg>
+
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
     <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
-      <div className="animation-element appear uppercase text-center text-white text-5xl  md:text-7xl">
-        Welcome to the <span className="text-red-500">stellar</span>
-        <div className="flex justify-center flex-wrap  md:gap-[20px]">
-          <span className="text-red-500">standard</span> of technology <WithRedRect>solutions</WithRedRect>
+      <div className=" uppercase text-center text-white text-5xl  md:text-7xl">
+        <div class="animation-element home-title">
+          {AnimatedTitle('Welcome to the stellar standard solutions.', 15, 30)}
         </div>
       </div>
       <div className="flex md:flex-row flex-col-reverse pt-[100px] gap-[30px] items-center justify-center">
-        <div className="animation-element appear md:w-[50%] md:p-[20px] text-xl md:text-[32px] text-[#979796]">
+        <div className="animation-element appear leading-normal	 md:w-[50%] md:p-[20px] text-xl md:text-[42px] text-[#979796]">
           We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and
           groundbreaking technology.
         </div>
@@ -74,11 +80,8 @@ export const WelcomeSection = () => (
       </div>
     </div>
     <div className="bg-black w-full text-white   h-full flex flex-col gap-20 justify-center items-center px-10 py-10">
-      <div className="animation-element appear  uppercase text-center justify-center  w-full flex flex-wrap  md:gap-10 md:py-10 md:text-8xl text-5xl">
-        <div className="flex ">Unleash tomorrow&apos;s Tech</div>
-        <div className="flex justify-end items-end ">
-          <WithRedRect>Today</WithRedRect>
-        </div>
+      <div className="uppercase text-center justify-center  w-full flex flex-wrap  md:gap-10 md:py-10 md:text-8xl text-5xl">
+        {AnimatedTitle('Unleash tomorrow`s Tech Today.', -1, -1)}
       </div>
       <Swiper
         modules={[Autoplay]}
@@ -131,11 +134,8 @@ export const WelcomeSection = () => (
       </Swiper>
     </div>
     <div className="lg:px-[10vw] md:px-0 bg-black p-[30px] text-[#B3B3B2] flex flex-col items-center justify-center ">
-      <div className="animation-element my-[70px] appear font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 ">
-        We keep you{' '}
-        <WithRedRect>
-          <span className="text-red-500">ahead</span>
-        </WithRedRect>
+      <div className=" my-[70px] font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 ">
+        {AnimatedTitle('We keep you ahead.', -1, -1)}
       </div>
       <div className="w-full flex md:flex-row flex-col gap-[10px]">
         <div className="w-[40%] p-10">
