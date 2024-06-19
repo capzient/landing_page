@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/capzient/landing_page/branches/compare/v1.1.0..v0.1.1) (2024-06-19)
+
+
+### Features
+
+* add favicon ([e30a58b](https://github.com/capzient/landing_page/commits/e30a58b990d8135e190e97f0f8913388b7ce8ecd))
+
 ## 1.0.0 (2024-06-19)
 
 ### Others
