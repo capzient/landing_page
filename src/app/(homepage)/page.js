@@ -1,4 +1,3 @@
-import { generateSeo } from '@/utils/generateSeo';
 import { ViewportTrigger } from '@/utils/viewPortTrigger';
 
 import { CareersSection } from './components/CareersSection';
@@ -7,13 +6,6 @@ import { HeroSection } from './components/HeroSection';
 // import { NewsLetterSection } from './components/NewsLetterSection';
 import { WeKeepYouAhead } from './components/WeKeepYouAhead';
 import { WelcomeSection } from './components/WelcomeSection';
-
-export const generateMetadata = () =>
-  generateSeo({
-    title: `Home`,
-    description: 'Hello world',
-    url: '/',
-  });
 
 export default function Home() {
   return (

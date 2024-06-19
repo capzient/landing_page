@@ -107,7 +107,7 @@ export const CapabilitiesComponent = ({ params }) => {
           ))}
         </div>
       </Container>
-      <Container containerClassName={'flex flex-col gap-[20px]'}>
+      {/* <Container containerClassName={'flex flex-col gap-[20px]'}>
         <Card bodyClassName="p-10 md:p-[50px] flex flex-col text-white text-2xl md:text-[50px] gap-[20px] w-full ">
           {data.extras.title}
         </Card>
@@ -119,7 +119,7 @@ export const CapabilitiesComponent = ({ params }) => {
             </Card>
           ))}
         </div>
-      </Container>
+      </Container> */}
     </div>
   );
 };

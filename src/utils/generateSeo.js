@@ -14,7 +14,7 @@ export const generateSeo = ({ title, description, url, image }) => ({
     images: [
       {
         url: image?.url ? image.url : siteConfig.ogImage,
-        width: image?.width ? image.width : 1200,
+        width: image?.width ? image.width : 2250,
         height: image?.height ? image.height : 675,
       },
     ],
@@ -27,7 +27,7 @@ export const generateSeo = ({ title, description, url, image }) => ({
     images: [
       {
         url: image?.url ? image.url : siteConfig.ogImage,
-        width: image?.width ? image.width : 1200,
+        width: image?.width ? image.width : 2250,
         height: image?.height ? image.height : 675,
       },
     ],
