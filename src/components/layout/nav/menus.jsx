@@ -1,59 +1,60 @@
-import { ExtendItem } from './extendItem';
+// import { ExtendItem } from './extendItem';
 
-const ExtendParent = ({ children }) => (
-  <div className="w-full flex text-[20px] justify-between border-[#ffffff20] border-t-[1px] mt-[50px]  p-10 px-[100px]">
-    {children}
-  </div>
-);
+// const ExtendParent = ({ children }) => (
+//   <div className="w-full flex text-[20px] justify-between border-[#ffffff20] border-t-[1px] mt-[50px]  p-10 px-[100px]">
+//     {children}
+//   </div>
+// );
 
 export const menus = [
   {
     title: 'About Us',
     href: '/about-us',
   },
-  {
-    title: 'Capabilities',
-    extend: (
-      <ExtendParent>
-        <div className="w-full">
-          {[
-            { title: 'Cloud', href: '/capabilities/cloud' },
-            { title: 'Cybersecurity', href: '/capabilities/cybersecurity' },
-            { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
-            { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
-            { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
-            { title: 'Enterprise Platforms', href: '/capabilities/enterprise-platforms' },
-          ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
-          ))}
-        </div>
-        <div className="w-full">
-          {[
-            { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
-            { title: 'Learning', href: '/learning' },
-            { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
-            { title: 'Metaverse', href: '/capabilities/metaverse' },
-            { title: 'Private Equity', href: '/capabilities/private-equity' },
-            { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
-          ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
-          ))}
-        </div>
-        <div className="w-full">
-          {[
-            { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
-            { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
-            { title: 'Enterprise Platforms', href: '/enterprise-platforms' },
-            { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
-            { title: 'Learning', href: '/capabilities/learning' },
-            { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
-          ].map((aItem, idx) => (
-            <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
-          ))}
-        </div>
-      </ExtendParent>
-    ),
-  },
+  { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
+  // {
+  //   title: 'Capabilities',
+  //   extend: (
+  //     <ExtendParent>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Cloud', href: '/capabilities/cloud' },
+  //           { title: 'Cybersecurity', href: '/capabilities/cybersecurity' },
+  //           { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
+  //           { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
+  //           { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
+  //           { title: 'Enterprise Platforms', href: '/capabilities/enterprise-platforms' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
+  //           { title: 'Learning', href: '/learning' },
+  //           { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
+  //           { title: 'Metaverse', href: '/capabilities/metaverse' },
+  //           { title: 'Private Equity', href: '/capabilities/private-equity' },
+  //           { title: 'Data and Artificial Intelligence', href: '/capabilities/data-ai' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //       <div className="w-full">
+  //         {[
+  //           { title: 'Digital Engineering and Manufacturing', href: '/capabilities/digital-engineering' },
+  //           { title: 'Emerging Technology', href: '/capabilities/emerging-tech' },
+  //           { title: 'Enterprise Platforms', href: '/enterprise-platforms' },
+  //           { title: 'Finance and Risk Management', href: '/capabilities/finance-risk' },
+  //           { title: 'Learning', href: '/capabilities/learning' },
+  //           { title: 'Marketing and Experience', href: '/capabilities/marketing-experience' },
+  //         ].map((aItem, idx) => (
+  //           <ExtendItem key={idx} title={aItem.title} href={aItem.href} />
+  //         ))}
+  //       </div>
+  //     </ExtendParent>
+  //   ),
+  // },
   {
     title: 'Careers',
     href: '/#careers',

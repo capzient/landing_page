@@ -5,6 +5,7 @@ import { CareersSection } from './components/CareersSection';
 import { EmergingTechSection } from './components/EmergingTechSection';
 import { HeroSection } from './components/HeroSection';
 // import { NewsLetterSection } from './components/NewsLetterSection';
+import { WeKeepYouAhead } from './components/WeKeepYouAhead';
 import { WelcomeSection } from './components/WelcomeSection';
 
 export const generateMetadata = () =>
@@ -20,6 +21,7 @@ export default function Home() {
       <ViewportTrigger />
       <HeroSection />
       <WelcomeSection />
+      <WeKeepYouAhead />
       <EmergingTechSection />
       {/* <NewsLetterSection /> */}
       <CareersSection />
