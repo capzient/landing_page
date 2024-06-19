@@ -1,5 +1,6 @@
 import './globals.css';
-import { Footer } from '@/components/layout/footer/Footer';
+// import { Footer } from '@/components/layout/footer/Footer';
+import FooterAnimate from '@/components/layout/footer/FooterAnimate';
 import { Navbar } from '@/components/layout/nav';
 import { siteConfig } from '@/config/site';
 import { inter_init, poppins_init, roboto_init } from '@/utils/Fonts';
@@ -53,7 +54,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             {children}
           </div>
-          <Footer />
+          <FooterAnimate />
         </Providers>
       </body>
     </html>

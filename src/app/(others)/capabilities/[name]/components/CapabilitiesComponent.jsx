@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Card } from '@/components/common/atoms/card';
 import { Container } from '@/components/common/atoms/container';
 
-import { cloud, cybersecurity } from '../../data';
+import { cloud, cybersecurity, emergingtechnology } from '../../data';
 
 const getData = (page) => {
   switch (page) {
@@ -12,6 +12,8 @@ const getData = (page) => {
       return cloud;
     case 'cybersecurity':
       return cybersecurity;
+    case 'emergingtechnology':
+      return emergingtechnology;
     default:
       return null;
   }
@@ -35,7 +37,7 @@ export const CapabilitiesComponent = ({ params }) => {
                 <div className="text-red-500"></div>
               </div>
               <div className="flex items-start flex-wrap ">
-                <div className="text-5xl max-w-[70%] font-bold text-white text-balance uppercase animation-element appear">
+                <div className="text-5xl max-w-[70%] leading-normal text-white text-balance animation-element appear">
                   {data.main.heading}
                 </div>
               </div>
@@ -56,14 +58,14 @@ export const CapabilitiesComponent = ({ params }) => {
       <Container containerClassName={'flex gap-[20px]'}>
         {data.stats.map((item, index) => (
           <Card key={index} bodyClassName={'p-6 flex flex-col gap-[20px] w-full text-center'}>
-            <div className="text-red-500 text-[60px] text-start">{item.number}</div>
+            <div className="text-[#F51101] text-[60px] text-start">{item.number}</div>
             <div className="text-[#B3B3B2] text-[20px] text-start uppercase">{item.details}</div>
           </Card>
         ))}
       </Container>
       <Container containerClassName={'flex flex-col gap-[20px]'}>
         <Card bodyClassName={'p-[50px] flex flex-col text-white text-[50px] gap-[20px] w-full'}>
-          Re-imagine {data.main.name}
+          Re-Imagine With {data.main.name}
         </Card>
         <div className="grid grid-cols-2 gap-4">
           {data.grid.map((item, index) => (
@@ -72,9 +74,10 @@ export const CapabilitiesComponent = ({ params }) => {
                 <Card bodyClassName={' flex h-full  justify-between text-white text-[50px] gap-[20px] w-full'}>
                   <div className="flex flex-col gap-[20px] w-1/2 p-[80px]">
                     <div className="flex items-center gap-[15px]">
-                      <Image src={'/assets/images/industry/icon_1.svg'} width={60} height={60} alt="" />
-                      <div className="text-[25px] text-white">{item.title}</div>
+                      {/* <Image src={'/assets/images/industry/icon_1.svg'} width={60} height={60} alt="" /> */}
+                      <div className="text-4xl text-white">{item.title}</div>
                     </div>
+
                     <div className="text-[#B3B3B2] text-[20px]">{item.description}</div>
                   </div>
                   {item.image && (
@@ -91,7 +94,7 @@ export const CapabilitiesComponent = ({ params }) => {
                 >
                   <div className="flex flex-col gap-[20px]">
                     <div className="flex items-center gap-[15px]">
-                      <Image src={'/assets/images/industry/icon_1.svg'} width={60} height={60} alt="" />
+                      {/* <Image src={'/assets/images/industry/icon_1.svg'} width={60} height={60} alt="" /> */}
                       <div className="text-[25px] text-white">{item.title}</div>
                     </div>
                     <div className="text-[#B3B3B2] text-[20px]">{item.description}</div>
