@@ -23,7 +23,7 @@ export const CareersSection = () => (
           layout="responsive"
         />
       </div>
-      <div className="animation-element appear w-full md:w-1/2 lg:w-1/2 text-gray-400 pt-[35px] px-[35px] mr-50 text-[30px]">
+      <div className="animation-element appear w-full md:w-1/2 lg:w-1/2 text-gray-400 pt-[35px] px-[35px] mr-50 text-lg md:text-3xl">
         <p>
           At Capzient, we live for change, thrive in disruption, and champion those who dare to dream bigger. If
           you&apos;re the kind of innovator who&apos;s hungry for growth and not afraid to challenge the status quo,
@@ -32,12 +32,12 @@ export const CareersSection = () => (
           technology, and society.
         </p>
         <div className="animation-element appear flex mt-[30px] justify-center md:justify-start">
-          <Link href="/careers" className="bg-[#1F1F1F] flex items-center text-white py-2 mt-[50px] px-4 rounded-xl">
+          {/* <Link href="/careers" className="bg-[#1F1F1F] flex items-center text-white py-2 mt-[50px] px-4 rounded-xl">
             Learn More{' '}
             <span className="ml-2 text-red-600 text-2xl">
               <FaArrowRight />
             </span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Container>
