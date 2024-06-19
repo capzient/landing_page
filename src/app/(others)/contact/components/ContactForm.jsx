@@ -2,9 +2,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import { promise, z } from 'zod';
 
 import { Card } from '@/components/common/atoms/card';
+import { submitForm } from '@/lib/actions/submitForm';
 
 function FormItem({ label, children, error }) {
   return (
@@ -39,7 +41,7 @@ export function ContactForm() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
-    // reset,
+    reset,
     // TODO: Add reset function to clear form after submission
   } = useForm({
     resolver: zodResolver(FormSchema),
@@ -47,9 +49,23 @@ export function ContactForm() {
 
   const onSubmit = async (data) => {
     try {
-      const validData = FormSchema.parse(data, promise);
-      console.log(validData);
-      alert('Form Submitted Successfully, Validated data: ' + JSON.stringify(validData));
+      const validData = await FormSchema.parse(data, promise);
+      const sendData = await submitForm({
+        'entry.1925949076': validData.firstname,
+        'entry.263137101': validData.lastname,
+        'entry.383513361': validData.jobtitle,
+        'entry.1450348331': validData.companyname,
+        'entry.935140568': validData.email,
+        'entry.1881374913': validData.phone,
+        'entry.1577520245': validData.message,
+        'entry.1677189919': validData.agreeterms,
+      });
+      if (sendData) {
+        reset();
+        toast.success('Message sent successfully');
+      } else {
+        toast.error('An error occurred while sending message. Please try again later.');
+      }
     } catch (error) {
       console.error(error.errors);
     }
@@ -144,9 +160,9 @@ export function ContactForm() {
               <button
                 role="submit"
                 disabled={isSubmitting || isSubmitSuccessful}
-                className="bg-[#F51101] rounded-2xl px-6 py-4 flex flex-row items-center space-x-5 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#F51101] rounded-2xl px-6 py-4 flex flex-row items-center font-extrabold space-x-5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                SEND YOUR MESSAGE
+                {isSubmitting ? 'SUBMITTING...' : isSubmitSuccessful ? 'MESSAGE SENT' : 'SEND MESSAGE'}
                 <Image src={'/assets/images/contact/arrow_icon.svg'} width={23} height={23} alt="" className="ml-2" />
               </button>
             </div>
