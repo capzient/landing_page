@@ -24,21 +24,21 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <div className=" bg-black text-zinc-50 py-6">
+    <div className="bg-gradient-to-r from-black to-neutral-950 text-zinc-50 py-6">
       <div>
-        <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16">
+        <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16 h-[500px]">
           <div className="px-10 col-span-2">
             <Image src="/assets/images/capzient_logo_white.png" height={250} width={250} alt="logo"></Image>
             <p className="text-start opacity-70">(c) 2024 Capzient, All rights reserved.</p>
           </div>
-          <div className="col-start-3">
+          <div className="col-start-3 mt-56">
             <ul className="flex flex-col items-center  gap-1">
               <li className="font-bold my-2">Company</li>
               {companyLinks.map((link) => (
                 <Link
                   href={link.link}
                   key={link.name}
-                  className=" flex justify-center items-center md:justify-start text-white/70 hover:text-white"
+                  className="flex justify-center leading-loose items-center md:justify-start text-white/70 hover:text-white"
                 >
                   {link.name}
                 </Link>
@@ -46,13 +46,13 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <ul className="flex flex-col items-center  gap-1">
+            <ul className="flex flex-col items-center mt-48 gap-1">
               <li className="font-bold my-2 ">Legal and Policy</li>
               {legalLinks.map((link) => (
                 <Link
                   href={link.link}
                   key={link.name}
-                  className=" flex justify-center items-center md:justify-start text-white/70 hover:text-white"
+                  className=" flex justify-center leading-loose items-center md:justify-start text-white/70 hover:text-white"
                 >
                   {link.name}
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-28">
             <ul className="flex flex-col items-center gap-1">
               <li className="font-bold my-2">FOLLOW US</li>
               <li className="flex justify-center items-center md:justify-start">
