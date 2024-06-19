@@ -6,13 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { TypewriterEffectSmooth } from '@/components/Animations/typewritter-text';
 import { Accordion } from '@/components/common/organisms/accordion';
 import { Menu } from '@/components/common/organisms/menu';
-
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { WithRedRect } from '@/utils/withRedRect';
 
-import { BackgroundGradient } from './BackgroundGradient';
 import { FlipWords } from './FlipWords';
+import { WavyBackground } from './WavyBackground';
 
 const carouselData = [
   {
@@ -69,16 +68,16 @@ export const WelcomeSection = () => (
         <text x="50%" y="50%" dy=".35em" text-anchor="middle"></text>
       </svg> */}
 
-      <BackgroundGradient>
-        <div className="absolute z-50 inset-0 flex items-center justify-center text-3xl text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-9xl">
+      <WavyBackground>
+        <div className="max-w-full mx-auto pb-40">
           <WithRedRect>
-            <div className="">
+            <div className="z-50 inset-0 flex items-center justify-center text-3xl text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-9xl">
               We Re-
               <FlipWords words={words} />
             </div>
           </WithRedRect>
         </div>
-      </BackgroundGradient>
+      </WavyBackground>
 
       {/* <div className="absolute w-full h-full welcome-blur"></div> */}
     </div>
