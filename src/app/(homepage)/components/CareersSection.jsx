@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa6';
 
 import { TypewriterEffectSmooth } from '@/components/Animations/typewritter-text';
 import { Container } from '@/components/common/atoms/container';
