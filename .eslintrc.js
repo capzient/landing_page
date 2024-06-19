@@ -66,12 +66,12 @@ module.exports = {
         forms: false,
       },
     ],
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: ['../*'],
-      },
-    ],
+    // 'no-restricted-imports': [
+    //   'error',
+    //   {
+    //     patterns: ['../*'],
+    //   },
+    // ],
   },
   env: {
     browser: true,
