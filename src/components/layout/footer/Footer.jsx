@@ -4,10 +4,10 @@ import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const companyLinks = [
-  { name: 'About Us', link: '#' },
-  { name: 'Contact Us', link: '#' },
-  { name: 'Location', link: '#' },
-  { name: 'Careers', link: '#' },
+  { name: 'About Us', link: '/about' },
+  { name: 'Contact Us', link: '/contact' },
+  // { name: 'Location', link: '/' },
+  { name: 'Careers', link: '/#careers' },
 ];
 
 const legalLinks = [
