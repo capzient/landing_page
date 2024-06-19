@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { Card } from '@/components/common/atoms/card';
-import { Container } from '@/components/common/atoms/container';
+// import { Container } from '@/components/common/atoms/container';
 
 export function About() {
   return (
@@ -15,29 +15,23 @@ export function About() {
           className=""
           layout="responsive"
         />
-        <div className="text-white text-[80px] absolute p-[30px] w-[750px]">Lorem ipsum dolor sit amet </div>
+        <div className="text-white text-[40px] md:text-[60px] lg:text-[80px] absolute p-[20px] md:p-[30px] w-[90%] md:w-[750px]">
+          About Us
+        </div>
       </div>
-      <Card bodyClassName="p-[40px] flex flex-col justify-end">
-        <div className="text-[30px] text-[#F9EFEC]">THE ESSENCE OF MINIMALISM IN DESIGN.</div>
-        <div className="pl-[45px] pt-4 text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae expedita obcaecati, quisquam, aliquid
-          repellat labore, animi odit at temporibus ea iusto fuga possimus culpa ullam porro quam maxime? Commodi?Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Cum eum totam aliquid maiores nemo minus ipsa neque, quam
-          officiis enim veniam sequi harum repellendus provident Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Rem illum velit ipsa voluptas adipisci veritatis, odit explicabo quo aliquam nihil distinctio aliquid
-          ullam. Iusto maxime, corrupti blanditiis nostrum delectus Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Unde quia a architecto <br />
-          <br />
-          voluptatibus aperiam eveniet in voluptas quis eaque harum, cupiditate ipsa, exercitationem pariatur maiores
-          dolorem quasi quos, et repudianda//eslint-disable-next-lineimport/no-extraneous-dependencies\n//importmaxime,
-          corrupti blanditiis nostrum delectus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quia a
-          architecto voluptatibus aperiam eveniet in voluptas quis eaque harum, cupiditate ipsa, exercitationem pariatur
-          maiores dolorem quasi quos, et repudianda//eslint-disable-next-lineimport/no-extraneous-dependencies\n//import
-          uptas quis eaque harum, cupiditate ipsa, exercitationem pariatur maiores dolorem quasi quos, et
-          repudianda//eslint-disable-next-lineimport/no-extraneous-dependencies\n//import
+
+      <Card bodyClassName="p-[20px] md:p-[40px] flex flex-col justify-end">
+        <div className="text-[24px] md:text-[30px] text-[#F9EFEC]">THE ESSENCE OF MINIMALISM IN DESIGN.</div>
+        <div className="pt-4 text-gray-400 text-sm md:text-base">
+          At Capzient, we harness the power of innovation and expertise to transform your vision into a reality that
+          transcends the boundaries of the ordinary. Our elite team of strategists, developers, and creatives craft
+          transformative experiences, imbued with cutting-edge technologies and groundbreaking strategies, catapulting
+          your business towards unprecedented success. Partner with Capzient to disrupt markets, captivate audiences,
+          and forge a new frontier of excellence in your industry.
         </div>
       </Card>
-      <div className="flex flex-row justify-end ">
+
+      {/* <div className="flex flex-row justify-end ">
         <Card className="flex justify-end  flex-col w-[40%] items-center">
           <div className="flex flex-row w-full rounded-xl justify-end bg-[#1A1A1A] items-center">
             <div className="flex flex-col px-[15px] rounded-xl w-1/2">
@@ -70,27 +64,22 @@ export function About() {
         </Card>
       </div>
 
-      <Container containerClassName="p-[20px] flex flex-col gap-[20px]">
-        <div className="flex gap-[20px]">
-          <div className="animation-element appear w-[55%] bg-gradient-50-50 rounded-lg px-[20px] pb-[30px]">
-            <div className=" flex flex-col items-center justify-center">
-              {' '}
-              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">Aniket</div>
-              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-[40px] flex items-center">Co-founder & CEO</div>
+      <Container className="p-5 flex flex-col gap-5">
+        <div className="flex flex-col md:flex-row gap-5">
+          <div className="animation-element appear w-full md:w-[55%] bg-gradient-50-50 rounded-lg px-5 pb-7">
+            <div className="flex flex-col items-center justify-center">
+              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-10 flex justify-center">Aniket</div>
+              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-10 flex items-center">Co-founder & CEO</div>
             </div>
             <div className="w-full">
               <Image src={'/assets/images/about/person1.svg'} width={450} height={150} layout="responsive" alt="" />
             </div>
-
-            <div className="animation-element appear flex flex-row pt-4 space-x-3 items-center justify-center ">
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+            <div className="animation-element appear flex flex-row pt-4 space-x-3 items-center justify-center">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/facebook.svg'} width={16} height={16} alt="" className="absolute" />
               </div>
               <div className="flex pt-2 items-center flex-row justify-center">
-                <div
-                  className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full
-               border border-gray-700 p-7 "
-                >
+                <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                   <Image
                     src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
@@ -100,30 +89,25 @@ export function About() {
                   />
                 </div>
               </div>
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/linkedIn.svg'} width={56} height={56} alt="" className="absolute" />
               </div>
             </div>
           </div>
-          <div className="animation-element appear w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
-            <div className=" flex flex-col items-center justify-center">
-              {' '}
-              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">SHIV</div>
-              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-[40px] flex items-center">HEAD OF DESIGN</div>
+          <div className="animation-element appear w-full md:w-[55%] bg-gradient-50-50 rounded-lg px-5 pb-7">
+            <div className="flex flex-col items-center justify-center">
+              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-10 flex justify-center">SHIV</div>
+              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-10 flex items-center">HEAD OF DESIGN</div>
             </div>
             <div className="w-full">
               <Image src={'/assets/images/about/person2.svg'} width={450} height={150} layout="responsive" alt="" />
             </div>
-
             <div className="animation-element appear flex pt-4 items-center justify-center space-x-3">
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/facebook.svg'} width={16} height={16} alt="" className="absolute" />
               </div>
               <div className="flex pt-2 items-center flex-row justify-center">
-                <div
-                  className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full
-               border border-gray-700 p-7 "
-                >
+                <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                   <Image
                     src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
@@ -133,32 +117,25 @@ export function About() {
                   />
                 </div>
               </div>
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/linkedIn.svg'} width={56} height={56} alt="" className="absolute" />
               </div>
             </div>
           </div>
-          <div className="animation-element appear w-[55%] bg-gradient-50-50  rounded-lg px-[20px] pb-[30px]">
-            <div className=" flex flex-col items-center justify-center">
-              {' '}
-              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-[40px] flex justify-center">CHENG</div>
-              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-[40px] flex items-center">
-                Lead Backend Developer
-              </div>
+          <div className="animation-element appear w-full md:w-[55%] bg-gradient-50-50 rounded-lg px-5 pb-7">
+            <div className="flex flex-col items-center justify-center">
+              <div className="text-[#F9EFEC] text-[25px] h-[100px] pt-10 flex justify-center">CHENG</div>
+              <div className="text-[#B3B3B2] text-[20px] h-[10px] pb-10 flex items-center">Lead Backend Developer</div>
             </div>
             <div className="w-full">
               <Image src={'/assets/images/about/person3.svg'} width={450} height={150} layout="responsive" alt="" />
             </div>
-
             <div className="animation-element appear flex pt-4 items-center justify-center space-x-3">
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/facebook.svg'} width={16} height={16} alt="" className="absolute" />
               </div>
               <div className="flex pt-2 items-center flex-row justify-center">
-                <div
-                  className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full
-               border border-gray-700 p-7 "
-                >
+                <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                   <Image
                     src={'/assets/images/resources_more/twitter.svg'}
                     width={30}
@@ -168,15 +145,14 @@ export function About() {
                   />
                 </div>
               </div>
-              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7 ">
+              <div className="relative flex justify-center items-center bg-[#1F1F1F] rounded-full border border-gray-700 p-7">
                 <Image src={'/assets/images/about/linkedIn.svg'} width={56} height={56} alt="" className="absolute" />
               </div>
             </div>
           </div>
         </div>
-
-        <Card bodyClassName="flex flex-row justify-between items-center">
-          <div className="p-[40px] flex flex-col text-white text-[48px] gap-[20px] w-full rounded-lg">
+        <Card bodyClassName="flex mt-5 flex-col md:flex-row justify-between items-center">
+          <div className="p-10 flex flex-col text-white text-4xl md:text-6xl gap-5 w-full rounded-lg">
             MEET THE BRILLIANT MINDS BEHIND CAPZIENT
           </div>
           <div className="animation-element appear flex items-center px-4">
@@ -186,7 +162,7 @@ export function About() {
             <div className="px-3 text-[#B3B3B2] whitespace-nowrap">ALL MEMBERS</div>
           </div>
         </Card>
-      </Container>
+      </Container> */}
     </div>
   );
 }
