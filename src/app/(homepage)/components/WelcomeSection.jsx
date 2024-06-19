@@ -8,7 +8,6 @@ import { TypewriterEffectSmooth } from '@/components/Animations/typewritter-text
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { WithRedRect } from '@/utils/withRedRect';
 
 import { FlipWords } from './FlipWords';
 import { WavyBackground } from './WavyBackground';
