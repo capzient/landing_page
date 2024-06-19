@@ -12,7 +12,6 @@ const PrivacyPolicy = async ({ params }) => {
   try {
     content = fs.readFileSync(filePath, 'utf8');
   } catch (error) {
-    console.log(error);
     return notFound();
   }
 
