@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Card } from '@/components/common/atoms/card';
 import { Container } from '@/components/common/atoms/container';
 
-import { cloud, cybersecurity } from '../../data';
+import { cloud, cybersecurity, emergingtechnology } from '../../data';
 
 const getData = (page) => {
   switch (page) {
@@ -12,6 +12,8 @@ const getData = (page) => {
       return cloud;
     case 'cybersecurity':
       return cybersecurity;
+    case 'emergingtechnology':
+      return emergingtechnology;
     default:
       return null;
   }
@@ -56,7 +58,7 @@ export const CapabilitiesComponent = ({ params }) => {
       <Container containerClassName={'flex gap-[20px] md:flex-row flex-col'}>
         {data.stats.map((item, index) => (
           <Card key={index} bodyClassName={'p-6 flex flex-col gap-[20px] w-full text-center'}>
-            <div className="text-red-500 text-[60px] text-start">{item.number}</div>
+            <div className="text-[#F51101] text-[60px] text-start">{item.number}</div>
             <div className="text-[#B3B3B2] text-[20px] text-start uppercase">{item.details}</div>
           </Card>
         ))}
@@ -78,6 +80,7 @@ export const CapabilitiesComponent = ({ params }) => {
                     <div className="flex items-center gap-[15px]">
                       <div className="text-[25px] text-white">{item.title}</div>
                     </div>
+
                     <div className="text-[#B3B3B2] text-[20px]">{item.description}</div>
                   </div>
                   {item.image && (
