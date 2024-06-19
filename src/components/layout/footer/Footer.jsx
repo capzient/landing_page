@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+
+import { siteConfig } from '@/config/site';
 
 const companyLinks = [
   { name: 'About Us', link: '/about' },
@@ -17,21 +19,22 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  { name: 'Facebook', icon: <FaFacebook className="text-xl" />, link: '#' },
-  { name: 'Xing', icon: <FaXTwitter className="text-xl" />, link: '#' },
-  { name: 'Instagram', icon: <FaInstagram className="text-xl" />, link: '#' },
+  { name: 'LinkedIN', icon: <FaLinkedin className="text-xl" />, link: siteConfig.links.linkedin },
+  { name: 'X', icon: <FaXTwitter className="text-xl" />, link: siteConfig.links.twitter },
+  { name: 'Instagram', icon: <FaInstagram className="text-xl" />, link: siteConfig.links.instagram },
+  { name: 'Email', icon: <FaEnvelope className="text-xl" />, link: `mailto:${siteConfig.email}` },
 ];
 
 export function Footer() {
   return (
     <div className="bg-gradient-to-r from-black to-neutral-950 text-zinc-50 py-6">
       <div>
-        <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16 h-[500px]">
+        <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16 ">
           <div className="px-10 col-span-2">
             <Image src="/assets/images/capzient_logo_white.png" height={250} width={250} alt="logo"></Image>
             <p className="text-start opacity-70">(c) 2024 Capzient, All rights reserved.</p>
           </div>
-          <div className="col-start-3 mt-56">
+          <div className="col-start-3 ">
             <ul className="flex flex-col items-center  gap-1">
               <li className="font-bold my-2">Company</li>
               {companyLinks.map((link) => (
@@ -46,7 +49,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <ul className="flex flex-col items-center mt-48 gap-1">
+            <ul className="flex flex-col items-center  gap-1">
               <li className="font-bold my-2 ">Legal and Policy</li>
               {legalLinks.map((link) => (
                 <Link
@@ -60,12 +63,17 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="flex justify-center mt-28">
+          <div className="flex justify-center ">
             <ul className="flex flex-col items-center gap-1">
               <li className="font-bold my-2">FOLLOW US</li>
               <li className="flex justify-center items-center md:justify-start">
                 {socialLinks.map((link) => (
-                  <Link href={link.link} key={link.name} className="mx-2 text-white/70 hover:text-white">
+                  <Link
+                    href={link.link}
+                    key={link.name}
+                    target="_blank"
+                    className="mx-2 text-white/70 hover:text-white"
+                  >
                     {link.icon}
                   </Link>
                 ))}

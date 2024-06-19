@@ -5,8 +5,8 @@ export const siteConfig = {
   url: 'https://capzient.com',
   domain: 'capzient.com',
   ogImage: 'https://capzient.com/assets/images/banner.png',
-  twitterHandle: '@',
-  email: 'something@email.com',
+  twitterHandle: '@capzient',
+  email: 'info@capzient.com',
   location: {
     address: '',
     lat: 0,
@@ -15,8 +15,9 @@ export const siteConfig = {
   links: {
     facebook: '',
     whatsapp: '',
-    instagram: '',
-    twitter: '',
-    phone: '',
+    instagram: 'https://www.instagram.com/capzient',
+    linkedin: 'https://www.linkedin.com/company/capzient/',
+    twitter: 'https://x.com/capzient',
+    phone: '+918595522662',
   },
 };
