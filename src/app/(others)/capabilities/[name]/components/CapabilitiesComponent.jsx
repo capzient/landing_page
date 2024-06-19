@@ -12,7 +12,7 @@ const getData = (page) => {
       return cloud;
     case 'cybersecurity':
       return cybersecurity;
-    case 'emergingtechnology':
+    case 'emerging-technology':
       return emergingtechnology;
     default:
       return null;
