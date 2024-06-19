@@ -1,3 +1,4 @@
+'use server';
 import { stringifyData } from '@/utils/stringifyUrl';
 
 export const submitForm = async (data) => {
