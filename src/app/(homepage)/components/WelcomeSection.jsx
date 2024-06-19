@@ -84,7 +84,7 @@ export const WelcomeSection = () => (
     </div>
     <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
       <div className=" uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full flex justify-center items-center flex-col">
-        <TypewriterEffectSmooth words={welcomeWords} />
+        <TypewriterEffectSmooth words={welcomeWords} className={'md:text-4xl text-2xl'} />
         <TypewriterEffectSmooth words={[{ text: 'of' }, { text: 'Technology' }, { text: 'solution' }]} />
       </div>
       <div className="flex md:flex-row flex-col-reverse pt-[100px] gap-[30px] items-center justify-center">
