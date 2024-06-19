@@ -6,7 +6,6 @@ import { About } from './components/About';
 export const generateMetadata = () =>
   generateSeo({
     title: `About`,
-    description: 'Hello world',
     url: '/about',
   });
 

@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: 'Capzient',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and groundbreaking technology.',
   url: 'https://capzient.com',
   domain: 'capzient.com',
-  ogImage: 'https://capzient.com/images/banner.png', // TODO: add a banner image at this location with size of 675x1200
+  ogImage: 'https://capzient.com/assets/images/banner.png',
   twitterHandle: '@',
   email: 'something@email.com',
   location: {
