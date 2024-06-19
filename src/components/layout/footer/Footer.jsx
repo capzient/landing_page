@@ -6,7 +6,7 @@ import { FaEnvelope, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { siteConfig } from '@/config/site';
 
 const companyLinks = [
-  { name: 'About Us', link: '/about' },
+  { name: 'About Us', link: '/about-us' },
   { name: 'Contact Us', link: '/contact' },
   // { name: 'Location', link: '/' },
   { name: 'Careers', link: '/#careers' },
