@@ -52,7 +52,7 @@ const welcomeWords = [
   { text: 'the' },
   { text: 'stellar' },
   { text: 'standard', className: 'text-[#F51101] dark:text-[#F51101]' },
-  { text: 'solutions', className: 'text-[#cb6666] dark:text-[#cb6666]' },
+  { text: 'solutions', className: 'text-[#cb6666] dark:text-[#F51101]' },
 ];
 
 export const WelcomeSection = () => (
