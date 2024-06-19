@@ -11,7 +11,7 @@ import { submitForm } from '@/lib/actions/submitForm';
 function FormItem({ label, children, error }) {
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 md:col-span-1 col-span-2">
         <span className={`text-base ${error ? 'text-red-500' : 'text-[#F3DFD8]'}`}>{label}</span>
         {children}
         {error && <span className="text-red-500 text-sm">{error.message}</span>}
@@ -71,8 +71,8 @@ export function ContactForm() {
     }
   };
   return (
-    <div className="gap-[25px] bg-black px-[60px] py-[100px] pt-[100px] pb-[600px] flex flex-col font-sans">
-      <Card bodyClassName="animation-element appear p-[40px] flex flex-col justify-end">
+    <div className="gap-[25px] bg-black md:px-[60px] py-[100px] pt-[100px] pb-[600px] flex flex-col font-sans">
+      <Card bodyClassName="animation-element appear md:p-[40px] flex flex-col justify-end">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-2 gap-x-16 gap-y-16 p-16 ">
             <FormItem label={'First Name'} error={errors.firstname}>
@@ -83,7 +83,7 @@ export function ContactForm() {
                 placeholder="ENTER FIRST NAME"
               />
             </FormItem>
-            <FormItem label={'First Name'} error={errors.lastname}>
+            <FormItem label={'Last Name'} error={errors.lastname}>
               <input
                 {...register('lastname')}
                 className="text-base border-[1px] rounded-xl border-gray-700 bg-[#1F1F1F]  p-4 text-white"
@@ -125,7 +125,7 @@ export function ContactForm() {
             </FormItem>
             <div className="flex flex-col gap-4 col-span-2">
               <span className=" text-base text-[#F3DFD8] ">MESSAGE</span>
-              <input
+              <textarea
                 {...register('message')}
                 className="border-[1px] border-gray-700 rounded-xl bg-[#1F1F1F] pl-[20px] pt-[20px] pb-[100px]  w-full text-white"
                 type="text"
@@ -134,7 +134,7 @@ export function ContactForm() {
               {errors.message && <span className="text-red-500 text-sm">{errors.message.message}</span>}
             </div>
           </div>
-          <div className=" flex flex-row justify-between items-center px-16 mx-8 mt-2">
+          <div className=" flex flex-col gap-10 md:flex-row justify-between items-center px-16 mx-8 mt-2 py-10">
             <div className=" flex flex-col items-center gap-2">
               <div className="flex">
                 <input {...register('agreeterms')} type="checkbox" id="custom-checkbox" className="hidden" />
@@ -150,7 +150,9 @@ export function ContactForm() {
                     />
                   </svg>
                 </label>
-                <span className="text-base text-gray-400 pl-4  ">I agree with use of term and Privacy Policy</span>
+                <span htmlFor="custom-checkbox" className="text-base text-gray-400 pl-4  ">
+                  I agree with use of term and Privacy Policy
+                </span>
               </div>
               {errors.agreeterms && (
                 <span className="text-red-500 text-sm text-start">{errors.agreeterms.message}</span>
