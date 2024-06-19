@@ -19,15 +19,16 @@ export const HeroContent = () => {
       ref={ref}
       variants={ContainerVars}
       initial="initial"
-      className="absolute top-0 h-[100vh] flex items-center justify-center px-3 w-full z-[20]"
+      className="absolute top-0 h-[100vh] flex items-center justify-center px-3 w-full z-[20] "
     >
-      <motion.div className="w-full flex flex-col gap-0 text-start px-[50px]">
+      <motion.div className="w-full flex flex-col gap-0 text-start px-10 md:px-[50px]">
         <div className="h-[70vh] flex items-end">
           <motion.div
             variants={MobileLinkVars}
             initial="initial"
             animate={inView ? 'open' : 'initial'}
             className="overflow-hidden tracking-wider md:mt-6 text-4xl md:text-9xl font-medium text-white w-full roboto items-center"
+            style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
           >
             <div className="overflow-hidden">
               <motion.div variants={MobileLinkVars} initial="initial" animate={inView ? 'open' : 'initial'}>
@@ -43,18 +44,20 @@ export const HeroContent = () => {
               variants={MobileLinkVars}
               initial="initial"
               animate={inView ? 'open' : 'initial'}
-              className="text-6xl md:text-[140px] font-extrabold"
+              className="text-5xl md:text-[140px] font-extrabold"
+              style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
             >
               <WithRedRect>TOMORROW</WithRedRect>
             </motion.div>
           </motion.div>
         </div>
-        <motion.div className="flex flex-row h-[30vh] items-center justify-between overflow-hidden">
+        <motion.div className="flex flex-col md:flex-row h-[30vh] md:items-center md:justify-between overflow-hidden gap-6">
           <motion.div
             variants={MobileLinkVars}
             initial="initial"
             animate={inView ? 'open' : 'initial'}
-            className="text-white w-8 md:w-auto text-xl md:text-4xl roboto text-start flex items-center"
+            className="text-white md:w-auto text-xl md:text-4xl roboto text-start flex items-center"
+            style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
