@@ -72,7 +72,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
   );
 };
 
-export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) => {
+export const TypewriterEffectSmooth = ({ words, className, textClassName, cursorClassName }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => ({
     ...word,
@@ -111,7 +111,7 @@ export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) =>
         }}
       >
         <div
-          className="text-xl md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className={(cn('text-xl md:text-xl lg:text:3xl xl:text-5xl font-bold'), textClassName)}
           style={{
             whiteSpace: 'nowrap',
           }}
