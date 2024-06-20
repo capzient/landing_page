@@ -82,10 +82,33 @@ export const WelcomeSection = () => {
         {/* <div className="absolute w-full h-full welcome-blur"></div> */}
       </div>
       <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
-        <div className=" uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full flex justify-center items-center flex-col">
-          <TypewriterEffectSmooth words={welcomeWords} className={'md:text-4xl text-2xl'} />
+        <div className="md:flex uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full hidden justify-center items-center flex-col">
+          <TypewriterEffectSmooth
+            words={welcomeWords}
+            className={'md:text-4xl text-xl'}
+            textClassName={'md:text-4xl text-2xl'}
+          />
           <TypewriterEffectSmooth words={[{ text: 'of' }, { text: 'Technology' }, { text: 'solution' }]} />
         </div>
+        <div className="flex uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full md:hidden justify-center items-center flex-col">
+          <TypewriterEffectSmooth
+            words={[{ text: 'Welcome' }, { text: 'to' }, { text: 'the' }]}
+            textClassName={'md:text-4xl text-xl'}
+          />
+          <TypewriterEffectSmooth
+            words={[
+              { text: 'stellar' },
+              { text: 'standard', className: 'text-[#F51101] dark:text-[#F51101]' },
+              { text: 'solutions', className: 'text-[#F51101] dark:text-[#F51101]' },
+            ]}
+            textClassName={'md:text-4xl text-xl'}
+          />
+          <TypewriterEffectSmooth
+            words={[{ text: 'of' }, { text: 'Technology' }, { text: 'solution' }]}
+            textClassName={'md:text-4xl text-xl'}
+          />
+        </div>
+
         <div className="flex md:flex-row flex-col-reverse pt-[100px] gap-[30px] items-center justify-center">
           <div className="animation-element appear leading-normal	 md:w-[50%] md:p-[20px] text-xl md:text-[42px] text-[#979796]">
             We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and
@@ -109,6 +132,7 @@ export const WelcomeSection = () => {
         <div className="uppercase text-center justify-center  w-full flex flex-wrap  md:gap-10 md:py-10 md:text-8xl text-5xl">
           <TypewriterEffectSmooth
             words={[{ text: 'Our' }, { text: 'capabilities', className: 'text-[#F51101] dark:text-[#F51101]' }]}
+            textClassName={'md:text-4xl text-2xl'}
           />
         </div>
         <Swiper
