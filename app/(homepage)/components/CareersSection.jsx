@@ -8,14 +8,14 @@ export const CareersSection = () => (
     <div className="pl-11 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#999999] text-5xl md:text-8xl uppercase text-center flex justify-center items-center">
       <TypewriterEffectSmooth words={[{ text: 'Careers' }]} />
     </div>
-    <Container containerClassName="flex flex-wrap  justify-center items-center p-[20px]  mt-[20px]">
+    <Container containerClassName="flex flex-wrap  justify-center items-center p-[20px] mt-[20px]">
       {' '}
       <div className="animation-element appear w-full md:w-1/2 p-[20px] lg:w-1/2">
         {' '}
         <Image
-          src={'/assets/images/common/careers.svg'}
+          src={'/assets/images/common/careers.jpg'}
           alt="careers img"
-          className=" mx-auto md:mx-0"
+          className=" mx-auto rounded-xl md:mx-0"
           width={950}
           height={950}
           layout="responsive"
