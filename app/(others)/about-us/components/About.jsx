@@ -22,8 +22,8 @@ export function About() {
       </div>
 
       <Card bodyClassName="p-[20px] md:p-[40px] flex flex-col justify-end">
-        <div className="text-[24px] md:text-[30px] text-[#F9EFEC]">THE ESSENCE OF MINIMALISM IN DESIGN.</div>
-        <div className="pt-4 text-gray-400 text-sm md:text-base">
+        {/* <div className="text-[24px] md:text-[30px] text-[#F9EFEC]">THE ESSENCE OF MINIMALISM IN DESIGN.</div> */}
+        <div className="pt-4 text-gray-400 text-md md:text-lg">
           At Capzient, we harness the power of innovation and expertise to transform your vision into a reality that
           transcends the boundaries of the ordinary. Our elite team of strategists, developers, and creatives craft
           transformative experiences, imbued with cutting-edge technologies and groundbreaking strategies, catapulting
