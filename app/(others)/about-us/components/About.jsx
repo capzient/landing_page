@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Card } from '@/components/common/atoms/card';
+
 // import { Container } from '@/components/common/atoms/container';
 
 export function About() {

@@ -1,5 +1,6 @@
 import './globals.css';
 // import { Footer } from '@/components/layout/footer/Footer';
+
 import { Footer } from '@/components/layout/footer/Footer';
 import { Navbar } from '@/components/layout/nav';
 import { siteConfig } from '@/config/site';
