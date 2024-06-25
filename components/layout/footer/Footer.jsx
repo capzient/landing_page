@@ -31,8 +31,17 @@ export function Footer() {
       <div>
         <div className="md:grid md:grid-cols-5 flex flex-col md:justify-start gap-10 items-center pt-16 ">
           <div className="px-10 col-span-2">
-            <Image src="/assets/images/capzient_logo_white.png" height={250} width={250} alt="logo"></Image>
-            <p className="text-start opacity-70">(c) 2024 Capzient, All rights reserved.</p>
+            <Image
+              src="/assets/images/capzient_logo_white.png"
+              height={250}
+              width={250}
+              alt="logo"
+              className="ml-7 md:ml-0"
+            ></Image>
+            <p className="md:text-start text-center opacity-70 ">
+              Copyright &copy; 2024 <br />
+              Capzient Tech and Media Private Limited, <br /> All rights reserved.
+            </p>
           </div>
           <div className="col-start-3 ">
             <ul className="flex flex-col items-center  gap-1">
