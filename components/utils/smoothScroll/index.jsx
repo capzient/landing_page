@@ -2,8 +2,7 @@
 
 import ReactLenis from "@studio-freight/react-lenis";
 
-const SmoothScroll = ({ children }) => {
-  return (
+const SmoothScroll = ({ children }) => (
     <ReactLenis
       root
       options={{
@@ -15,5 +14,4 @@ const SmoothScroll = ({ children }) => {
       {children}
     </ReactLenis>
   );
-};
 export default SmoothScroll;

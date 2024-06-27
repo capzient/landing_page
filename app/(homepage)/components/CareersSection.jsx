@@ -10,7 +10,7 @@ export const CareersSection = () => (
     </div>
     <Container containerClassName="flex flex-wrap  justify-center items-center p-[20px] mt-[20px]">
       {' '}
-      <div className="animation-element appear w-full md:w-1/2 p-[20px] lg:w-1/2">
+      <div className=" w-full md:w-1/2 p-[20px] lg:w-1/2">
         {' '}
         <Image
           src={'/assets/images/common/careers.jpg'}
@@ -21,7 +21,7 @@ export const CareersSection = () => (
           layout="responsive"
         />
       </div>
-      <div className="animation-element appear w-full md:w-1/2 lg:w-1/2 text-gray-400 pt-[35px] px-[35px] mr-50 text-lg md:text-3xl">
+      <div className=" w-full md:w-1/2 lg:w-1/2 text-gray-400 pt-[35px] px-[35px] mr-50 text-lg md:text-3xl">
         <p>
           At Capzient, we live for change, thrive in disruption, and champion those who dare to dream bigger. If
           you&apos;re the kind of innovator who&apos;s hungry for growth and not afraid to challenge the status quo,
@@ -29,7 +29,7 @@ export const CareersSection = () => (
           push the boundaries of what’s possible, come join us and together, we’ll redefine the future of business,
           technology, and society.
         </p>
-        <div className="animation-element appear flex mt-[30px] justify-center md:justify-start">
+        <div className=" flex mt-[30px] justify-center md:justify-start">
           {/* <Link href="/careers" className="bg-[#1F1F1F] flex items-center text-white py-2 mt-[50px] px-4 rounded-xl">
             Learn More{' '}
             <span className="ml-2 text-red-600 text-2xl">
