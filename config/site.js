@@ -4,6 +4,7 @@ export const siteConfig = {
     'We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and groundbreaking technology.',
   url: 'https://capzient.com',
   domain: 'capzient.com',
+  ga_tracking_id: 'G-56QNQSMWEX',
   ogImage: 'https://capzient.com/assets/images/banner.png',
   twitterHandle: '@capzient',
   email: 'info@capzient.com',
