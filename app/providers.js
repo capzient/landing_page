@@ -6,8 +6,10 @@ import { Toaster } from 'sonner';
 import { SmoothScroll } from '@/utils/smoothScroll';
 
 export const Providers = ({ children }) => (
-  <AnimatePresence>
-    <Toaster />
-    <SmoothScroll>{children}</SmoothScroll>
-  </AnimatePresence>
+  <>
+    <AnimatePresence>
+      <Toaster />
+      <SmoothScroll>{children}</SmoothScroll>
+    </AnimatePresence>
+  </>
 );

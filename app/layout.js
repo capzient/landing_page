@@ -5,7 +5,7 @@ import { Montserrat } from 'next/font/google';
 import { Footer } from '@/components/layout/footer/Footer';
 import { Navbar } from '@/components/layout/navbar';
 import { siteConfig } from '@/config/site';
-
+import { GoogleAnalytics } from 'components/Analytics/GoogleAnalytics';
 import { Providers } from './providers';
 
 const montserrat = Montserrat({
@@ -53,6 +53,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleAnalytics GA_TRACKING_ID={siteConfig.ga_tracking_id} />
       <body className={`${montserrat.className}`}>
         <Providers>
           <Navbar />
