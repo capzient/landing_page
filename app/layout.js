@@ -1,12 +1,18 @@
 import './globals.css';
 // import { Footer } from '@/components/layout/footer/Footer';
+import { Montserrat } from 'next/font/google';
 
 import { Footer } from '@/components/layout/footer/Footer';
-import { Navbar } from '@/components/layout/nav';
+import { Navbar } from '@/components/layout/navbar';
 import { siteConfig } from '@/config/site';
-import { inter_init, poppins_init, roboto_init } from '@/utils/Fonts';
-import { GoogleAnalytics } from 'components/Analytics/GoogleAnalytics';
+
+import { GoogleAnalytics } from '../components/Analytics/GoogleAnalytics';
+
 import { Providers } from './providers';
+
+const montserrat = Montserrat({
+  subsets: ['cyrillic'],
+});
 
 export const metadata = {
   title: {
@@ -50,12 +56,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleAnalytics GA_TRACKING_ID={siteConfig.ga_tracking_id} />
-      <body className={`${roboto_init.variable} ${poppins_init.variable} ${inter_init.variable} relative`}>
+      <body className={`${montserrat.className}`}>
         <Providers>
-          <div className="">
-            <Navbar />
-            {children}
-          </div>
+          <Navbar />
+          {children}
           <Footer />
         </Providers>
       </body>

@@ -29,7 +29,7 @@ export const WeKeepYouAhead = () => {
   const [selected, setSelected] = useState('research');
 
   return (
-    <div className="lg:px-[10vw] md:px-0 bg-black p-[30px] text-[#B3B3B2] flex flex-col items-center justify-center ">
+    <div className="lg:px-[10vw] relative  md:px-0 bg-black p-[30px] text-[#B3B3B2] flex flex-col items-center justify-center ">
       <div className=" my-[70px] font-bold uppercase text-2xl md:text-6xl inline-flex gap-2 ">
         <TypewriterEffectSmooth
           words={[

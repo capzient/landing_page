@@ -53,6 +53,7 @@ module.exports = {
         inter: ['var(--font-inter)'],
         poppins: ['var(--font-poppins)'],
         roboto: ['var(--font-roboto)'],
+        montserrat: ['var(--font-montserrat)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

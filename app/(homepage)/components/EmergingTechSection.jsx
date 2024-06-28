@@ -12,7 +12,7 @@ export const EmergingTechSection = () => (
       />
     </div>
     <div className="w-full flex md:flex-row flex-col justify-between items-start gap-[10px] h-full">
-      <div className="animation-element appear w-full md:w-1/3 p-[10px]">
+      <div className=" w-full md:w-1/3 p-[10px]">
         <div className="relative w-full h-full rounded-lg">
           <Image
             src="/assets/images/industry/sub_container.svg"

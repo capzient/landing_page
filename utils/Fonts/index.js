@@ -1,4 +1,4 @@
-import { Inter, Poppins, Roboto } from 'next/font/google';
+import { Instrument_Serif, Inter, Montserrat, Poppins, Roboto } from 'next/font/google';
 
 const roboto_init = Roboto({
   subsets: ['latin'],
@@ -16,5 +16,15 @@ const inter_init = Inter({
   weight: ['400', '800'],
   variable: '--font-inter',
 });
+const montserrat_init = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '800'],
+  variable: '--font-montserrat',
+});
+const instrument_init = Instrument_Serif({
+  style: 'italic',
+  subsets: ['latin'],
+  weight: '400',
+});
 
-export { roboto_init, poppins_init, inter_init };
+export { roboto_init, poppins_init, inter_init, montserrat_init, instrument_init };

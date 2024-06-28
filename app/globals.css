@@ -8,18 +8,15 @@
   --background-end-rgb: 255, 255, 255;
 } */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color-scheme: dark;
+
+*{
+  outline: 2px red solid;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+::-webkit-scrollbar{
+  display: none;
 }
+    
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
@@ -259,4 +256,14 @@ body {
     transform: translate(0) rotate(0deg) scale(1);
     opacity: 1;
   }
+
+
+}
+
+.link-list:hover li {
+  color: "#99a4b7";
+}
+
+.link-list li:hover {
+  color: white;
 }

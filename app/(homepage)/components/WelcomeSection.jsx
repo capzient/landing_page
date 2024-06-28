@@ -9,8 +9,6 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
-import { FlipWords } from './FlipWords';
-import { WavyBackground } from './WavyBackground';
 
 const carouselData = [
   {
@@ -42,7 +40,7 @@ const carouselData = [
   },
 ];
 
-const words = ['imagine', 'invent', 'define'];
+// const words = ['imagine', 'invent', 'define'];
 
 const welcomeWords = [
   { text: 'Welcome' },
@@ -56,32 +54,8 @@ const welcomeWords = [
 export const WelcomeSection = () => {
   const { isMobile } = useMediaQuery();
   return (
-    <div>
-      <div className="h-[100vh]"></div>
-      <div className="h-[100vh] relative welcome-text-container flex items-center justify-center bg-cover bg-center bg-black w-full text-white text-[128px]">
-        {/* <WithRedRect>
-        <div className="relative md:welcome-text ">We Re-imagine</div>
-      </WithRedRect> */}
-        {/* <svg className="welcome-text" viewBox="0 0 1320 300">
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-          We Re-imagine
-        </text>
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle"></text>
-      </svg> */}
-
-        <WavyBackground>
-          <div className="max-w-full mx-auto pb-40">
-            <div className="z-50 inset-0 flex items-center justify-center text-3xl text-white font-bold px-4 pointer-events-none text-center md:text-4xl lg:text-9xl">
-              We Re-
-              <FlipWords words={words} />
-              <span className={`text-red-500 dot`}>.</span>
-            </div>
-          </div>
-        </WavyBackground>
-
-        {/* <div className="absolute w-full h-full welcome-blur"></div> */}
-      </div>
-      <div className="px-[100px] py-[150px] flex bg-cover bg-center bg-black flex-col w-full">
+    <div className="relative z-10">
+      <div className="px-[100px]  flex bg-cover bg-center bg-black flex-col w-full">
         <div className="md:flex uppercase text-center text-white text-4xl gap-0  md:text-4xl w-full hidden justify-center items-center flex-col">
           <TypewriterEffectSmooth
             words={welcomeWords}
@@ -109,22 +83,21 @@ export const WelcomeSection = () => {
           />
         </div>
 
-        <div className="flex md:flex-row flex-col-reverse pt-[100px] gap-[30px] items-center justify-center">
-          <div className="animation-element appear leading-normal	 md:w-[50%] md:p-[20px] text-xl md:text-[42px] text-[#979796]">
+        <div className="flex md:flex-row relative z-30  flex-col-reverse gap-[30px] items-center justify-center">
+          <div className=" leading-normal	 md:w-[50%] md:p-[20px] text-xl md:text-[42px] text-[#979796]">
             We are an emerging technology company empowering leaders to disrupt markets with visionary ideas and
             groundbreaking technology.
           </div>
-          <div className="animation-element appear md:w-[50%]">
+          <div className="animation-element  md:w-[50%]">
             <YouTubeEmbed videoid="3WTO227boHA" style="rounded-xl" width={isMobile ? 300 : 0} />
-            {/*         
-          <Image
-            className="mx-auto"
-            src={'/assets/images/welcome/video.svg'}
-            alt=""
-            width={500}
-            height={500}
-            layout="responsive"
-          /> */}
+            {/* <Image
+              className="mx-auto"
+              src={'/assets/images/welcome/video.svg'}
+              alt=""
+              width={500}
+              height={500}
+              layout="responsive"
+            /> */}
           </div>
         </div>
       </div>
@@ -152,7 +125,7 @@ export const WelcomeSection = () => {
               slidesPerView: 2,
             },
           }}
-          className="animation-element appear w-full h-full grow flex justify-center items-center gap-10"
+          className=" w-full h-full grow flex justify-center items-center gap-10"
         >
           {carouselData.map((item, index) => (
             <div key={index} className="h-full grow">

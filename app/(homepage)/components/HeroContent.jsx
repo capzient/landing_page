@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -28,7 +27,7 @@ export const HeroContent = () => {
             initial="initial"
             animate={inView ? 'open' : 'initial'}
             className="overflow-hidden tracking-wider md:mt-6 text-4xl md:text-9xl font-medium text-white w-full roboto items-center"
-            style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
+            // style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
           >
             <div className="overflow-hidden">
               <motion.div variants={MobileLinkVars} initial="initial" animate={inView ? 'open' : 'initial'}>
@@ -45,19 +44,19 @@ export const HeroContent = () => {
               initial="initial"
               animate={inView ? 'open' : 'initial'}
               className="text-5xl md:text-[140px] font-extrabold"
-              style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
+              // style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
             >
               <WithRedRect>TOMORROW</WithRedRect>
             </motion.div>
           </motion.div>
         </div>
-        <motion.div className="flex flex-col md:flex-row h-[30vh] md:items-center md:justify-between overflow-hidden gap-6">
+        {/* <motion.div className="flex flex-col md:flex-row h-[30vh] md:items-center md:justify-between overflow-hidden gap-6">
           <motion.div
             variants={MobileLinkVars}
             initial="initial"
             animate={inView ? 'open' : 'initial'}
             className="text-white md:w-auto text-xl md:text-4xl roboto text-start flex items-center"
-            style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
+            // style={{ textShadow: '8px 8px 16px rgba(0, 0, 0, 1)' }}
           >
             <WithRedRect>Capabilities that fuel the future</WithRedRect>
           </motion.div>
@@ -67,7 +66,7 @@ export const HeroContent = () => {
           >
             Power your project now
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.div>
   );
