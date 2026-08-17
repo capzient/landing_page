@@ -2,7 +2,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
-  output: 'standalone',
   // this is webpack configuration to allow svgr
   webpack(config) {
     config.module.rules.push({

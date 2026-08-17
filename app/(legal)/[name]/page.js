@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 
 const PrivacyPolicy = async ({ params }) => {
-  const filePath = path.join(process.cwd(), 'src/app/(legal)/markdown', `${params.name}.md`);
+  const filePath = path.join(process.cwd(), 'app/(legal)/markdown', `${params.name}.md`);
   let content;
   try {
     content = fs.readFileSync(filePath, 'utf8');
